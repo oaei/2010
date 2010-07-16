@@ -1,0 +1,202 @@
+<html>
+<head>
+<title>Ontology Alignment Evaluation Initiative::2010</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div class="header">
+<a style="color: grey; line-height: 5mm;" href="http://oaei.ontologymatching.org/2010/">Ontology
+  Alignment Evaluation Initiative - OAEI-2010
+  Campaign</a><a href="http://oaei.ontologymatching.org/"><img src="../oaeismall.jpg" alt="OAEI"
+		   style="float:right; margin-left: 5pt; border-style:none;"/></a>
+</div>
+
+<h1>SEALS platform evaluation modalities for OAEI</h1>
+
+<a href="http://www.seals-project.eu/"><img src="../seals-logo.jpg" alt="SEALS"
+		   style="float:right; margin-left: 5pt; border-style:none;"/></a>
+<p>
+
+The <a href="http://www.seals-project.eu">SEALS project</a> is
+dedicated to the evaluation of semantic web technologies. To that
+extent, it is creating a platform for easing this evaluation,
+organising evaluation campaigns, and building the community of tool
+providers and tool users around this evaluation activity.
+</p>
+<p>
+OAEI and SEALS are closely coordinated in the area of ontology
+matching. The SEALS platform covers other areas as well. We plan to
+integrate progressively the SEALS platform within OAEI
+evaluation. Starting in 2010, three tracks (benchmark, anatomy,
+conference) will take advantage of the SEALS platform in its first
+version.
+</p>
+
+<h2>Process</h2>
+
+<p>
+The SEALS platform will be delivered in two steps to participants:
+<ol>
+<li>A preliminary version in which systems are evaluated as web
+  services. This version allows participants to debug their system's
+  interface from their own site and to check that it works
+  well. Results are immediately available to participants.</li>
+<li>The final version in which systems are deployed in the
+  platform. This allows organisers to compare systems on the same
+  basis, in particular in terms of run time. This is also a test of
+  the deployability of tools.</li>
+</ol>
+</p>
+
+<h2>Web service based evaluation</h2>
+
+<p>
+In its first simple presentation, the SEALS platform will allow
+matchers to be evaluated as web services. Participants will thus have
+to implement a very simple web service, provide its URL to the
+platform and get results.
+</p>
+<p>
+This first primitive version of the platform does only this. It does
+not keep track of what has been done, does not provide extra support,
+etc. It allows participant to be sure that they implement the correct
+interface and test their system.
+This will evolve with time and further services will be provided as
+soon as they are available.
+</p>
+
+<p>
+The instructions for implementing your matcher as a web service are
+provided in
+this <a href="http://alignapi.gforge.inria.fr/tutorial/tutorial5/">tutorial</a>. Following
+the instructions in the tutorial will allow you to test whether you
+correctly implemented the interface. It will also allow you to use a
+first service of the SEALS platform to test your system.
+It is highly advised to implement the second part of the tutorial (the
+MyAlignmentWS part) so that your tool will be ready for the
+deployment evaluation part.
+</p>
+
+<p>
+The evaluation service is available
+at <a href="http://seals.inrialpes.fr/platform/">http://seals.inrialpes.fr/platform/</a>. Notice
+that we are updating the functionality from time to time, in case of
+problems do not hesitate to contact us.</p>
+
+<!--p style="color: red;">Cassia: update screendumps</p-->
+
+<p>
+Processing an evaluating with the platform consists of providing the
+name of the system, the endpoint (URL) of the web service and selecting the test set. Clicking on Submit will launch the evaluation.
+</p>
+
+<br>
+
+<div style="text-align: center;">
+<img align="center" src="images/seals-light-1.jpg">
+</div>
+
+<br>
+
+<p>
+Before starting an evaluation, some validation is done, in order to verify that the namespace and endpoint are correct and the tool delivers alignments in the correct <a href="http://oaei.ontologymatching.org/2010/align.html">Alignment format</a>.
+</p>
+
+<br>
+
+<div style="text-align: center;">
+<img align="center" src="images/seals-light-2.jpg">
+</div>
+
+<br>
+
+<p>
+If everything is ok, then the evaluation is launched and the evaluation results are shown.
+</p> 
+
+<br>
+
+<div style="text-align: center;">
+<img align="center" src="images/seals-light-3.jpg">
+</div>
+
+<br>
+
+<div style="text-align: center;">
+<img align="center" src="images/seals-light-4.jpg">
+</div>
+
+<br>
+
+<p>For each alignment, details about the correct, incorrect and missing correspondences are provided.
+</p>
+
+<br>
+
+<div style="text-align: center;">
+<img align="center" src="images/seals-light-5.jpg">
+</div>
+
+<br>
+
+
+<h2>Deployment-based evaluation</h2>
+
+<p>
+The deployment based evaluation relies on the Alignment API, so
+matchers have to be made available under Java. Doing so is described
+in detail in this <a href="http://alignapi.gforge.inria.fr/tutorial/tutorial3/">tutorial</a>.
+However, if you have followed our advice above, then this is already
+done.
+</p>
+
+<p>
+Then, deploying a matcher on the SEALS platform may require additional
+information than just a jar file. The SEALS platform allows for
+defining the environment under which your system is run: Operating
+system, installed databases or resources like WordNet, etc. 
+Your system is provided as a bundled zip file in which a deployment
+description file tells the platform what to do.
+</p>
+
+<p>More information about the bundle will be posted soon.</p>
+
+<!--p style="color: red;">Cassia: more info on the bundle format?
+<ol>
+<li>Until July 10th: we have a simple bundle ready, then publish it here.</li>
+<li>Then we wait for stable documentation (working with SQL and
+  WordNet) and put a pointer here.</li>
+</ol></p>
+
+<p style="color: red;">I'd like to see here the minimal version of
+  the bundling: XML file, empty scripts, everything already given to
+  the participants.</p-->
+
+
+<h2>Registration</h2>
+
+<!--p style="color: red;">Cassia: update?</p-->
+
+<p>
+So far, there is no compulsory registration. It is still possible to
+manifest your interest in the SEALS project and to pre-register your
+tool for evaluation on the <a href="http://www.seals-project.eu/join-the-community">SEALS portal</a>
+</a>
+
+<p>
+Later, for the participation commitment, it will be necessary to
+register and to upload the tool in the SEALS platform.
+</p>
+
+<h2>Contacts</h2>
+<p>
+Do not hesitate to contact Cassia.Trojahn # inrialpes : fr for
+any questions.
+</p>
+
+<div class="address">
+<div class="footer">http://oaei.ontologymatching.org/2010/seals-eval.html</div>
+$Id: seals-eval.html,v 1.6 2010/07/14 16:25:52 euzenat Exp $
+</div>
+</body>
+</html>
