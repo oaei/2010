@@ -1,0 +1,152 @@
+head	1.6;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.6
+date	2006.08.01.11.18.22;	author euzenat;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2006.07.12.12.49.28;	author euzenat;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2006.07.08.22.36.18;	author euzenat;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2005.06.10.20.40.21;	author euzenat;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2005.06.09.21.06.26;	author euzenat;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2005.06.09.21.05.55;	author euzenat;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.6
+log
+@- 2006/benchmark -> tests
+@
+text
+@<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: generalization.xsl,v 1.5 2006/07/12 12:49:28 euzenat Exp euzenat $ -->
+
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+		xmlns:my="http://oaei.ontologymatching.org/tests/101/onto.rdf#"
+		xmlns:units="http://visus.mit.edu/fontomri/0.01/units.owl#" 
+		xmlns:foaf="http://xmlns.com/foaf/0.1/#" 
+		xmlns:ical="http://www.w3.org/2002/12/cal/#" 
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+		xmlns:owl="http://www.w3.org/2002/07/owl#" 
+		xmlns:wot="http://xmlns.com/wot/0.1/" 
+		xmlns:dc="http://purl.org/dc/elements/1.1/" 
+		xmlns:dcterms="http://purl.org/dc/terms/" 
+		xmlns:dctype="http://purl.org/dc/dcmitype/"
+		version="1.0"
+>
+  <xsl:param name="param"></xsl:param>
+  <xsl:param name="value"></xsl:param>
+  <xsl:param name="ref"></xsl:param>
+
+  <xsl:output method="xml" encoding="iso-8859-1"/>
+
+  <!-- This is fully ad hoc -->
+  <xsl:template match="rdf:type[@@rdf:resource='http://www.w3.org/2002/07/owl#TransitiveProperty']"/>
+
+  <xsl:template match="rdfs:domain[owl:Class/owl:unionOf]">
+    <rdfs:domain rdf:resource="#Reference"/>
+  </xsl:template>
+  <xsl:template match="owl:allValuesFrom[owl:Class/owl:unionOf]">
+    <owl:allValuesFrom rdf:resource="#PersonList"/>
+  </xsl:template>
+
+  <xsl:template match="@@*|node()"> <!-- node() = text()|* ? -->
+    <xsl:copy>
+      <xsl:apply-templates select="@@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+	
+</xsl:stylesheet>
+@
+
+
+1.5
+log
+@- typo
+@
+text
+@d2 1
+a2 1
+<!-- $Id: generalization.xsl,v 1.4 2006/07/08 22:36:18 euzenat Exp euzenat $ -->
+d6 1
+a6 1
+		xmlns:my="http://oaei.ontologymatching.org/2006/benchmark/101/onto.rdf#"
+@
+
+
+1.4
+log
+@- updated URI ==> 2006 + ontologymatching.org
+@
+text
+@d2 1
+a2 1
+<!-- $Id: generalization.xsl,v 1.3 2005/06/10 20:40:21 euzenat Exp $ -->
+d6 1
+a6 1
+		xmlns:my="http://oeai.ontologymatching.org/2006/benchmark/101/onto.rdf#"
+@
+
+
+1.3
+log
+@- added output method
+@
+text
+@d2 1
+a2 1
+<!-- $Id: generalization.xsl,v 1.2 2005/06/09 21:06:26 euzenat Exp euzenat $ -->
+d6 1
+a6 1
+		xmlns:my="http://oaei.inrialpes.fr/2005/benchmark/101/onto.rdf#"
+@
+
+
+1.2
+log
+@- added id
+@
+text
+@d2 1
+a2 1
+<!-- $Id$ -->
+d22 2
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d2 1
+@
