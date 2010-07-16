@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Ontology Alignment Evaluation Initiative::2010</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div class="header">
+<a style="color: grey; line-height: 5mm;" href="http://oaei.ontologymatching.org/2010/">Ontology
+  Alignment Evaluation Initiative - OAEI-2010
+  Campaign</a><a href="http://oaei.ontologymatching.org/"><img src="../oaeismall.jpg" alt="OAEI"
+		   style="float:right; margin-left: 5pt; border-style:none;"/></a>
+</div>
+
+<h1>A note about handling SKOS</h1>
+
+<p>Ontology matchers tend
+  to require ontologies to be matched (this is the least). Yet SKOS
+  thesauri are not really ontologies. There are a few options for
+  doing this.</p>
+
+<h2>Direct handling of SKOS</h2>
+
+<p>
+Since version 4.1 (or <a href="https://gforge.inria.fr/scm/?group_id=117">the current version under svn</a>),
+the <a href="http://alignapi.gforge.inria.fr/">Alignment API</a> is able to handle SKOS thesauri
+thanks to its <a href="http://alignapi.gforge.inria.fr/ontowrap.html">Ontology wrapper</a> and the <a href="http://skosapi.sourceforge.net/">SKOS API</a>.
+</p>
+
+
+<h2>Translation from SKOS to OWL</h2>
+
+<p>People may want to translate SKOS thesauri into OWL ontologies.  We are aware of at least two ways
+  to achieve this.</p>
+<p>Use the converted ontologies provided for the food, environment and
+  library test sets. According to the <a href="http://www.few.vu.nl/~aisaac/oaei2010/index.html#OWL">description provided by Antoine
+  Issac</a> (older version <a href="../2007/library/index.html#OWL">here</a>), they obey the following rules:
+<ul compact="1">
+<li>instances of skos:Concept are converted into instances of owl:Class;</li>
+<li>skos:prefLabel, skos:altLabel and skos:hiddenLabel statements are
+  converted to rdfs:label statements, which removes the subtle
+  distinctions that exist between these different properties (for
+  instance, altLabels are often not synonyms at all);</li>
+<li>various kind of skos:notes are converted to rdfs:comments;</li>
+<li>skos:broader statements are converted into rdfs:subClassOf statements;</li>
+<li>skos:related statements are converted into rdfs:seeAlso statements.</li>
+</ul>
+</p>
+<p>Use the <a href="../2007/SKOSToOWL.zip">tool developed by Miklos Nagy</a> for the same purpose. It uses
+  the following set of rules (see also Miklos
+  provided <a href="../2007/SKOSParser.pdf">short description</a>):
+<ul compact="1">
+<li>skos:Concept -> owl:Class</li>
+<li>skos:prefLabel -> rdfs:label</li>
+<li>skos:altLabel -> rdfs:label</li>
+<li>skos:broader -> rdfs:subClassOf</li>
+<li>skos:definition -> rdfs:comment</li>
+<li>skos:scopeNote -> rdfs:comment</li>
+</ul>
+</p>
+
+<p>Antoine also plans to evaluate alignments that use OWL properties as mapping links.
+The following interpretations will be made of OWL data sent back by
+participants:
+<ul compact="1">
+<li>instances of owl:Class will be interpreted as instances of skos:Concept;</li>
+<li>owl:equivalentClass statements will be interpreted as skos:exactMatch statements;</li>
+<li>if participants match the original concepts (as instances of skos:Concept and not owl:Class) using owl:sameAs, these statements will also be interpreted as skos:exactMatchs;</li>
+<li>rdfs:subClassOf statements will be interpreted as skos:broaderMatch statements;</li>
+<li>rdfs:seeAlso statements will be interpreted as stitch:relatedMatch statements;</li>
+<!--li>if participants' tools output alignments involving defined classes using owl:intersectionOf and owl:unionOf respectively, the concerned statements will be interpreted as statements involving skos:AND and skos:OR. Disjunction-like statements (owl:disjoint, owl:differentFrom, owl:disjointWith, owl:ComplementOf which could be interpreted as statements involving skos:NOT) will be ignored, as these are not evaluated.</li--!>
+</ul>
+</p>
+
+<div class="address">
+<div class="footer">http://oaei.ontologymatching.org/2010/skos2owl.html</div>
+$Id: skos2owl.html,v 1.3 2010/07/08 10:05:45 euzenat Exp euzenat $
+</div>
+</body>
+</html>
+

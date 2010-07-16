@@ -1,0 +1,62 @@
+body {
+	font-family: sans-serif;
+	color: black;
+	text-align: justify;
+	background-color: white;
+	//background: url(./img/oaei_tiny.jpg) right top no-repeat ;
+}
+
+div.header { color: grey; text-decoration: none; font-size: 80%; }
+
+span.logo {
+	float:right;
+	/* to be updated with the img size */
+	width:200px;
+	height:200px;
+	/*not implemented yet -> css3 */
+	background-image: url(./img/oaei_tiny.jpg);
+	background-position: right top;
+	background-repeat: no-repeat;	
+}
+
+h1 { font-size: 200%; }
+h2 { font-size: 160%; }
+h3 { font-size: 120%; }
+
+div.address {
+    font-size: 90%;
+    color: grey;
+}
+
+div.footer {
+    font-size: 90%;
+    text-align: center;
+    width:100%;
+    padding: 0.5em 0 0.5em 0em;
+    border-top: ridge grey;
+    border-bottom: ridge grey;
+}
+
+div.yellowbar{
+	text-align: center;
+	background-color: yellow;
+	width:100%;	
+}
+h1 {
+
+}
+a:link {  
+	color: #0074CA; 
+	text-decoration: none
+}
+
+a[href]:hover {  
+	color: #0074CA; 
+	text-decoration: none; 
+	background-color: #D3DBFE
+}
+a:visited {  
+	color: #0084E6; 
+	text-decoration: none
+}
+
