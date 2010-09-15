@@ -185,23 +185,25 @@ return their results to organisers.</p>
 
 <p>During the execution phase the <b>participants</b> will use their
   algorithms to automatically match the ontologies. 
-  Participants should only use one algorithm and the same set of
-  parameters for all tests in all tracks. Of course, it is fair to
+  Participants should only use one algorithm and the <b>same set of
+  parameters</b> for all tests in all tracks. Of course, it is fair to
   select the 
   set of parameters that provide the best results (for the tests where
   results are known). Beside the
   parameters the input of the algorithms must be the two provided
   ontology to match and any general purpose resource available to
-  everyone (that is no resourse especially designed for the test). In
+  everyone (that is no resource especially designed for the test). In
   particular, participants should not use the data (ontologies
   and results) from other test sets to help their algorithm. And
   cheating is not fair...</p>
-<p>The deadline for delivering final results is October 4th,
-  sharp. However, it is <i>highly advised</i> that participants send
+<p>The deadline for delivering final results is <b>October 4th</b>,
+  sharp. 
+
+<p>For <b>old-style tracks</b>, it is <i>highly advised</i> that participants send
   results before (preferably by August 30th) to the organisers so
   that they can check that they will be able to evaluate the results
-  smoothly and can provide some feedback to participants.</>
-<p>For old-style tracks, <b>Participants</b> will provide their alignment for each test
+  smoothly and can provide some feedback to participants.</p>
+<p>Participants will provide their alignment for each test
   in the <a href="align.html">Alignment
   format</a>. The results will be provided in a <i>zip</i> file containing
   one directory per test (named after its number) and each directory
@@ -231,19 +233,22 @@ participant.zip
 + ...
 </pre>
 </p>
-<p>
-For evaluation on the SEALS platform, the tools will have to be
-registered by that time (the registration process will come
-later <a href="seals-eval.html">here</a>).
+
+<p>For the <b>SEALS modality</b>, participants must register their tools by that time in the SEALS portal (see <a href="http://www.seals-project.eu/seals-evaluation-campaigns/ontology-matching">instructions</a>) and must test their web service implementation in the SEALS <a href="http://seals.inrialpes.fr/platform/">platform</a> (see <a href="seals-eval.html">instructions</a>). Participants must guarantee that their tools generate alignments in the correct format (Alignment API).
 </p>
-<p>Participants will also provide, for October 4th, a paper to be
+
+<p>All participants will also provide, for October 4th, a paper to be
   published in the proceedings</p>
+
 <p>All participants are required to provide a
   link to their program and parameter set.</p>
-<p>Appart from the instance matching track, the only interesting
+
+<p>Apart from the instance matching track, the only interesting
   alignments are those involving classes and 
   properties of the given ontologies. So these alignments should not
   align individuals, nor entities from the external ontologies.</p>
+
+
 
 <h3>Evaluation Phase</h3>
 
@@ -252,7 +257,7 @@ later <a href="seals-eval.html">here</a>).
   provided alignments.</p>
 <p>In order to ensure that it will be possible to process
   automatically the provided results, <b>participants</b>
-  are requested to provide (preliminary) results by August 30th. In
+  are requested to provide (preliminary) results by August 30th (old-style tracks). In
   the case of blind tests only the organizers will do the evaluation
   with regard to the withheld alignments. In the case of double blind
   tests, the <b>participants</b> will provide a version of their
@@ -261,10 +266,10 @@ later <a href="seals-eval.html">here</a>).
   the contact addresses below.
 </p>
 
-<p>For the SEALS tracks, the participants must
+<!--<p>For the SEALS modality, the participants must
 ensure by August 30th that their tools run correctly in the SEALS
 platform as well as generate alignments in the correct format.
-</p>
+</p>-->
 <p>The standard evaluation measures will be precision and recall
   computed against the reference alignments. For the matter of
   aggregation of the measures we will use weighted harmonic means
@@ -287,13 +292,13 @@ platform as well as generate alignments in the correct format.
 <dt><strike>June 1st</strike></dt><dd>datasets are out</dd>
 <dt><strike>June 21st</strike></dt><dd>end of commenting period</dd>
 <dt><strike>July 8th</strike></dt><dd>tests are frozen</dd>
-<dt><strike>August 30th</strike></dt><dd>participants send preliminary results (for
-    interoperability-checking) and ensure that their tools work under
-    the SEALS platform (see further instructions for at
+<dt><strike>August 30th</strike></dt><dd>participants send preliminary
+    results for interoperability-checking (old-style tracks), or
+    ensure that their tools work under the SEALS platform (SEALS
+    tracks, see further instructions for at
     the <a href="#ex">Execution phase</a>)</dd>
-<dt>October 4th</dt><dd>participants send final results and papers</dd>
-<dt>October 11th</dt><dd>organisers publish results for comments</dd>
-<dt>November 7th or 8th</dt><dd>final results ready
+<dt>October 4th</dt><dd>participants send final results (old-style tracks) or register their final results in the SEALS platform (SEALS tracks). All participants must send their papers.</dd>
+<dt>November 7th</dt><dd>final results ready
     and <a href="http://om2010.ontologymatching.org">OM-2010
       workshop</a> and evaluation of semantic technologies workshop.</dd>
 <dt>November 30th</dt><dd>participants send final versions of papers to
