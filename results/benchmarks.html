@@ -36,7 +36,8 @@ href="benchmarks/RESULTS.zip">available</a>.
 <p>Table 1 provides the consolidated results by groups of tests. We display
 the results of participants as well as those given by some simple edit distance
 algorithm on labels (edna). The computed values are real precision and recall
-and not an average of precision and recall. Two systems are ahead: ASMOV and RiMOM, with AgrMaker as close follower. Ef2Match, GeromeSBM and SOBOM had presented intermediary values of precision and recall.</p>
+and not an average of precision and recall. Two systems are ahead:  ASMOV and RiMOM, with AgrMaker as close follower, while SOBOM, GeRMeSMB and Ef2Match, respectively, had presented intermediary values of precision and recall. 
+No system had strictly lower performance than edna, specially in terms of precision.</p>
 
 <p></p>
 
@@ -104,16 +105,16 @@ and not an average of precision and recall. Two systems are ahead: ASMOV and RiM
 <td>1xx</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.96</td>
-<td>1.00</td>
-<td>0.98</td>
 <td>1.00</td>
 <td>1.00</td>
 <td>0.98</td>
 <td>1.00</td>
 <td>1.00</td>
+<td>0.97</td>
 <td>1.00</td>
-<td>0.99</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>1.00</td>
 <td>1.00</td>
@@ -133,8 +134,8 @@ and not an average of precision and recall. Two systems are ahead: ASMOV and RiM
 <td>2xx</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.40</td>
-<td>0.42</td>
+<td>0.43</td>
+<td>0.57</td>
 <td>0.95</td>
 <td>0.84</td>
 <td>0.94</td>
@@ -163,8 +164,8 @@ and not an average of precision and recall. Two systems are ahead: ASMOV and RiM
 <td>3xx</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.47</td>
-<td>0.82</td>
+<td>0.51</td>
+<td>0.65</td>
 <td>0.88</td>
 <td>0.58</td>
 <td>0.83</td>
@@ -183,8 +184,8 @@ and not an average of precision and recall. Two systems are ahead: ASMOV and RiM
 <td>0.39</td>
 <td>0.94</td>
 <td>0.76</td>
-<td>0.67</td>
-<td>0.64</td>
+<td>0.79</td>
+<td>0.75</td>
 <td>0.71</td>
 <td>0.32</td>
 </tr>
@@ -192,8 +193,8 @@ and not an average of precision and recall. Two systems are ahead: ASMOV and RiM
 <td>H-mean</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.42</td>
 <td>0.45</td>
+<td>0.58</td>
 <td>0.95</td>
 <td>0.84</td>
 <td>0.94</td>
@@ -212,7 +213,7 @@ and not an average of precision and recall. Two systems are ahead: ASMOV and RiM
 <td>0.60</td>
 <td>0.99</td>
 <td>0.84</td>
-<td>0.96</td>
+<td>0.97</td>
 <td>0.75</td>
 <td>0.86</td>
 <td>0.29</td>
@@ -225,7 +226,10 @@ and not an average of precision and recall. Two systems are ahead: ASMOV and RiM
 <h2>Comparison to 2009 tests</h2>
 
 <p>The tests are roughly the same as last year. Tble&nbsp;2 provides the results of the systems on the tests of last year. 
-Four systems that had participated last year (AFlood, DSSim, Kosimap and Lily) did not participate this year, while two new systems (CODI and Ef2Match) have registered their results. </p>
+Four systems that had participated last year (AFlood, DSSim, Kosimap and Lily) did not participate this year, while two new systems (CODI and Ef2Match) have registered their results. 
+In the 2009 campaign, Lily and ASMOV were ahread, with aflood and RiMOM as followers, while GeRoME, AROMA, DSSim and AgrMaker had intermediary performance. The same group of best matchers
+has been presented in both campaigns.
+</p>
 
 <table border="2" rules="groups">
   <colgroup align="center"> </colgroup>
@@ -651,14 +655,16 @@ to pure precision and recall). </p>
 <p></p>
 
 <p><img src="prgraph2010.png" alt=""> </p>
-</div>
-Figure 1: Precision/recall graphs. They cut the results given by the
+
+<p>Figure 1: Precision/recall graphs. They cut the results given by the
 participants under a threshold necessary for achieving <i>n</i>% recall and
 compute the corresponding precision. Systems for which these graphs are not
 meaningful (because they did not provide graded confidence values) are drawn in
-dashed lines. 
+dashed lines. </p>
 
-<p></p>
+</div>
+
+
 
 <h2>Triangle</h2>
 
@@ -668,9 +674,10 @@ representations.</p>
 <p align="center"></p>
 
 <div style="text-align: center;">
-<img src="triangle2010.png"> </div>
-Figure 2: Each point expresses the position of a system with regard to
-precision and recall. 
+<img src="triangle2010.png"> 
+<p>Figure 2: Each point expresses the position of a system with regard to
+precision and recall.</p> 
+</div>
 
 <p></p>
 
@@ -737,7 +744,7 @@ precision and recall.
 <td>101</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.96</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>0.98</td>
 <td>1.00</td>
@@ -766,7 +773,7 @@ precision and recall.
 <td>103</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.96</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>0.98</td>
 <td>1.00</td>
@@ -795,7 +802,7 @@ precision and recall.
 <td>104</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.96</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>0.98</td>
 <td>1.00</td>
@@ -853,7 +860,7 @@ precision and recall.
 <td>201-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.76</td>
+<td>0.79</td>
 <td>0.79</td>
 <td>0.98</td>
 <td>0.96</td>
@@ -882,8 +889,8 @@ precision and recall.
 <td>201-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.60</td>
+<td>0.60</td>
 <td>0.99</td>
 <td>0.93</td>
 <td>1.00</td>
@@ -911,7 +918,7 @@ precision and recall.
 <td>201-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.40</td>
+<td>0.41</td>
 <td>0.41</td>
 <td>0.97</td>
 <td>0.91</td>
@@ -940,8 +947,8 @@ precision and recall.
 <td>201-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.23</td>
+<td>0.23</td>
 <td>0.98</td>
 <td>0.90</td>
 <td>1.00</td>
@@ -969,8 +976,8 @@ precision and recall.
 <td>202</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.04</td>
-<td>0.04</td>
+<td>0.03</td>
+<td>0.03</td>
 <td>1.00</td>
 <td>0.80</td>
 <td>0.00</td>
@@ -998,7 +1005,7 @@ precision and recall.
 <td>202-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.76</td>
+<td>0.79</td>
 <td>0.79</td>
 <td>0.97</td>
 <td>0.96</td>
@@ -1027,7 +1034,7 @@ precision and recall.
 <td>202-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.57</td>
+<td>0.60</td>
 <td>0.60</td>
 <td>0.97</td>
 <td>0.91</td>
@@ -1056,8 +1063,8 @@ precision and recall.
 <td>202-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.41</td>
+<td>0.41</td>
 <td>0.97</td>
 <td>0.87</td>
 <td>0.82</td>
@@ -1086,7 +1093,7 @@ precision and recall.
 <td>1.00</td>
 <td>1.00</td>
 <td>0.23</td>
-<td>0.24</td>
+<td>0.23</td>
 <td>0.95</td>
 <td>0.86</td>
 <td>0.88</td>
@@ -1114,7 +1121,7 @@ precision and recall.
 <td>203</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.96</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>0.96</td>
 <td>1.00</td>
@@ -1143,8 +1150,8 @@ precision and recall.
 <td>204</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.90</td>
-<td>0.94</td>
+<td>0.93</td>
+<td>0.93</td>
 <td>0.98</td>
 <td>0.97</td>
 <td>1.00</td>
@@ -1173,7 +1180,7 @@ precision and recall.
 <td>1.00</td>
 <td>1.00</td>
 <td>0.34</td>
-<td>0.35</td>
+<td>0.34</td>
 <td>0.96</td>
 <td>0.88</td>
 <td>1.00</td>
@@ -1201,8 +1208,8 @@ precision and recall.
 <td>206</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.54</td>
+<td>0.54</td>
 <td>0.98</td>
 <td>0.88</td>
 <td>1.00</td>
@@ -1230,7 +1237,7 @@ precision and recall.
 <td>207</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.51</td>
+<td>0.54</td>
 <td>0.54</td>
 <td>0.98</td>
 <td>0.88</td>
@@ -1259,8 +1266,8 @@ precision and recall.
 <td>208</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.93</td>
+<td>0.93</td>
 <td>0.99</td>
 <td>0.94</td>
 <td>0.95</td>
@@ -1288,7 +1295,7 @@ precision and recall.
 <td>209</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.34</td>
+<td>0.35</td>
 <td>0.35</td>
 <td>0.92</td>
 <td>0.84</td>
@@ -1317,7 +1324,7 @@ precision and recall.
 <td>210</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.51</td>
+<td>0.54</td>
 <td>0.54</td>
 <td>1.00</td>
 <td>0.87</td>
@@ -1346,7 +1353,7 @@ precision and recall.
 <td>221</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.96</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>0.95</td>
 <td>1.00</td>
@@ -1375,7 +1382,7 @@ precision and recall.
 <td>222</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.92</td>
+<td>0.96</td>
 <td>1.00</td>
 <td>0.97</td>
 <td>1.00</td>
@@ -1404,7 +1411,7 @@ precision and recall.
 <td>223</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.96</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>0.92</td>
 <td>0.98</td>
@@ -1433,7 +1440,7 @@ precision and recall.
 <td>224</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.96</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>0.98</td>
 <td>1.00</td>
@@ -1462,7 +1469,7 @@ precision and recall.
 <td>225</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.96</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>0.98</td>
 <td>1.00</td>
@@ -1491,8 +1498,8 @@ precision and recall.
 <td>228</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>1.00</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>1.00</td>
 <td>1.00</td>
@@ -1520,7 +1527,7 @@ precision and recall.
 <td>230</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.71</td>
+<td>0.74</td>
 <td>1.00</td>
 <td>0.84</td>
 <td>0.97</td>
@@ -1549,7 +1556,7 @@ precision and recall.
 <td>231</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.96</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>0.98</td>
 <td>1.00</td>
@@ -1578,7 +1585,7 @@ precision and recall.
 <td>232</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.96</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>0.95</td>
 <td>1.00</td>
@@ -1607,7 +1614,7 @@ precision and recall.
 <td>233</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.38</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>1.00</td>
 <td>1.00</td>
@@ -1636,8 +1643,8 @@ precision and recall.
 <td>236</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>1.00</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>1.00</td>
 <td>1.00</td>
@@ -1665,7 +1672,7 @@ precision and recall.
 <td>237</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.92</td>
+<td>0.96</td>
 <td>1.00</td>
 <td>0.97</td>
 <td>1.00</td>
@@ -1694,7 +1701,7 @@ precision and recall.
 <td>238</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.96</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>0.92</td>
 <td>0.96</td>
@@ -1723,7 +1730,7 @@ precision and recall.
 <td>239</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.29</td>
+<td>0.33</td>
 <td>1.00</td>
 <td>0.97</td>
 <td>1.00</td>
@@ -1752,7 +1759,7 @@ precision and recall.
 <td>240</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.33</td>
+<td>0.38</td>
 <td>1.00</td>
 <td>0.89</td>
 <td>0.94</td>
@@ -1781,7 +1788,7 @@ precision and recall.
 <td>241</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.38</td>
+<td>1.00</td>
 <td>1.00</td>
 <td>1.00</td>
 <td>1.00</td>
@@ -1810,7 +1817,7 @@ precision and recall.
 <td>246</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.29</td>
+<td>0.33</td>
 <td>1.00</td>
 <td>0.97</td>
 <td>1.00</td>
@@ -1839,7 +1846,7 @@ precision and recall.
 <td>247</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.33</td>
+<td>0.38</td>
 <td>1.00</td>
 <td>0.88</td>
 <td>0.88</td>
@@ -1868,8 +1875,8 @@ precision and recall.
 <td>248</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.05</td>
-<td>0.05</td>
+<td>0.03</td>
+<td>0.03</td>
 <td>0.96</td>
 <td>0.57</td>
 <td>0.00</td>
@@ -1897,7 +1904,7 @@ precision and recall.
 <td>248-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.76</td>
+<td>0.79</td>
 <td>0.79</td>
 <td>0.95</td>
 <td>0.92</td>
@@ -1926,7 +1933,7 @@ precision and recall.
 <td>248-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.57</td>
+<td>0.60</td>
 <td>0.60</td>
 <td>0.94</td>
 <td>0.84</td>
@@ -1955,7 +1962,7 @@ precision and recall.
 <td>248-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.40</td>
+<td>0.41</td>
 <td>0.41</td>
 <td>0.94</td>
 <td>0.75</td>
@@ -1984,8 +1991,8 @@ precision and recall.
 <td>248-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.22</td>
-<td>0.23</td>
+<td>0.24</td>
+<td>0.24</td>
 <td>0.94</td>
 <td>0.64</td>
 <td>0.69</td>
@@ -2013,8 +2020,8 @@ precision and recall.
 <td>249</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.05</td>
-<td>0.05</td>
+<td>0.03</td>
+<td>0.03</td>
 <td>1.00</td>
 <td>0.78</td>
 <td>1.00</td>
@@ -2042,8 +2049,8 @@ precision and recall.
 <td>249-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.79</td>
+<td>0.79</td>
 <td>0.97</td>
 <td>0.96</td>
 <td>0.95</td>
@@ -2071,7 +2078,7 @@ precision and recall.
 <td>249-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.57</td>
+<td>0.60</td>
 <td>0.60</td>
 <td>0.97</td>
 <td>0.91</td>
@@ -2100,7 +2107,7 @@ precision and recall.
 <td>249-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.40</td>
+<td>0.41</td>
 <td>0.41</td>
 <td>0.97</td>
 <td>0.87</td>
@@ -2129,7 +2136,7 @@ precision and recall.
 <td>249-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.22</td>
+<td>0.23</td>
 <td>0.23</td>
 <td>0.95</td>
 <td>0.86</td>
@@ -2158,8 +2165,8 @@ precision and recall.
 <td>250</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.01</td>
+<td>0.03</td>
 <td>1.00</td>
 <td>0.39</td>
 <td>0.00</td>
@@ -2187,7 +2194,7 @@ precision and recall.
 <td>250-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.30</td>
+<td>0.27</td>
 <td>0.79</td>
 <td>1.00</td>
 <td>0.94</td>
@@ -2216,8 +2223,8 @@ precision and recall.
 <td>250-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.21</td>
+<td>0.61</td>
 <td>1.00</td>
 <td>0.82</td>
 <td>0.94</td>
@@ -2245,7 +2252,7 @@ precision and recall.
 <td>250-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.16</td>
+<td>0.14</td>
 <td>0.42</td>
 <td>1.00</td>
 <td>0.70</td>
@@ -2274,7 +2281,7 @@ precision and recall.
 <td>250-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.08</td>
+<td>0.07</td>
 <td>0.21</td>
 <td>1.00</td>
 <td>0.48</td>
@@ -2332,7 +2339,7 @@ precision and recall.
 <td>251-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.73</td>
+<td>0.76</td>
 <td>0.80</td>
 <td>0.96</td>
 <td>0.94</td>
@@ -2361,7 +2368,7 @@ precision and recall.
 <td>251-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.55</td>
+<td>0.58</td>
 <td>0.60</td>
 <td>0.95</td>
 <td>0.86</td>
@@ -2390,7 +2397,7 @@ precision and recall.
 <td>251-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.38</td>
+<td>0.39</td>
 <td>0.41</td>
 <td>0.95</td>
 <td>0.77</td>
@@ -2420,7 +2427,7 @@ precision and recall.
 <td>1.00</td>
 <td>1.00</td>
 <td>0.23</td>
-<td>0.25</td>
+<td>0.24</td>
 <td>0.96</td>
 <td>0.72</td>
 <td>0.76</td>
@@ -2477,8 +2484,8 @@ precision and recall.
 <td>252-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.79</td>
+<td>0.79</td>
 <td>0.91</td>
 <td>0.93</td>
 <td>0.92</td>
@@ -2506,7 +2513,7 @@ precision and recall.
 <td>252-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.76</td>
+<td>0.79</td>
 <td>0.79</td>
 <td>0.91</td>
 <td>0.93</td>
@@ -2535,8 +2542,8 @@ precision and recall.
 <td>252-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.79</td>
+<td>0.79</td>
 <td>0.91</td>
 <td>0.93</td>
 <td>0.92</td>
@@ -2564,7 +2571,7 @@ precision and recall.
 <td>252-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.76</td>
+<td>0.79</td>
 <td>0.79</td>
 <td>0.91</td>
 <td>0.93</td>
@@ -2622,7 +2629,7 @@ precision and recall.
 <td>253-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.76</td>
+<td>0.79</td>
 <td>0.79</td>
 <td>0.95</td>
 <td>0.92</td>
@@ -2651,8 +2658,8 @@ precision and recall.
 <td>253-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.60</td>
+<td>0.60</td>
 <td>0.94</td>
 <td>0.84</td>
 <td>0.90</td>
@@ -2680,8 +2687,8 @@ precision and recall.
 <td>253-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.41</td>
+<td>0.41</td>
 <td>0.94</td>
 <td>0.75</td>
 <td>0.77</td>
@@ -2709,8 +2716,8 @@ precision and recall.
 <td>253-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.23</td>
+<td>0.23</td>
 <td>0.94</td>
 <td>0.64</td>
 <td>0.69</td>
@@ -2738,8 +2745,8 @@ precision and recall.
 <td>254</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.01</td>
+<td>0.03</td>
 <td>1.00</td>
 <td>0.39</td>
 <td>0.00</td>
@@ -2767,7 +2774,7 @@ precision and recall.
 <td>254-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.30</td>
+<td>0.27</td>
 <td>0.79</td>
 <td>1.00</td>
 <td>0.85</td>
@@ -2796,8 +2803,8 @@ precision and recall.
 <td>254-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.21</td>
+<td>0.61</td>
 <td>1.00</td>
 <td>0.73</td>
 <td>0.90</td>
@@ -2825,7 +2832,7 @@ precision and recall.
 <td>254-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.16</td>
+<td>0.14</td>
 <td>0.42</td>
 <td>1.00</td>
 <td>0.64</td>
@@ -2854,8 +2861,8 @@ precision and recall.
 <td>254-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.09</td>
-<td>0.24</td>
+<td>0.07</td>
+<td>0.21</td>
 <td>1.00</td>
 <td>0.48</td>
 <td>0.33</td>
@@ -2883,8 +2890,8 @@ precision and recall.
 <td>257</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.02</td>
-<td>0.06</td>
+<td>0.00</td>
+<td>0.00</td>
 <td>1.00</td>
 <td>0.39</td>
 <td>0.00</td>
@@ -2912,7 +2919,7 @@ precision and recall.
 <td>257-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.30</td>
+<td>0.27</td>
 <td>0.79</td>
 <td>1.00</td>
 <td>0.94</td>
@@ -2941,8 +2948,8 @@ precision and recall.
 <td>257-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.21</td>
+<td>0.61</td>
 <td>1.00</td>
 <td>0.82</td>
 <td>0.94</td>
@@ -2970,7 +2977,7 @@ precision and recall.
 <td>257-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.16</td>
+<td>0.14</td>
 <td>0.42</td>
 <td>1.00</td>
 <td>0.70</td>
@@ -2999,8 +3006,8 @@ precision and recall.
 <td>257-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.09</td>
-<td>0.24</td>
+<td>0.07</td>
+<td>0.21</td>
 <td>1.00</td>
 <td>0.48</td>
 <td>0.86</td>
@@ -3028,8 +3035,8 @@ precision and recall.
 <td>258</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.04</td>
+<td>0.04</td>
 <td>0.98</td>
 <td>0.65</td>
 <td>1.00</td>
@@ -3057,7 +3064,7 @@ precision and recall.
 <td>258-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.73</td>
+<td>0.76</td>
 <td>0.80</td>
 <td>0.96</td>
 <td>0.94</td>
@@ -3086,7 +3093,7 @@ precision and recall.
 <td>258-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.55</td>
+<td>0.58</td>
 <td>0.60</td>
 <td>0.95</td>
 <td>0.86</td>
@@ -3115,7 +3122,7 @@ precision and recall.
 <td>258-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.38</td>
+<td>0.39</td>
 <td>0.41</td>
 <td>0.95</td>
 <td>0.78</td>
@@ -3144,8 +3151,8 @@ precision and recall.
 <td>258-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.24</td>
+<td>0.25</td>
 <td>0.96</td>
 <td>0.72</td>
 <td>0.78</td>
@@ -3173,8 +3180,8 @@ precision and recall.
 <td>259</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.03</td>
-<td>0.03</td>
+<td>0.02</td>
+<td>0.02</td>
 <td>0.92</td>
 <td>0.67</td>
 <td>1.00</td>
@@ -3202,8 +3209,8 @@ precision and recall.
 <td>259-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.79</td>
+<td>0.79</td>
 <td>0.91</td>
 <td>0.93</td>
 <td>0.90</td>
@@ -3231,8 +3238,8 @@ precision and recall.
 <td>259-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.79</td>
+<td>0.79</td>
 <td>0.91</td>
 <td>0.93</td>
 <td>0.91</td>
@@ -3260,8 +3267,8 @@ precision and recall.
 <td>259-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.79</td>
+<td>0.79</td>
 <td>0.91</td>
 <td>0.93</td>
 <td>0.91</td>
@@ -3289,8 +3296,8 @@ precision and recall.
 <td>259-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.79</td>
+<td>0.79</td>
 <td>0.91</td>
 <td>0.93</td>
 <td>0.90</td>
@@ -3318,8 +3325,8 @@ precision and recall.
 <td>260</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.02</td>
-<td>0.07</td>
+<td>0.00</td>
+<td>0.00</td>
 <td>0.93</td>
 <td>0.45</td>
 <td>0.00</td>
@@ -3347,8 +3354,8 @@ precision and recall.
 <td>260-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.24</td>
+<td>0.79</td>
 <td>0.96</td>
 <td>0.90</td>
 <td>0.77</td>
@@ -3376,7 +3383,7 @@ precision and recall.
 <td>260-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.18</td>
+<td>0.19</td>
 <td>0.62</td>
 <td>0.96</td>
 <td>0.79</td>
@@ -3434,8 +3441,8 @@ precision and recall.
 <td>260-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.07</td>
-<td>0.24</td>
+<td>0.08</td>
+<td>0.28</td>
 <td>0.94</td>
 <td>0.55</td>
 <td>0.57</td>
@@ -3463,8 +3470,8 @@ precision and recall.
 <td>261</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.01</td>
-<td>0.03</td>
+<td>0.00</td>
+<td>0.00</td>
 <td>0.87</td>
 <td>0.39</td>
 <td>0.00</td>
@@ -3492,7 +3499,7 @@ precision and recall.
 <td>261-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.26</td>
+<td>0.27</td>
 <td>0.79</td>
 <td>0.91</td>
 <td>0.88</td>
@@ -3521,7 +3528,7 @@ precision and recall.
 <td>261-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.26</td>
+<td>0.27</td>
 <td>0.79</td>
 <td>0.91</td>
 <td>0.88</td>
@@ -3550,7 +3557,7 @@ precision and recall.
 <td>261-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.26</td>
+<td>0.27</td>
 <td>0.79</td>
 <td>0.91</td>
 <td>0.88</td>
@@ -3579,7 +3586,7 @@ precision and recall.
 <td>261-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.26</td>
+<td>0.27</td>
 <td>0.79</td>
 <td>0.91</td>
 <td>0.88</td>
@@ -3608,8 +3615,8 @@ precision and recall.
 <td>262</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.01</td>
 <td>0.03</td>
+<td>0.09</td>
 <td>1.00</td>
 <td>0.39</td>
 <td>0.00</td>
@@ -3637,7 +3644,7 @@ precision and recall.
 <td>262-2</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.30</td>
+<td>0.27</td>
 <td>0.79</td>
 <td>1.00</td>
 <td>0.85</td>
@@ -3666,7 +3673,7 @@ precision and recall.
 <td>262-4</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.23</td>
+<td>0.21</td>
 <td>0.61</td>
 <td>1.00</td>
 <td>0.73</td>
@@ -3695,8 +3702,8 @@ precision and recall.
 <td>262-6</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.14</td>
+<td>0.42</td>
 <td>1.00</td>
 <td>0.64</td>
 <td>0.73</td>
@@ -3724,8 +3731,8 @@ precision and recall.
 <td>262-8</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.09</td>
-<td>0.24</td>
+<td>0.07</td>
+<td>0.21</td>
 <td>1.00</td>
 <td>0.48</td>
 <td>0.33</td>
@@ -3753,8 +3760,8 @@ precision and recall.
 <td>265</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.02</td>
+<td>0.07</td>
 <td>0.93</td>
 <td>0.45</td>
 <td>0.00</td>
@@ -3782,8 +3789,8 @@ precision and recall.
 <td>266</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.01</td>
-<td>0.03</td>
+<td>0.00</td>
+<td>0.00</td>
 <td>0.87</td>
 <td>0.39</td>
 <td>0.00</td>
@@ -3811,7 +3818,7 @@ precision and recall.
 <td>301</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.46</td>
+<td>0.47</td>
 <td>0.78</td>
 <td>1.00</td>
 <td>0.42</td>
@@ -3840,7 +3847,7 @@ precision and recall.
 <td>302</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.31</td>
+<td>0.32</td>
 <td>0.65</td>
 <td>1.00</td>
 <td>0.19</td>
@@ -3869,8 +3876,8 @@ precision and recall.
 <td>303</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.40</td>
-<td>0.83</td>
+<td>0.00</td>
+<td>0.00</td>
 <td>0.83</td>
 <td>0.73</td>
 <td>0.69</td>
@@ -3889,8 +3896,8 @@ precision and recall.
 <td>0.00</td>
 <td>0.91</td>
 <td>0.81</td>
-<td>0.00</td>
-<td>0.00</td>
+<td>0.46</td>
+<td>0.54</td>
 <td>0.48</td>
 <td>0.29</td>
 </tr>
@@ -3898,7 +3905,7 @@ precision and recall.
 <td>304</td>
 <td>1.00</td>
 <td>1.00</td>
-<td>0.71</td>
+<td>0.74</td>
 <td>0.95</td>
 <td>0.86</td>
 <td>0.86</td>
@@ -3925,8 +3932,8 @@ precision and recall.
 </tr>
 <tr bgcolor="yellow"><td>H-mean</td><td>1.00</td>
 <td>1.00</td>
-<td>0.42</td>
 <td>0.45</td>
+<td>0.58</td>
 <td>0.95</td>
 <td>0.84</td>
 <td>0.94</td>
@@ -3945,7 +3952,7 @@ precision and recall.
 <td>0.60</td>
 <td>0.99</td>
 <td>0.84</td>
-<td>0.96</td>
+<td>0.97</td>
 <td>0.75</td>
 <td>0.86</td>
 <td>0.29</td>
@@ -3953,7 +3960,6 @@ precision and recall.
 </tbody></table>
 <p><small>n/a: result alignment not provided or not readable<br />
 NaN: division per zero, likely due to empty alignment.</small></p>
-</body></html>
 <p></p>
 
 <!--h2>References</h2>
