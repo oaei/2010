@@ -1,0 +1,470 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>Ontology Alignment Evaluation Initiative::very large crosslingual resources</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head><body>
+
+<div class="content">
+<div class="header">
+
+    <a style="color: grey; line-height: 5mm;" 
+href="http://oaei.ontologymatching.org/2010/">Ontology Alignment
+    Evaluation Initiative - OAEI-2010 Campaign</a>
+
+    <a href="http://oaei.ontologymatching.org/"><img 
+src="../../oaeismall.jpg"
+ alt="OAEI" style="border-style: none; float: right; margin-left: 5pt;"></a>
+ </div>
+
+
+<h1>Very Large Crosslingual Resources</h1>
+
+<img 
+src="vulogo.jpg"
+ alt="VU logo" style="margin: 10px;" width="150">
+<img 
+src="tulogo.gif"
+ alt="TU Delft logo" style="margin: 10px;" width="150">
+
+<p>The purpose of this task is to match three resources to each other: 
+the Thesaurus of the Netherlands Institute for Sound and Vision (called 
+GTAA), 
+the New York Times subject headings and DBpedia.</p>
+
+<p>The rationale of such a mapping is to open up and connect large 
+collections of data all around the world.
+Archives, museums and libraries use controlled vocabularies to disclose 
+their collections. Linking these vocabularies to each other, regardless 
+of their
+language, is a first step towards search and browsing accross 
+collections. Links to other sources of knowledge on the Linked Data Web 
+(such as DBpedia) not only enrich the
+collections with additional information, but can also serve as hubs that
+ connect multiple collections.
+
+This task focuses on Dutch and English sources. The mapping between the 
+GTAA and the New York Times subject headings enables a cross-language 
+(NL/EN) and 
+cross-media (television/news paper) integration of the two collections. 
+<!--Linking these vocabularies to DBpedia, 
+which is a central resource in the Linked Open Data cloud, enables a user or a system to benefit from all related triples on the Linked Data Web. -->
+
+</p><p>We are aiming for skos:exactMatch relations. 
+According to the SKOS recommendation, a skos:exactMatch link "indicates a
+ high degree of confidence that two concepts can be used interchangeably
+ across a wide range of information retrieval applications". 
+We focus on this relation because our task aims at enabling/enhancing 
+search and browsing through interlinked archives.
+</p> 
+
+<p>Go directly to: <a href="#nyt">New York 
+Times</a>, <a href="#dbpedia">DBPedia</a>, <a href="#gtaa">GTAA</a>, <a href="#evaluation">evaluation</a>,
+ <a href="#schedule">schedule</a>, 
+ <a href="#contacts">contact</a></p>
+
+
+<p><a name="#data">Data files</a>:
+<ul>
+<li>Set 1: <b>New York Times</b>
+<ul>
+<li><a href="dataset/nyt/nytimes_people_noDBpedia.rdf">People</a></li>
+<li><a href="dataset/nyt/nytimes_organizations_noDBpedia.rdf">Organizations</a></li>
+<li><a href="dataset/nyt/nytimes_locations_noDBpedia.rdf">Locations</a></li>
+<li><a href="dataset/nyt/nytimes_descriptors_noDBpedia.rdf">Descriptors</a></li>
+</ul>
+<br/>
+</li>
+
+<li>Set 2: <b>DBpedia</b></br>
+<ul>
+<li><a href="http://downloads.dbpedia.org/3.5.1/en/labels_en.nt.bz2">Titles</a></li>
+<li><a href="http://downloads.dbpedia.org/3.5.1/en/instance_types_en.nt.bz2">Infobox types</a></li>
+<li><a href="http://wiki.dbpedia.org/Downloads351">...</a></li>
+</ul>
+<br/>
+</li>
+
+<li>Set 3: <b>GTAA</b><br/>
+Fax the signed <a href="oaei_licence_agreement.pdf">Non-Disclosure Agreement</a> to +31 15 2786632, at the attention of Laura Hollink, or scan the form and e-mail it to <tt>l.hollink at tudelft dot nl</tt>.
+<ul>
+<li>Person <a href="dataset/GTAA/Oaeisamplegtaaperson.owl">(sample)</a></li>
+<li>Name <a href="dataset/GTAA/OAEIsampleGTAAname.owl">(sample)</a></li>
+<li>Location <a href="dataset/GTAA/OAEIsampleGTAAlocation.owl">(sample)</a></li>
+<li>Subject <a href="dataset/GTAA/OAEIsampleGTAAsubject.owl">(sample)</a></li>
+</ul>
+</li>
+</ul>
+</p>
+
+<h2>Motivating examples</h2>
+
+<p>If a person is searching the TV archives of The Netherlands Institute
+ for Sound and Vision for programs about Cormorants,
+the mapping between the GTAA and DBpedia gives this user access to 
+information about the genre, species, synonyms, the wikipedia page and 
+other 
+documents about Cormorants.</p> 
+
+<p>A Dutch person interested in TV programs about exhibitions of 
+Mondrain's painting is very likely to be interested in New York Times 
+new articles reporting on the same 
+exhibition (and is very likely to be able to read the material in 
+English too).</p>
+
+<p>We will evaluate all mappings with this general application scenario 
+in mind: enabling/enhancing search and browsing through interlinked 
+archives.</p>
+
+<a href="mondrian.jpg"><img src="mondrian.jpg" style="margin-top: 40px;" width="800"></a>
+
+<h2>Data sets</h2>
+
+<p>The three resources that we consider are large, and consist mostly of
+ instances; 
+whereas DBpedia is organized according to multiple hierarchies or 
+categorizations, GTAA and the New York Times subject headings are 
+(mostly) 
+flat resources. Whereas DBpedia has labels, abstracts and comments in 
+different languages, 
+GTAA and New York Times subject headings are both monolingual (the 
+former in Dutch, the latter in English). 
+The proposed task can be schematized as in the picture above: a 
+triangular cross-language instance mapping.</p>
+
+<h3>New York Times</h3> <a name="nyt"></a>
+<h4>General Information</h4>
+<div>The New York Times has developed over the past 150 years an 
+authoritative vocabulary for annotating news items. 
+The vocabulary contains about 30.000 subject headings, or tags. They are
+ in the process of publishing them as Linked Open Data and by July 2010 
+had published over 10.000 of these subject headings in the categories People, 
+Organizations, Locations and Descriptors. We use this dataset for the VLCR task. Note that the Descriptors facet is similar in content to the Subject facet of the GTAA. 
+For further information about the New York Times data we refer to their <a href="http://data.nytimes.com/home/about.html">website</a> on Linked Data Documents.</div>
+
+<!-- <div>In addition, the vlcr task organisers provide a fourth and a fifth 
+facet of New York Times subject headings: Subject and Companies. These 
+facets are created by simply crawling the NYT website, and are not 
+published by the NYT Company. The table below shows the partition of the
+ published subjects in three categories:</div> -->
+
+<br>
+<table border="1">
+<tbody><tr><th>Facet</th><th>Nr. of Concepts</th></tr>
+<tr><td><a href="dataset/nyt/nytimes_people_noDBpedia.rdf">People</a></td><td>4.967</td></tr>
+<tr><td><a href="dataset/nyt/nytimes_organizations_noDBpedia.rdf">Organizations</a></td><td>3.054</td></tr>
+<tr><td><a href="dataset/nyt/nytimes_locations_noDBpedia.rdf">Locations</a></td><td>1.905</td></tr>
+<tr><td><a href="dataset/nyt/nytimes_descriptors_noDBpedia.rdf">Descriptors</a></td><td>498</td></tr>
+<!--<tr><td> </td><td>9.969</td></tr>-->
+</tbody></table> 
+
+<h4>SKOS Representation </h4>
+The SKOS representation of each subject heading facet contains the
+ label of the skos:Concept (skos:label), the facet it belongs to 
+(skos:inScheme), 
+and some specific properties: nyt:associated_article_count for the 
+number of NYT articles the concept is associated with and nyt:topicPage 
+pointing 
+to the topic page (in HTML) gathering different information published on
+ the subject. The concepts  have 
+links to DBpedia, <a href="http://rdf.freebase.com/">Freebase</a> and/or
+<a href="http://www.geonames.org/ontology/">GeoNames</a>. Participants 
+of VLCR are not allowed to use the existing links to DBpedia, 
+as the task is meant to map previously unmapped vocabularies to each 
+other. The Location facet also contains geo-coordinates.
+
+<h5>Examples of NYT concepts</h5>
+
+<blockquote> <pre>&lt;rdf:Description rdf:about="http://data.nytimes.com/N13463766342949717891"&gt;
+    &lt;rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/&gt;
+    &lt;skos:prefLabel xml:lang="en"&gt;Oregon Trail&lt;/skos:prefLabel&gt;
+    &lt;skos:inScheme rdf:resource="http://data.nytimes.com/elements/nytd_geo"/&gt;
+    &lt;geo:long rdf:datatype="&amp;xsd;double"&gt;-94.6255127&lt;/geo:long&gt;
+    &lt;geo:lat rdf:datatype="&amp;xsd;double"&gt;39.0166723&lt;/geo:lat&gt;
+    &lt;nyt:first_use rdf:datatype="&amp;xsd;date"&gt;2008-09-14&lt;/nyt:first_use&gt;
+    &lt;nyt:latest_use rdf:datatype="&amp;xsd;date"&gt;2008-09-14&lt;/nyt:latest_use&gt;
+    &lt;nyt:associated_article_count rdf:datatype="&amp;xsd;int"&gt;1&lt;/nyt:associated_article_count&gt;
+    &lt;nyt:number_of_variants rdf:datatype="&amp;xsd;int"&gt;1&lt;/nyt:number_of_variants&gt;
+<font color="#999999">    &lt;owl:sameAs rdf:resource="http://dbpedia.org/resource/Oregon_Trail"/&gt;  </font>
+    &lt;owl:sameAs rdf:resource="http://sws.geonames.org/4276727/"/&gt;
+    &lt;owl:sameAs rdf:resource="http://rdf.freebase.com/ns/en.oregon_trail"/&gt;
+    &lt;owl:sameAs rdf:resource="http://data.nytimes.com/oregon_trail_geo"/&gt;
+&lt;/rdf:Description&gt;</pre> </blockquote>
+
+<blockquote> <pre>&lt;rdf:Description rdf:about="http://data.nytimes.com/21885919306341988023"&gt;
+    &lt;rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/&gt;
+    &lt;skos:prefLabel xml:lang="en"&gt;Johnson, Diane&lt;/skos:prefLabel&gt;
+    &lt;skos:inScheme rdf:resource="http://data.nytimes.com/elements/nytd_per"/&gt;
+    &lt;nyt:first_use rdf:datatype="&amp;xsd;date"&gt;2008-10-24&lt;/nyt:first_use&gt;
+    &lt;nyt:latest_use rdf:datatype="&amp;xsd;date"&gt;2008-10-26&lt;/nyt:latest_use&gt;
+    &lt;nyt:associated_article_count rdf:datatype="&amp;xsd;int"&gt;2&lt;/nyt:associated_article_count&gt;
+    &lt;nyt:number_of_variants rdf:datatype="&amp;xsd;int"&gt;1&lt;/nyt:number_of_variants&gt;
+    &lt;nyt:topicPage rdf:resource="http://topics.nytimes.com/.../diane_johnson/index.html"/&gt;
+    &lt;owl:sameAs rdf:resource="http://data.nytimes.com/johnson_diane_per"/&gt;
+    &lt;owl:sameAs rdf:resource="http://rdf.freebase.com/ns/en.diane_johnson"/&gt;
+<font color="#999999">    &lt;owl:sameAs rdf:resource="http://dbpedia.org/resource/Diane_Johnson"/&gt; </font>
+  &lt;/rdf:Description&gt;</pre> </blockquote>
+
+<h4>Obtaining the NYT dataset</h4>
+
+<p>
+Although the official datasets can be freely downloaded from 
+<a href="http://data.nytimes.com">http://data.nytimes.com</a>, we created a local copy to make sure that all 
+VLCR participants work with the same set: the New York Times' website 
+can be updated at any time, and a local copy avoids running into 
+versioning problems. Existing links to DBpedia have been removed from 
+the local copies. 
+The files for the task can be found <a href="#data">above</a>.  
+</p>
+
+
+<h3>DBPedia</h3> <a name="dbpedia"></a> 
+
+  <h4>General Information</h4>
+
+  <p>DBPedia is an extremely rich dataset. It contains 2.18 million
+  resources or "things", each tied to an article in the English language
+  Wikipedia. The "things" are described by titles and abstracts in
+  English and often also in Dutch. DBPedia "things" have numerous
+  properties, such as categories, properties derived from the wikipedia
+  'infoboxes', links between pages within and outside wikipedia, etc.
+  The purpose of this task is to map the DBPedia "things" to NYT 
+subjects and GTAA concepts. </p>
+
+  <p>All information can be downloaded from the <a 
+href="http://wiki.dbpedia.org/Downloads">DBPedia download site</a>.
+  For each type of property (title, abstracts, infobox properties, links
+  to pages, etc.), there is a separate file that can be downloaded. 
+Also,
+  small preview files are provided. In the following description we will
+ link to the preview files instead of to the actual content files that 
+you need for the allignment, to prevent multiple downloads of very large
+ files.</p>
+
+  <p>Every type of relation from the download site can be used in this
+  OAEI task. However, you are of course not obliged to use them all. You
+  can pick and choose the information that you think is useful and that
+  your tool can handle. A reasonable choice seems to be to use at least
+  the following information: "things", their labels and their comments:</p>
+
+	<pre> DBPedia "thing" 
+		-- rdfs:label -- "title of the wikipedia page" 
+		-- rdfs:comment -- "abstract of the wikipedia page" </pre>
+
+The file Titles (<a 
+href="http://downloads.dbpedia.org/preview.php?file=3.5.1_sl_en_sl_labels_en.nt.bz2">preview</a>)
+ contains labels, available in English and Dutch, which are the titles 
+of the corresponding wikipedia articles.
+The file Short Abstracts (<a 
+href="http://downloads.dbpedia.org/preview.php?file=3.5.1_sl_en_sl_short_abstracts_en.nt.bz2">preview</a>) contains short abstracts, available in English and Dutch.
+
+<p>In addition, we consider the DBpedia ontology and DBpedia categories 
+valuable sources for the current alignment task. Descriptions will be 
+given below. </p>
+
+<h4>DBPedia ontology</h4>
+
+<p>The DBpedia Ontology is an ontology of currently more than 259 
+classes, organised in a subsumption hierarchy. The ontology was manually
+ created based on the most commonly used infoboxes of Wikipedia. The 
+file DBpedia Ontology (<a 
+href="http://downloads.dbpedia.org/preview.php?file=3.5.1_sl_dbpedia_3.5.1.owl.bz2">preview</a>) contains the classes and properties of this ontology, while
+ the file Ontology Infobox
+ Types (<a 
+href="http://downloads.dbpedia.org/preview.php?file=3.5.1_sl_en_sl_instance_types_en.nt.bz2">preview</a>) contains the instances of the Ontology, i.e. DBpedia 
+"things".</p>
+
+<h4>Categories</h4>
+
+<p>DBpedia "things" are organised into categories. The file Categories
+ (SKOS) (<a 
+href="http://downloads.dbpedia.org/preview.php?file=3.5.1_sl_en_sl_skos_categories_en.nt.bz2">preview</a>) provides the categories and the SKOS relations between them,
+ while the file Articles
+ Categories (<a 
+href="http://downloads.dbpedia.org/preview.php?file=3.5.1_sl_en_sl_article_categories_en.nt.bz2">preview</a>) contains the skos:Subject links between "things" and 
+categories.</p>
+
+<h4>RDF/OWL and SKOS representation</h4>
+	All DBpedia files are in RDF, and some are in SKOS.
+
+<!--    <p>Note that the DBPedia "things" are instances. For those tools
+that require classes, we have translated the instances to classes and
+rdf:type to owl:Class: triples of the form DBPedia:SomeThing rdf:type
+yago:SomeClass become DBPedia:SomeThing rdfs:subClassOf yago:SomeClass.
+This is, however, a downgrading of the dataset:</p>
+
+    DBPedia:SomeThing rdf:type yago:SomeClass rdfs:subClassOf
+    yago:SomeSuperClass, now becomes DBPedia:SomeThing rdfs:subClassOf
+    yago:SomeClass rdfs:subClassOf yago:SomeSuperClass.
+
+    <p>Also, some of the properties become unusable or will have to be
+    translated, such as the wordnet-type property.</p> -->
+
+<h3>GTAA</h3> <a name="gtaa"></a> <h4>General Information</h4>
+
+<p><a href="http://portal.beeldengeluid.nl/">The Netherlands Institute 
+for Sound and Vision</a>
+is the Dutch archive for public broadcast television. They employ the 
+GTAA, which is a Dutch acronym for <i>Common Thesaurus [for]
+Audiovisual Archives</i>, to index and disclose their audiovisaul 
+documents.
+
+The GTAA closely follows the ISO-2788 standard for thesaurus structures,
+ and is representative for many thesauri in the archiving world both in 
+size and scope. 
+<!--The GTAA contains all the subjects necessary to describe any TV program broadcasted on a Dutch public channel. -->
+ The thesaurus consists of 6 facets that
+concern the description of: </p><ul> <li>the topic of a TV program: 
+keywords
+are selected from the Subject facet</li> <li>the main people mentioned
+in a TV program: keywords are selected from the Person facet</li>
+<li>the main "Named Entities" mentioned in a TV program (Corporation
+names, music bands etc): keywords are selected from the Name facet</li>
+<li>the main locations mentioned in a TV program or the place where it
+has been created: keywords are selected from the Location facet</li>
+<li>the genre of a TV program: keywords are selected from the Genre
+facet</li> <li>the makers and presentators of a TV program: keywords are
+selected from the Makers facet</li> </ul> 
+
+The GTAA contains approximately 160.000 terms: ~3800 Subjects, ~97.000 
+Persons, ~27.000 Names, ~14.000 Locations, 113 Genres and 
+~18.000 Makers, and is continually updated as new concepts emerge on TV.
+ In this mapping task, we consider only the four following facets: 
+Subject, Person, Name and Location. <p></p>
+
+<h4>SKOS Representation </h4> 
+<p>The SKOS version of the GTAA consists of
+skos:Concepts with Preferred and Alternative labels, related by 
+skos:broader, skos:narrower and skos:related
+properties. In addition, some concepts are clarified with a 
+skos:scopeNote. Terms in all facets of the GTAA can have Related Terms 
+and Scope Notes, but only the Subject facet has Alternative Labels and 
+Broader Term/Narrower 
+Term relations, the latter organizing the terms into a hierarchy. The 
+hierarchal organisation of the Subject facet is not very dense: 
+80% of the terms are not involved in hierarchies deeper than 3 levels; 
+the average hierarchy depth is 1.3.</p>
+
+<p>Samples of the datasets are directly available for
+inspection from  <a 
+href="dataset/GTAA/OAEIsampleGTAAperson.owl">Person</a>, 
+<a href="dataset/GTAA/OAEIsampleGTAAname.owl">Name</a>, 
+<a href="dataset/GTAA/OAEIsampleGTAAlocation.owl">Location</a>, 
+<a href="dataset/GTAA/OAEIsampleGTAAsubject.owl">Subject</a>, 
+and below are examples from each facet. Each facet is
+in a different file, but all concepts have a skos:inScheme property that
+specifies the name of the facet that it belongs to, enabling you to put
+all the data in only one file if necessary.</p>
+
+<h5>Examples of GTAA concepts</h5>
+
+<blockquote> <pre> &lt;skos:Concept rdf:about="#Subject_alternatieveenergie"&gt;
+	&lt;skos:prefLabel&gt;alternatieve energie&lt;/skos:prefLabel&gt;
+	&lt;skos:inScheme rdf:resource="http://www.beeldengeluid.nl/Thesaurus/Subject"/&gt;
+	&lt;skos:broader rdf:resource="#Subject_energie"/&gt; 
+	&lt;skos:narrower rdf:resource="#Subject_biobrandstoffen"/&gt;
+        &lt;skos:narrower rdf:resource="#Subject_windenergie"/&gt; 
+	&lt;skos:narrower rdf:resource="#Subject_zonne-energie"/&gt; 
+	&lt;skos:related rdf:resource="#Subject_alcohol"/&gt; 
+	&lt;skos:related rdf:resource="#Subject_energiebeleid"/&gt; 
+	&lt;skos:related rdf:resource="#Subject_energiebronnen"/&gt; 
+	&lt;skos:related rdf:resource="#Subject_getijden"/&gt; 
+	&lt;skos:related rdf:resource="#Subject_milieubeleid"/&gt; 
+	&lt;skos:related rdf:resource="#Subject_waterkracht"/&gt; 
+	&lt;skos:related rdf:resource="#Subject_waterstof"/&gt;
+	&lt;skos:altLabel&gt;getijdenenergie&lt;/skos:altLabel&gt; 
+&lt;/skos:Concept&gt; </pre> </blockquote>
+
+<blockquote> <pre> &lt;skos:Concept rdf:about="#Person_BeatrixkoninginNederland"&gt;
+	&lt;skos:prefLabel&gt;Beatrix (koningin Nederland)&lt;/skos:prefLabel&gt; 
+	&lt;skos:inScheme rdf:resource="http://www.beeldengeluid.nl/Thesaurus/Person"/&gt;
+	&lt;skos:related rdf:resource="#Person_BeatrixkroonprinsesNederland"/&gt;
+	&lt;skos:scopeNote&gt;va30-4-80&lt;/skos:scopeNote&gt;
+&lt;/skos:Concept&gt; </pre> </blockquote>
+
+<blockquote> <pre> &lt;skos:Concept rdf:about="#Name_Abba"&gt;
+	&lt;skos:prefLabel&gt;Abba&lt;/skos:prefLabel&gt; 
+	&lt;skos:inScheme rdf:resource="http://www.beeldengeluid.nl/Thesaurus/Name"/&gt;
+	&lt;skos:scopeNote&gt;popgroep Zweden&lt;/skos:scopeNote&gt;
+&lt;/skos:Concept&gt; </pre> </blockquote>
+
+<blockquote> <pre> &lt;skos:Concept rdf:about="#Location_Amsterdam"&gt;
+	&lt;skos:prefLabel&gt;Amsterdam&lt;/skos:prefLabel&gt; 
+	&lt;skos:inScheme rdf:resource="http://www.beeldengeluid.nl/Thesaurus/Location"/&gt;
+	&lt;skos:scopeNote&gt;Nederland&lt;/skos:scopeNote&gt;
+&lt;/skos:Concept&gt; </pre> </blockquote>
+
+<h4>Obtaining the GTAA dataset</h4> 
+The Netherlands Institute for Sound and Vision is currenlty in the 
+process of publishing the GTAA as linked data. 
+However, for the purpose of this mapping task we provide a stable <a 
+href="http://www.w3.org/TR/2008/WD-skos-reference-20080125/">SKOS</a> 
+version 
+of the four relevant facets, that represents the GTAA as it was in 2009.
+ The GTAA is copyrighted material. To
+obtain the full datasets, please download the user agreement <a 
+href="oaei_licence_agreement.pdf">
+here</a>. Fax the signed agreement to +31 15 2786632, at the attention
+of Laura Hollink, or scan the form and e-mail it to <tt>l.hollink
+at tudelft dot nl</tt>. You will receive by email the password to access
+the complete dataset.
+
+
+
+<h2>Evaluation</h2> <a name="evaluation"></a> 
+<p>We evaluate the results of the three alignments (GTAA-NYT, 
+GTAA-DBpedia, NYT-DBpedia) in terms of precision and recall. 
+Aside from an overall measure, we also present measures for each 
+GTAA/NYT facet separately.</p>
+
+<p>For precision, we will judge samples of each allignment as being 
+correct or incorrect, 
+and re-use judgements made for the VLCR task in 2009 where applicable. 
+For recall, we will create gold standards for random samples of each 
+GTAA/NYT facet, 
+and re-use gold standards that were made for the VLCR task in 2009 where
+ applicable.</p>
+
+<p>All judgements will be made with our application scenario in mind: 
+enabling/enhancing search and browsing through interlinked archives.</p>
+
+<h2>Tentative Schedule</h2> <a name="schedule"></a>
+
+<p>
+</p><dl compact="1">
+<dt>July</dt><dd>tests are frozen</dd>
+<dt>Early September</dt><dd>participants send preliminary results (for 
+interoperability-checking)</dd>
+<dt>Late September</dt><dd>participants send final results and papers</dd>
+<dt>October</dt><dd>organisers publish results for comments</dd>
+<dt>November</dt><dd>final results ready and <a 
+href="http://om2010.ontologymatching.org/">OM-2010 workshop</a>.</dd>
+</dl>
+<p></p>
+
+
+<h2>Acknowledgements</h2>
+
+<p>We would like to thanks Evan Sandhaus from the NYT for the fruitful 
+collaboration. 
+We thank Chris Bizer, Fabian Suchanec and Jens Lehman for their help 
+with the DBPedia dataset. We gratefully acknowledge the Dutch Institute 
+for Sound and Vision for allowing us to use the GTAA. </p>
+
+
+<h2>Contacts</h2> <a name="contacts"></a> <div class="address"> <p>Send
+any questions, comments, or suggestions to: </p><ul>
+
+        <li> <a href="http://www.few.vu.nl/%7Ewrvhage/">Willem Robert 
+van Hage</a>:
+        <tt>wrvhage at few dot vu dot nl</tt></li>
+		<li> <a href="http://www.cs.vu.nl/%7Elaurah/">Laura Hollink</a>:
+        <tt>l.hollink at tudelft dot nl</tt></li> 
+		<li> <a href="http://www.few.vu.nl/%7Evmalaise/">Véronique Malaisé</a>:
+        <tt>vmalaise at few dot vu dot nl</tt></li> </ul>
+</div></div>
+<div class="address">
+Original page: <a href="http://www.cs.vu.nl/~laurah/oaei/2010/">http://www.cs.vu.nl/~laurah/oaei/2010/</a> [cached: 08/03/2011]
+<div class="footer">http://oaei.ontologymatching.org/2010/vlcr/</div>
+<!--$Id$-->
+</div>
+</body></html>

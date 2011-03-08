@@ -1,0 +1,139 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Ontology Alignment Evaluation Initiative::Matching Web Directories</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head><body>
+
+<div class="header">
+<a style="color: grey; line-height: 5mm;" href="http://oaei.ontologymatching.org/2010/">Ontology
+  Alignment Evaluation Initiative - OAEI-2010
+  Campaign</a><a href="http://oaei.ontologymatching.org/"><img src="../../oaeismall.jpg" alt="OAEI" style="border-style: none; float: right; margin-left: 5pt;"></a>
+</div>
+
+<h1>Matching Web Directories</h1>
+
+<p>The focus of this task is to evaluate performance of existing matching tools 
+  in real world taxonomy integration scenario. Our aim is to analyze whether ontology 
+  matching tools can effectively be applied to integration of "shallow ontologies". Particularly, this year we have used two modalities:</p>
+<ul>
+  <li>Small tasks: this modality corresponds to the <a href="../../2009/directory/index.html">last year directory track</a> and aims at testing single matching tasks.</li>
+  <li>Single task: this modality contains only one matching task. The source and the target directories to be matched contain 2854 and 6555 nodes respectively.  <em>The Single task modality in the Directory track was cancelled due to lack of resources needed to cross check the reference alignments. </em></li>
+ </ul>
+ 
+<h2>Data sets</h2>
+
+
+<p>The evaluation datasets for both modalities were extracted from <a href="http://www.google.com/dirhp">Google</a>, <a href="http://dir.yahoo.com/">Yahoo</a> and <a href="http://www.looksmart.com/r?country=uk">Looksmart</a> web directories. 
+The specific characteristics of the datasets are:</p>
+<ul>
+<li>Common characteristics: </li>
+<ul>
+<li>Simple relationships. Basically web directories contain only one type of 
+    relationship so called "classification relation".
+  </li><li>Vague
+terminology and modeling principles: The matching tasks incorporate the
+typical "real world" modeling and terminological errors. </li></ul>
+  <li>Small tasks:</li>
+<ul>
+  <li>More than 4500 of node matching tasks, where each node
+matching task is composed from the paths to root of the nodes in the
+web directories. </li>
+  <li>Rerefence correspondences for the equivalence relation for all the matching tasks. 
+  </li>
+  </ul>
+<li>Single task:</li>
+<ul>
+  <li>A single matching task where the aim is to find the correspondences between the directory nodes, where each directory contains 2854 and 6555 nodes respectively.</li>
+  <li>Reference correspondences for the matching task. This task includes, besides the equivalence relation, more general and less general relations. 
+  </li>
+  </ul>
+
+
+ </ul>
+<p>These characteristics make the tasks challenging from a technological point of 
+view, but there is guidance for tuning the matching approach that needs to be taken 
+into account. The paper describing the datatset construction methodology for both modalities is <a href="http://eprints.biblio.unitn.it/archive/00001345/01/001.pdf">TaxME 2</a>.</p>
+
+<p>In both modalities the node matching tasks are represented by pairs of OWL ontologies,
+  where the classification relation is modeled as OWL subClassOf
+  construct. Therefore all OWL ontologies are taxonomies, i.e., they
+  contain <b>only classes</b> (without Object and Data
+  properties) <b>connected with subclass relation</b>.</p>  
+
+<h3>Modalities</h3>  
+<p>In the <b><i>small tasks modality</i></b>, the first matching task is to find a correspondence between 1/source.owl and 1/target.owl and to output it to a file called 1/yoursystem.rdf. The matching tasks are numbered
+  from 1 to 4639. The tasks in the <i>small tasks modality</i> are the same as last year, since we try to make a comparative study on the evolution of the participating systems from last year to the date. Freezing the dataset means that we do not introduce any new variable affecting the comparisson.  
+The directory dataset for the <i>small tasks modality</i> can be found in the <a href="#downloads">downloads area</a>. 
+A set of partial reference correspondences can also be found in the <a href="#downloads">downloads area</a>. 
+These reference correspondences are the same as those published in <a href="../../2005/results/">OAEI-2005</a>. However, considering that the directory dataset has grown in size since 2005, the set of reference alignments disclosed here accounts for 49% of the current set of alignments.
+</p>
+
+<p>
+In the <b><i>single task modality</i></b> there is only one source and one target directory containing 2854 and 6555 nodes respectively. These directories correspond to a superset of all the "small" directories contained in the <i>small tasks modality</i>. The aim of this modality is to test the ability of current matching systems to handle and match big directories. We believe this is a realistic scenario that needs to be supported and can be found in many application areas as <a href="http://www.google.com/dirhp">Google</a>, <a href="http://dir.yahoo.com/">Yahoo</a> and <a href="http://www.looksmart.com/r?country=uk">Looksmart</a> web directories come from commerce. For this modality only one result compliant with the <a href="../align.html">Alignment API</a> format has to be submitted. The file should be named "yoursystem.rdf". The directory dataset for the <i>single task modality</i> can be found in the <a href="#downloads">downloads area</a>. <b><em>The Single task modality in the Directory track was cancelled due to lack of resources needed to cross check the reference alignments. </em></b>
+
+</p>
+<p>
+These alignments can be used together with the <a href="../align.html">Alignment API</a> to compute recall (see <a href="files/eval.bat">an example command</a>). Both datasets are being developed by the <a href="http://s-match.org/">S-Match.org</a> open source project.</p>
+
+
+<h3>Downloads<A NAME="downloads"></a></h3>  
+<ul>
+<li><a href="files/directoryDataset2010smallTasks.zip">Dataset for small tasks modality.</a></li>
+<ul>
+<li><a href="files/partialReference2010smallTasks.zip">Partial reference alignment for the small tasks modality.</a></li>
+</ul>
+<li><a href="files/directoryDataset2010singleTask.zip">Dataset for single task modality.</a></li>
+
+</ul>
+
+<h2>Submission details</h2>
+
+ 
+  <p>The task is to find correspondences between classes in the
+  ontologies. To find the correspondences any information in the
+  two models can be used. In addition, it is allowed to use background
+  knowledge, <b>that has not specifically been created for the
+  matching tasks</b>
+(i.e., no hand-made correspondences between parts of the ontologies). Admissible
+background knowledge are "Oracles" such as WordNet, Cyc, UMLS, etc.
+Furthermore, results must not be tuned manually, for instance, by removing
+obviously wrong correspondences. Participants are encouraged to submit the
+results as computed by their systems. </p>
+
+<p>
+We expect a single "zipped" file containing the submission for both modalities with the following directory structure:
+</p>
+<ul>
+<li>A single root folder named "yourystem".</li>
+<li>One sub-folder for each modality named "smalltasks" and "singletask".</li>
+<li>The "smalltasks"  folder contains a sub-folder for each mathicng task, numbered from 1 to 4639. Inside each folder, the resulting correspondences should be put in a file named "yoursystem.rdf".</li>
+<li>The "singletask"  folder contains only one file with the resulting correspondences named "yoursystem.rdf".</li>
+<li>All the results should be compliant with the <a href="../align.html">Alignment format</a>.</li>
+
+</ul>
+  <h2>Schedule</h2>
+
+<p>
+The resulting alignments should be represented using the <a href="../align.html">common format for alignments</a> and send
+  to Juan Pane <img src="files/Untitled.jpg"> for evaluation by August 30th. Quantitative indicators of matching
+quality (Precision and Recall) will be returned to participants till
+September 15th.</p>
+
+<p>The complete schedule of the event can be found at the <a href="../index.html">OAEI 2010 campaign page</a>.</p>
+
+
+<h2>Format</h2>
+
+<p>The resulting alignments should be represented using the <a href="../align.html">common format for alignments</a>.</p>
+
+<h2>Contacts</h2>
+<p>The resulting alignments should be sent
+to Juan Pane <img src="files/Untitled.jpg">.</p>
+
+
+<div class="address">
+Original page: <a href="http://www.disi.unitn.it/~pane/OAEI/2010/directory/">http://www.disi.unitn.it/~pane/OAEI/2010/directory/</a> [cached: 08/03/2011]
+<div class="footer">http://oaei.ontologymatching.org/2010/directory/</div>
+<!--$Id$-->
+</div>
+</body></html>

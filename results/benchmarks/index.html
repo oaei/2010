@@ -1,0 +1,3972 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ontology Alignment Evaluation Initiative::2010</title>
+  <link rel="stylesheet" type="text/css" href="../../style.css">
+</head>
+
+<body>
+
+<div class="header">
+<a style="color: grey; line-height: 5mm;"
+href="http://oaei.ontologymatching.org/2010/">Ontology Alignment Evaluation
+Initiative - OAEI-2010 Campaign</a><a
+href="http://oaei.ontologymatching.org/"><img
+src="../../../oaeismall.jpg" alt="OAEI"
+style="border-style: none; float: right; margin-left: 5pt;"></a> </div>
+
+<h1>Ontology Alignment Evaluation Initiative</h1>
+
+<h1>Benchmark results</h1>
+
+<p>This year 11 systems participated in the benchmark track. Their
+  results extracted from the SEALS platform can be
+  found <a href="benchmarks2010.zip">here</a>.
+
+The results have been obtained online from the SEALS platform. They
+  should be reproducible with the <a href="../../align.html">Alignment
+  API</a>.
+More results are available from
+  the <a href="../oaei2010.pdf">Synthesis paper</a>.</p>
+
+<h2>Summarised results</h2>
+
+<p>Table 1 provides the consolidated results by groups of tests. We display
+the results of participants as well as those given by some simple edit distance
+algorithm on labels (edna). The computed values are real precision and recall
+and not an average of precision and recall. Two systems are ahead:  ASMOV and RiMOM, with AgrMaker as close follower, while SOBOM, GeRMeSMB and Ef2Match, respectively, had presented intermediary values of precision and recall. 
+No system had strictly lower performance than edna, specially in terms of precision.</p>
+
+<p></p>
+
+<table border='2' frame='sides' rules='groups'>
+<colgroup align='center' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<thead valign='top'><tr>
+<th>algo</th>
+<th colspan='2'>refalign</th>
+<th colspan='2'>edna</th>
+<th colspan='2'>AgrMaker</th>
+<th colspan='2'>AROMA</th>
+<th colspan='2'>ASMOV</th>
+<th colspan='2'>CODI</th>
+<th colspan='2'>Ef2Match</th>
+<th colspan='2'>Falcon</th>
+<th colspan='2'>GeRMeSMB</th>
+<th colspan='2'>MapPSO</th>
+<th colspan='2'>RiMOM</th>
+<th colspan='2'>SOBOM</th>
+<th colspan='2'>TaxoMap</th>
+</tr></thead><tbody><tr><td>algo</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+    </tr>
+  </tbody>
+  <tbody>
+<tr>
+<td>1xx</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>2xx</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.43</td>
+<td>0.57</td>
+<td>0.95</td>
+<td>0.84</td>
+<td>0.94</td>
+<td>0.46</td>
+<td>0.99</td>
+<td>0.89</td>
+<td>0.83</td>
+<td>0.42</td>
+<td>0.98</td>
+<td>0.63</td>
+<td>0.81</td>
+<td>0.63</td>
+<td>0.96</td>
+<td>0.66</td>
+<td>0.67</td>
+<td>0.59</td>
+<td>0.99</td>
+<td>0.83</td>
+<td>0.97</td>
+<td>0.74</td>
+<td>0.86</td>
+<td>0.29</td>
+</tr>
+
+<tr>
+<td>3xx</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.51</td>
+<td>0.65</td>
+<td>0.88</td>
+<td>0.58</td>
+<td>0.83</td>
+<td>0.58</td>
+<td>0.88</td>
+<td>0.84</td>
+<td>0.95</td>
+<td>0.45</td>
+<td>0.92</td>
+<td>0.75</td>
+<td>0.89</td>
+<td>0.76</td>
+<td>0.90</td>
+<td>0.42</td>
+<td>0.72</td>
+<td>0.39</td>
+<td>0.94</td>
+<td>0.76</td>
+<td>0.79</td>
+<td>0.75</td>
+<td>0.71</td>
+<td>0.32</td>
+</tr>
+<tr bgcolor="yellow">
+<td>H-mean</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.45</td>
+<td>0.58</td>
+<td>0.95</td>
+<td>0.84</td>
+<td>0.94</td>
+<td>0.48</td>
+<td>0.98</td>
+<td>0.89</td>
+<td>0.84</td>
+<td>0.44</td>
+<td>0.98</td>
+<td>0.65</td>
+<td>0.82</td>
+<td>0.65</td>
+<td>0.96</td>
+<td>0.67</td>
+<td>0.68</td>
+<td>0.60</td>
+<td>0.99</td>
+<td>0.84</td>
+<td>0.97</td>
+<td>0.75</td>
+<td>0.86</td>
+<td>0.29</td>
+</tr>
+</tbody>
+</table>
+
+<p></p>
+
+<h2>Comparison to 2009 tests</h2>
+
+<p>The tests are roughly the same as last year. Tble&nbsp;2 provides the results of the systems on the tests of last year. 
+Four systems that had participated last year (AFlood, DSSim, Kosimap and Lily) did not participate this year, while two new systems (CODI and Ef2Match) have registered their results. 
+In the 2009 campaign, Lily and ASMOV were ahread, with aflood and RiMOM as followers, while GeRoME, AROMA, DSSim and AgrMaker had intermediary performance. The same group of best matchers
+has been presented in both campaigns.
+</p>
+
+<table border="2" rules="groups">
+  <colgroup align="center"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <thead valign="top">
+    <tr>
+      <th>algo</th>
+      <th colspan="2">refalign</th>
+      <th colspan="2">edna</th>
+      <th colspan="2">aflood</th>
+      <th colspan="2">AgrMaker</th>
+      <th colspan="2">aroma</th>
+      <th colspan="2">ASMOV</th>
+      <th colspan="2">DSSim</th>
+      <th colspan="2">GeRoMe</th>
+      <th colspan="2">kosimap</th>
+      <th colspan="2">Lily</th>
+      <th colspan="2">MapPSO</th>
+      <th colspan="2">RiMOM</th>
+      <th colspan="2">SOBOM</th>
+      <th colspan="2">TaxoMap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>test</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>1xx</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.96</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.98</td>
+      <td>0.98</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.99</td>
+      <td>0.99</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.98</td>
+      <td>0.97</td>
+      <td>1.00</td>
+      <td>0.34</td>
+    </tr>
+    <tr bgcolor="lightblue">
+      <td>2xx</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.41</td>
+      <td>0.56</td>
+      <td>0.98</td>
+      <td>0.74</td>
+      <td>0.98</td>
+      <td>0.60</td>
+      <td>0.98</td>
+      <td>0.69</td>
+      <td>0.96</td>
+      <td>0.85</td>
+      <td>0.97</td>
+      <td>0.62</td>
+      <td>0.92</td>
+      <td>0.71</td>
+      <td>0.94</td>
+      <td>0.57</td>
+      <td>0.97</td>
+      <td>0.86</td>
+      <td>0.75</td>
+      <td>0.73</td>
+      <td>0.93</td>
+      <td>0.81</td>
+      <td>0.97</td>
+      <td>0.46</td>
+      <td>0.90</td>
+      <td>0.23</td>
+    </tr>
+    <tr>
+      <td>3xx</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.47</td>
+      <td>0.82</td>
+      <td>0.90</td>
+      <td>0.81</td>
+      <td>0.92</td>
+      <td>0.79</td>
+      <td>0.85</td>
+      <td>0.78</td>
+      <td>0.81</td>
+      <td>0.82</td>
+      <td>0.94</td>
+      <td>0.67</td>
+      <td>0.68</td>
+      <td>0.60</td>
+      <td>0.72</td>
+      <td>0.50</td>
+      <td>0.84</td>
+      <td>0.81</td>
+      <td>0.54</td>
+      <td>0.29</td>
+      <td>0.81</td>
+      <td>0.82</td>
+      <td>0.92</td>
+      <td>0.55</td>
+      <td>0.77</td>
+      <td>0.31</td>
+    </tr>
+    <tr bgcolor="yellow">
+      <td>H-mean</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.43</td>
+      <td>0.59</td>
+      <td>0.98</td>
+      <td>0.80</td>
+      <td>0.99</td>
+      <td>0.62</td>
+      <td>0.94</td>
+      <td>0.69</td>
+      <td>0.95</td>
+      <td>0.87</td>
+      <td>0.97</td>
+      <td>0.66</td>
+      <td>0.91</td>
+      <td>0.73</td>
+      <td>0.91</td>
+      <td>0.59</td>
+      <td>0.97</td>
+      <td>0.88</td>
+      <td>0.64</td>
+      <td>0.59</td>
+      <td>0.93</td>
+      <td>0.82</td>
+      <td>0.98</td>
+      <td>0.44</td>
+      <td>0.86</td>
+      <td>0.26</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 2: Results on the 2009 tests. </p>
+
+<p></p>
+
+<!--
+<h2>Comparison to 2004 tests</h2>
+
+<p>Table&nbsp;3 provides results on the very easy tests of 2004. As expected,
+systems perform very well. </p>
+
+<p></p>
+
+<table border="2" rules="groups">
+  <colgroup align="center"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <colgroup align="center" span="2"> </colgroup>
+  <thead valign="top">
+    <tr>
+      <th>algo</th>
+      <th colspan="2">refalign</th>
+      <th colspan="2">edna</th>
+      <th colspan="2">aflood</th>
+      <th colspan="2">AgrMaker</th>
+      <th colspan="2">aroma</th>
+      <th colspan="2">ASMOV</th>
+      <th colspan="2">DSSim</th>
+      <th colspan="2">GeRoMe</th>
+      <th colspan="2">kosimap</th>
+      <th colspan="2">Lily</th>
+      <th colspan="2">MapPSO</th>
+      <th colspan="2">RiMOM</th>
+      <th colspan="2">SOBOM</th>
+      <th colspan="2">TaxoMap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>test</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+      <td>Prec.</td>
+      <td>Rec.</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>1xx</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.96</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.98</td>
+      <td>0.98</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.99</td>
+      <td>0.99</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.98</td>
+      <td>0.97</td>
+      <td>1.00</td>
+      <td>0.34</td>
+    </tr>
+    <tr bgcolor="lightblue">
+      <td>2xx</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.67</td>
+      <td>0.74</td>
+      <td>0.98</td>
+      <td>0.93</td>
+      <td>0.98</td>
+      <td>0.88</td>
+      <td>0.99</td>
+      <td>0.94</td>
+      <td>0.99</td>
+      <td>0.98</td>
+      <td>0.97</td>
+      <td>0.86</td>
+      <td>0.97</td>
+      <td>0.94</td>
+      <td>0.95</td>
+      <td>0.78</td>
+      <td>0.99</td>
+      <td>0.98</td>
+      <td>0.96</td>
+      <td>0.96</td>
+      <td>0.99</td>
+      <td>0.98</td>
+      <td>0.97</td>
+      <td>0.65</td>
+      <td>0.91</td>
+      <td>0.26</td>
+    </tr>
+    <tr>
+      <td>3xx</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.47</td>
+      <td>0.82</td>
+      <td>0.90</td>
+      <td>0.81</td>
+      <td>0.92</td>
+      <td>0.79</td>
+      <td>0.85</td>
+      <td>0.78</td>
+      <td>0.81</td>
+      <td>0.82</td>
+      <td>0.94</td>
+      <td>0.67</td>
+      <td>0.68</td>
+      <td>0.60</td>
+      <td>0.72</td>
+      <td>0.50</td>
+      <td>0.84</td>
+      <td>0.81</td>
+      <td>0.54</td>
+      <td>0.29</td>
+      <td>0.81</td>
+      <td>0.82</td>
+      <td>0.92</td>
+      <td>0.55</td>
+      <td>0.77</td>
+      <td>0.31</td>
+    </tr>
+    <tr bgcolor="yellow">
+      <td>H-mean</td>
+      <td>1.00</td>
+      <td>1.00</td>
+      <td>0.67</td>
+      <td>0.80</td>
+      <td>0.98</td>
+      <td>0.93</td>
+      <td>0.97</td>
+      <td>0.89</td>
+      <td>0.97</td>
+      <td>0.93</td>
+      <td>0.97</td>
+      <td>0.96</td>
+      <td>0.97</td>
+      <td>0.86</td>
+      <td>0.94</td>
+      <td>0.90</td>
+      <td>0.93</td>
+      <td>0.78</td>
+      <td>0.97</td>
+      <td>0.96</td>
+      <td>0.94</td>
+      <td>0.88</td>
+      <td>0.97</td>
+      <td>0.96</td>
+      <td>0.97</td>
+      <td>0.69</td>
+      <td>0.90</td>
+      <td>0.28</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Table 3: Results on the 2004 tests.</p>
+
+<p></p>
+-->
+
+<h2>Precision/recall graphs</h2>
+
+<p>Figure 1 shows the precision and recall graphs of this year. These results
+are only relevant for the results of participants who provide confidence
+measures different from 1 or 0. This graph has been drawn with only technical
+adaptation of the technique used in TREC. Moreover, due to lack of time, these
+graphs have been computed by averaging the graphs of each of the tests (instead
+to pure precision and recall). </p>
+
+<p>These results and those presented in Figure 2 single out the same group of systems, ASMOV, RiMOM and AgrMaker, which seem to perform these tests at the highest level of quality. Of these, ASMOV has slightly better results than the two others. So, this confirms the leadership that we observed on raw results.</p>
+
+<div style="text-align: center;">
+<p></p>
+
+<p><img src="prgraph2010.png" alt=""> </p>
+
+<p>Figure 1: Precision/recall graphs. They cut the results given by the
+participants under a threshold necessary for achieving <i>n</i>% recall and
+compute the corresponding precision. Systems for which these graphs are not
+meaningful (because they did not provide graded confidence values) are drawn in
+dashed lines. </p>
+
+</div>
+
+
+
+<h2>Triangle</h2>
+
+<p>The triangular display shows the same results as the other
+representations.</p>
+
+<p align="center"></p>
+
+<div style="text-align: center;">
+<img src="triangle2010.png"> 
+<p>Figure 2: Each point expresses the position of a system with regard to
+precision and recall.</p> 
+</div>
+
+<p></p>
+
+<h2>Full results</h2>
+
+<table border='2' frame='sides' rules='groups'>
+<colgroup align='center' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<colgroup align='center' span='2' />
+<thead valign='top'><tr><th>algo</th>
+<th colspan='2'>refalign</th>
+<th colspan='2'>edna</th>
+<th colspan='2'>AgrMaker</th>
+<th colspan='2'>AROMA</th>
+<th colspan='2'>ASMOV</th>
+<th colspan='2'>CODI</th>
+<th colspan='2'>Ef2Match</th>
+<th colspan='2'>Falcon</th>
+<th colspan='2'>GeRMeSMB</th>
+<th colspan='2'>MapPSO</th>
+<th colspan='2'>RiMOM</th>
+<th colspan='2'>SOBOM</th>
+<th colspan='2'>TaxoMap</th>
+</tr></thead><tbody><tr><td>test</td>
+<td>Prec.</td>
+<td>Rec.</td>
+<td>Prec.</td>
+<td>Rec.</td>
+<td>Prec.</td>
+<td>Rec.</td>
+<td>Prec.</td>
+<td>Rec.</td>
+<td>Prec.</td>
+<td>Rec.</td>
+<td>Prec.</td>
+<td>Rec.</td>
+<td>Prec.</td>
+<td>Rec.</td>
+<td>Prec.</td>
+<td>Rec.</td>
+<td>Prec.</td>
+<td>Rec.</td>
+<td>Prec.</td>
+<td>Rec.</td>
+<td>Prec.</td>
+<td>Rec.</td>
+<td>Prec.</td>
+<td>Rec.</td>
+<td>Prec.</td>
+<td>Rec.</td>
+</tr></tbody><tbody>
+<tr>
+<td>101</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>103</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr>
+<td>104</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>201</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.04</td>
+<td>0.04</td>
+<td>0.98</td>
+<td>0.86</td>
+<td>1.00</td>
+<td>0.90</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>0.07</td>
+<td>1.00</td>
+<td>0.62</td>
+<td>0.97</td>
+<td>0.97</td>
+<td>0.95</td>
+<td>0.94</td>
+<td>0.47</td>
+<td>0.38</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.91</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr>
+<td>201-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.98</td>
+<td>0.96</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.75</td>
+<td>0.62</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>0.98</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>0.92</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>201-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.60</td>
+<td>0.60</td>
+<td>0.99</td>
+<td>0.93</td>
+<td>1.00</td>
+<td>0.92</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.51</td>
+<td>1.00</td>
+<td>0.95</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.90</td>
+<td>0.80</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.96</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr>
+<td>201-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.41</td>
+<td>0.41</td>
+<td>0.97</td>
+<td>0.91</td>
+<td>1.00</td>
+<td>0.92</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.84</td>
+<td>0.39</td>
+<td>1.00</td>
+<td>0.93</td>
+<td>0.92</td>
+<td>0.92</td>
+<td>0.98</td>
+<td>0.98</td>
+<td>0.76</td>
+<td>0.66</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.93</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>201-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.23</td>
+<td>0.23</td>
+<td>0.98</td>
+<td>0.90</td>
+<td>1.00</td>
+<td>0.90</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.74</td>
+<td>0.21</td>
+<td>0.99</td>
+<td>0.70</td>
+<td>0.98</td>
+<td>0.98</td>
+<td>0.96</td>
+<td>0.96</td>
+<td>0.72</td>
+<td>0.60</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.92</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr>
+<td>202</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.03</td>
+<td>0.03</td>
+<td>1.00</td>
+<td>0.80</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.99</td>
+<td>0.80</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.04</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.76</td>
+<td>0.26</td>
+<td>0.06</td>
+<td>0.05</td>
+<td>1.00</td>
+<td>0.68</td>
+<td>0.98</td>
+<td>0.47</td>
+<td>1.00</td>
+<td>0.01</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>202-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.97</td>
+<td>0.96</td>
+<td>0.95</td>
+<td>0.41</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>0.76</td>
+<td>0.46</td>
+<td>1.00</td>
+<td>0.90</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>1.00</td>
+<td>0.89</td>
+<td>0.93</td>
+<td>0.84</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.92</td>
+<td>0.88</td>
+<td>0.30</td>
+</tr>
+<tr>
+<td>202-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.60</td>
+<td>0.60</td>
+<td>0.97</td>
+<td>0.91</td>
+<td>0.90</td>
+<td>0.37</td>
+<td>0.99</td>
+<td>0.92</td>
+<td>0.84</td>
+<td>0.37</td>
+<td>0.99</td>
+<td>0.69</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>0.97</td>
+<td>0.75</td>
+<td>0.73</td>
+<td>0.60</td>
+<td>1.00</td>
+<td>0.92</td>
+<td>1.00</td>
+<td>0.81</td>
+<td>0.87</td>
+<td>0.28</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>202-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.41</td>
+<td>0.41</td>
+<td>0.97</td>
+<td>0.87</td>
+<td>0.82</td>
+<td>0.29</td>
+<td>0.99</td>
+<td>0.88</td>
+<td>0.83</td>
+<td>0.25</td>
+<td>0.98</td>
+<td>0.52</td>
+<td>0.71</td>
+<td>0.71</td>
+<td>1.00</td>
+<td>0.67</td>
+<td>0.55</td>
+<td>0.45</td>
+<td>1.00</td>
+<td>0.87</td>
+<td>0.99</td>
+<td>0.72</td>
+<td>0.67</td>
+<td>0.21</td>
+</tr>
+<tr>
+<td>202-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.23</td>
+<td>0.23</td>
+<td>0.95</td>
+<td>0.86</td>
+<td>0.88</td>
+<td>0.15</td>
+<td>0.99</td>
+<td>0.87</td>
+<td>0.87</td>
+<td>0.13</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.72</td>
+<td>0.72</td>
+<td>0.81</td>
+<td>0.36</td>
+<td>0.28</td>
+<td>0.23</td>
+<td>1.00</td>
+<td>0.86</td>
+<td>0.97</td>
+<td>0.64</td>
+<td>0.88</td>
+<td>0.15</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>203</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.96</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.66</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.76</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>0.33</td>
+</tr>
+<tr>
+<td>204</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.93</td>
+<td>0.93</td>
+<td>0.98</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.95</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.69</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>0.96</td>
+<td>0.96</td>
+<td>0.99</td>
+<td>0.98</td>
+<td>0.98</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>205</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.34</td>
+<td>0.34</td>
+<td>0.96</td>
+<td>0.88</td>
+<td>1.00</td>
+<td>0.90</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>0.68</td>
+<td>0.18</td>
+<td>0.95</td>
+<td>0.75</td>
+<td>0.97</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>0.82</td>
+<td>0.66</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>1.00</td>
+<td>0.93</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr>
+<td>206</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.54</td>
+<td>0.54</td>
+<td>0.98</td>
+<td>0.88</td>
+<td>1.00</td>
+<td>0.91</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>0.81</td>
+<td>0.26</td>
+<td>1.00</td>
+<td>0.77</td>
+<td>0.94</td>
+<td>0.94</td>
+<td>0.94</td>
+<td>0.90</td>
+<td>0.90</td>
+<td>0.80</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>1.00</td>
+<td>0.93</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>207</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.54</td>
+<td>0.54</td>
+<td>0.98</td>
+<td>0.88</td>
+<td>1.00</td>
+<td>0.91</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>0.87</td>
+<td>0.28</td>
+<td>1.00</td>
+<td>0.77</td>
+<td>0.96</td>
+<td>0.96</td>
+<td>0.97</td>
+<td>0.95</td>
+<td>0.87</td>
+<td>0.75</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>1.00</td>
+<td>0.93</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr>
+<td>208</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.93</td>
+<td>0.93</td>
+<td>0.99</td>
+<td>0.94</td>
+<td>0.95</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.75</td>
+<td>0.51</td>
+<td>1.00</td>
+<td>0.90</td>
+<td>0.98</td>
+<td>0.98</td>
+<td>0.96</td>
+<td>0.94</td>
+<td>0.85</td>
+<td>0.74</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>0.29</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>209</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.35</td>
+<td>0.35</td>
+<td>0.92</td>
+<td>0.84</td>
+<td>0.73</td>
+<td>0.25</td>
+<td>0.95</td>
+<td>0.89</td>
+<td>0.68</td>
+<td>0.13</td>
+<td>0.89</td>
+<td>0.32</td>
+<td>0.65</td>
+<td>0.65</td>
+<td>0.91</td>
+<td>0.44</td>
+<td>0.18</td>
+<td>0.15</td>
+<td>1.00</td>
+<td>0.77</td>
+<td>0.90</td>
+<td>0.59</td>
+<td>0.53</td>
+<td>0.08</td>
+</tr>
+<tr>
+<td>210</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.54</td>
+<td>0.54</td>
+<td>1.00</td>
+<td>0.87</td>
+<td>0.91</td>
+<td>0.10</td>
+<td>1.00</td>
+<td>0.93</td>
+<td>0.82</td>
+<td>0.14</td>
+<td>0.96</td>
+<td>0.24</td>
+<td>0.66</td>
+<td>0.66</td>
+<td>0.89</td>
+<td>0.43</td>
+<td>0.35</td>
+<td>0.29</td>
+<td>1.00</td>
+<td>0.74</td>
+<td>1.00</td>
+<td>0.70</td>
+<td>0.41</td>
+<td>0.09</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>221</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.95</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.96</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr>
+<td>222</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.96</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>0.31</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>223</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.92</td>
+<td>0.98</td>
+<td>0.95</td>
+<td>0.92</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>0.94</td>
+<td>0.98</td>
+<td>0.98</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>0.88</td>
+<td>0.30</td>
+</tr>
+<tr>
+<td>224</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.95</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>225</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr>
+<td>228</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>230</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.74</td>
+<td>1.00</td>
+<td>0.84</td>
+<td>0.97</td>
+<td>0.93</td>
+<td>0.93</td>
+<td>0.95</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>0.94</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.89</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>1.00</td>
+<td>0.83</td>
+<td>0.35</td>
+</tr>
+<tr>
+<td>231</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>232</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.95</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.34</td>
+</tr>
+<tr>
+<td>233</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>236</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>237</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.96</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>0.31</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>238</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.92</td>
+<td>0.96</td>
+<td>0.94</td>
+<td>0.91</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>0.99</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.99</td>
+<td>0.98</td>
+<td>0.95</td>
+<td>0.97</td>
+<td>0.97</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.98</td>
+<td>0.98</td>
+<td>0.88</td>
+<td>0.30</td>
+</tr>
+<tr>
+<td>239</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.33</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>1.00</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>240</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.38</td>
+<td>1.00</td>
+<td>0.89</td>
+<td>0.94</td>
+<td>0.82</td>
+<td>0.85</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>0.97</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.85</td>
+<td>0.85</td>
+<td>0.91</td>
+<td>0.94</td>
+<td>0.89</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>0.88</td>
+</tr>
+<tr>
+<td>241</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>246</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.33</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>0.97</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.93</td>
+<td>0.97</td>
+<td>0.88</td>
+<td>1.00</td>
+</tr>
+<tr>
+<td>247</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.38</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>0.88</td>
+<td>0.79</td>
+<td>0.82</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.91</td>
+<td>0.91</td>
+<td>0.88</td>
+<td>0.91</td>
+<td>0.89</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>0.88</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>248</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.03</td>
+<td>0.03</td>
+<td>0.96</td>
+<td>0.57</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.99</td>
+<td>0.77</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.01</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.69</td>
+<td>0.25</td>
+<td>0.06</td>
+<td>0.05</td>
+<td>1.00</td>
+<td>0.47</td>
+<td>0.97</td>
+<td>0.32</td>
+<td>1.00</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>248-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.95</td>
+<td>0.92</td>
+<td>1.00</td>
+<td>0.37</td>
+<td>1.00</td>
+<td>0.96</td>
+<td>0.79</td>
+<td>0.47</td>
+<td>1.00</td>
+<td>0.84</td>
+<td>0.71</td>
+<td>0.69</td>
+<td>1.00</td>
+<td>0.66</td>
+<td>0.91</td>
+<td>0.81</td>
+<td>1.00</td>
+<td>0.90</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>0.88</td>
+<td>0.29</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>248-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.60</td>
+<td>0.60</td>
+<td>0.94</td>
+<td>0.84</td>
+<td>0.88</td>
+<td>0.30</td>
+<td>0.99</td>
+<td>0.90</td>
+<td>0.77</td>
+<td>0.34</td>
+<td>0.98</td>
+<td>0.63</td>
+<td>0.69</td>
+<td>0.68</td>
+<td>0.97</td>
+<td>0.61</td>
+<td>0.74</td>
+<td>0.62</td>
+<td>1.00</td>
+<td>0.80</td>
+<td>1.00</td>
+<td>0.75</td>
+<td>0.87</td>
+<td>0.27</td>
+</tr>
+<tr>
+<td>248-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.41</td>
+<td>0.41</td>
+<td>0.94</td>
+<td>0.75</td>
+<td>0.77</td>
+<td>0.25</td>
+<td>0.99</td>
+<td>0.84</td>
+<td>0.86</td>
+<td>0.26</td>
+<td>0.98</td>
+<td>0.45</td>
+<td>0.73</td>
+<td>0.71</td>
+<td>0.96</td>
+<td>0.47</td>
+<td>0.59</td>
+<td>0.48</td>
+<td>1.00</td>
+<td>0.69</td>
+<td>0.98</td>
+<td>0.63</td>
+<td>0.64</td>
+<td>0.19</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>248-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.24</td>
+<td>0.24</td>
+<td>0.94</td>
+<td>0.64</td>
+<td>0.69</td>
+<td>0.11</td>
+<td>0.99</td>
+<td>0.84</td>
+<td>0.80</td>
+<td>0.12</td>
+<td>0.96</td>
+<td>0.24</td>
+<td>0.71</td>
+<td>0.69</td>
+<td>0.85</td>
+<td>0.34</td>
+<td>0.27</td>
+<td>0.22</td>
+<td>1.00</td>
+<td>0.58</td>
+<td>0.98</td>
+<td>0.49</td>
+<td>0.87</td>
+<td>0.13</td>
+</tr>
+<tr>
+<td>249</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.03</td>
+<td>0.03</td>
+<td>1.00</td>
+<td>0.78</td>
+<td>1.00</td>
+<td>0.01</td>
+<td>0.99</td>
+<td>0.80</td>
+<td>1.00</td>
+<td>0.01</td>
+<td>1.00</td>
+<td>0.04</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.64</td>
+<td>0.24</td>
+<td>0.06</td>
+<td>0.05</td>
+<td>1.00</td>
+<td>0.64</td>
+<td>0.98</td>
+<td>0.47</td>
+<td>1.00</td>
+<td>0.01</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>249-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.97</td>
+<td>0.96</td>
+<td>0.95</td>
+<td>0.41</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>0.78</td>
+<td>0.47</td>
+<td>1.00</td>
+<td>0.90</td>
+<td>0.71</td>
+<td>0.71</td>
+<td>1.00</td>
+<td>0.89</td>
+<td>0.89</td>
+<td>0.80</td>
+<td>1.00</td>
+<td>0.96</td>
+<td>1.00</td>
+<td>0.92</td>
+<td>0.88</td>
+<td>0.30</td>
+</tr>
+<tr>
+<td>249-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.60</td>
+<td>0.60</td>
+<td>0.97</td>
+<td>0.91</td>
+<td>0.92</td>
+<td>0.36</td>
+<td>0.99</td>
+<td>0.92</td>
+<td>0.79</td>
+<td>0.35</td>
+<td>0.99</td>
+<td>0.69</td>
+<td>0.71</td>
+<td>0.71</td>
+<td>0.97</td>
+<td>0.75</td>
+<td>0.70</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.90</td>
+<td>0.99</td>
+<td>0.80</td>
+<td>0.87</td>
+<td>0.28</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>249-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.41</td>
+<td>0.41</td>
+<td>0.97</td>
+<td>0.87</td>
+<td>0.82</td>
+<td>0.29</td>
+<td>0.99</td>
+<td>0.88</td>
+<td>0.83</td>
+<td>0.25</td>
+<td>0.96</td>
+<td>0.51</td>
+<td>0.74</td>
+<td>0.74</td>
+<td>0.95</td>
+<td>0.63</td>
+<td>0.53</td>
+<td>0.44</td>
+<td>1.00</td>
+<td>0.85</td>
+<td>0.99</td>
+<td>0.72</td>
+<td>0.67</td>
+<td>0.21</td>
+</tr>
+<tr>
+<td>249-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.23</td>
+<td>0.23</td>
+<td>0.95</td>
+<td>0.86</td>
+<td>0.88</td>
+<td>0.15</td>
+<td>0.99</td>
+<td>0.87</td>
+<td>0.93</td>
+<td>0.14</td>
+<td>0.96</td>
+<td>0.26</td>
+<td>0.71</td>
+<td>0.71</td>
+<td>0.83</td>
+<td>0.35</td>
+<td>0.18</td>
+<td>0.15</td>
+<td>1.00</td>
+<td>0.81</td>
+<td>0.97</td>
+<td>0.64</td>
+<td>0.88</td>
+<td>0.15</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>250</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.01</td>
+<td>0.03</td>
+<td>1.00</td>
+<td>0.39</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.45</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.06</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.03</td>
+<td>0.04</td>
+<td>0.03</td>
+<td>1.00</td>
+<td>0.58</td>
+<td>0.67</td>
+<td>0.12</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>250-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.79</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>0.88</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.59</td>
+<td>0.67</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>0.93</td>
+<td>0.82</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.85</td>
+<td>0.87</td>
+<td>0.82</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>250-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.21</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.82</td>
+<td>0.94</td>
+<td>0.52</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.59</td>
+<td>0.48</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>1.00</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.76</td>
+<td>0.71</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>1.00</td>
+<td>0.67</td>
+<td>0.85</td>
+<td>0.67</td>
+</tr>
+<tr>
+<td>250-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.14</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>0.70</td>
+<td>0.86</td>
+<td>0.36</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>0.63</td>
+<td>0.36</td>
+<td>0.89</td>
+<td>0.48</td>
+<td>0.93</td>
+<td>0.42</td>
+<td>0.95</td>
+<td>0.55</td>
+<td>0.58</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>0.85</td>
+<td>0.52</td>
+<td>0.62</td>
+<td>0.48</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>250-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.07</td>
+<td>0.21</td>
+<td>1.00</td>
+<td>0.48</td>
+<td>0.86</td>
+<td>0.18</td>
+<td>1.00</td>
+<td>0.67</td>
+<td>0.67</td>
+<td>0.18</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.88</td>
+<td>0.21</td>
+<td>1.00</td>
+<td>0.24</td>
+<td>0.38</td>
+<td>0.24</td>
+<td>0.93</td>
+<td>0.85</td>
+<td>0.80</td>
+<td>0.24</td>
+<td>0.82</td>
+<td>0.27</td>
+</tr>
+<tr>
+<td>251</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.05</td>
+<td>0.05</td>
+<td>0.98</td>
+<td>0.65</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.97</td>
+<td>0.78</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.04</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.82</td>
+<td>0.30</td>
+<td>0.07</td>
+<td>0.05</td>
+<td>1.00</td>
+<td>0.52</td>
+<td>0.94</td>
+<td>0.31</td>
+<td>1.00</td>
+<td>0.01</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>251-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.76</td>
+<td>0.80</td>
+<td>0.96</td>
+<td>0.94</td>
+<td>0.92</td>
+<td>0.37</td>
+<td>1.00</td>
+<td>0.95</td>
+<td>0.73</td>
+<td>0.44</td>
+<td>1.00</td>
+<td>0.86</td>
+<td>0.99</td>
+<td>0.78</td>
+<td>1.00</td>
+<td>0.77</td>
+<td>0.92</td>
+<td>0.82</td>
+<td>1.00</td>
+<td>0.90</td>
+<td>0.99</td>
+<td>0.89</td>
+<td>0.83</td>
+<td>0.27</td>
+</tr>
+<tr>
+<td>251-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.58</td>
+<td>0.60</td>
+<td>0.95</td>
+<td>0.86</td>
+<td>0.93</td>
+<td>0.40</td>
+<td>0.99</td>
+<td>0.90</td>
+<td>0.80</td>
+<td>0.35</td>
+<td>0.98</td>
+<td>0.66</td>
+<td>1.00</td>
+<td>0.59</td>
+<td>1.00</td>
+<td>0.68</td>
+<td>0.73</td>
+<td>0.62</td>
+<td>1.00</td>
+<td>0.83</td>
+<td>0.99</td>
+<td>0.76</td>
+<td>0.82</td>
+<td>0.25</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>251-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.39</td>
+<td>0.41</td>
+<td>0.95</td>
+<td>0.77</td>
+<td>0.82</td>
+<td>0.29</td>
+<td>0.99</td>
+<td>0.84</td>
+<td>0.81</td>
+<td>0.24</td>
+<td>1.00</td>
+<td>0.48</td>
+<td>0.97</td>
+<td>0.40</td>
+<td>0.96</td>
+<td>0.53</td>
+<td>0.51</td>
+<td>0.44</td>
+<td>1.00</td>
+<td>0.72</td>
+<td>0.95</td>
+<td>0.62</td>
+<td>0.69</td>
+<td>0.19</td>
+</tr>
+<tr>
+<td>251-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.23</td>
+<td>0.24</td>
+<td>0.96</td>
+<td>0.72</td>
+<td>0.76</td>
+<td>0.14</td>
+<td>1.00</td>
+<td>0.83</td>
+<td>0.80</td>
+<td>0.13</td>
+<td>0.92</td>
+<td>0.26</td>
+<td>0.95</td>
+<td>0.22</td>
+<td>0.89</td>
+<td>0.43</td>
+<td>0.25</td>
+<td>0.22</td>
+<td>1.00</td>
+<td>0.66</td>
+<td>0.94</td>
+<td>0.54</td>
+<td>0.79</td>
+<td>0.12</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>252</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.02</td>
+<td>0.02</td>
+<td>0.92</td>
+<td>0.67</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.96</td>
+<td>0.78</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.04</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.79</td>
+<td>0.24</td>
+<td>0.02</td>
+<td>0.02</td>
+<td>0.93</td>
+<td>0.54</td>
+<td>0.89</td>
+<td>0.35</td>
+<td>1.00</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>252-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.91</td>
+<td>0.93</td>
+<td>0.92</td>
+<td>0.51</td>
+<td>0.98</td>
+<td>0.95</td>
+<td>0.73</td>
+<td>0.44</td>
+<td>0.98</td>
+<td>0.87</td>
+<td>0.52</td>
+<td>0.52</td>
+<td>1.00</td>
+<td>0.71</td>
+<td>0.86</td>
+<td>0.77</td>
+<td>0.99</td>
+<td>0.95</td>
+<td>0.97</td>
+<td>0.89</td>
+<td>0.85</td>
+<td>0.29</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>252-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.91</td>
+<td>0.93</td>
+<td>0.92</td>
+<td>0.49</td>
+<td>0.98</td>
+<td>0.95</td>
+<td>0.80</td>
+<td>0.48</td>
+<td>0.98</td>
+<td>0.87</td>
+<td>0.53</td>
+<td>0.53</td>
+<td>0.99</td>
+<td>0.71</td>
+<td>0.87</td>
+<td>0.79</td>
+<td>0.99</td>
+<td>0.95</td>
+<td>0.96</td>
+<td>0.89</td>
+<td>0.85</td>
+<td>0.29</td>
+</tr>
+<tr>
+<td>252-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.91</td>
+<td>0.93</td>
+<td>0.92</td>
+<td>0.51</td>
+<td>0.98</td>
+<td>0.95</td>
+<td>0.80</td>
+<td>0.48</td>
+<td>0.98</td>
+<td>0.87</td>
+<td>0.53</td>
+<td>0.53</td>
+<td>0.99</td>
+<td>0.70</td>
+<td>0.90</td>
+<td>0.79</td>
+<td>0.99</td>
+<td>0.95</td>
+<td>0.97</td>
+<td>0.90</td>
+<td>0.85</td>
+<td>0.29</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>252-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.91</td>
+<td>0.93</td>
+<td>0.92</td>
+<td>0.49</td>
+<td>0.98</td>
+<td>0.95</td>
+<td>0.83</td>
+<td>0.51</td>
+<td>0.98</td>
+<td>0.87</td>
+<td>0.54</td>
+<td>0.54</td>
+<td>1.00</td>
+<td>0.71</td>
+<td>0.88</td>
+<td>0.78</td>
+<td>0.99</td>
+<td>0.95</td>
+<td>0.97</td>
+<td>0.89</td>
+<td>0.85</td>
+<td>0.29</td>
+</tr>
+<tr>
+<td>253</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.03</td>
+<td>0.03</td>
+<td>0.96</td>
+<td>0.57</td>
+<td>1.00</td>
+<td>0.01</td>
+<td>0.99</td>
+<td>0.78</td>
+<td>1.00</td>
+<td>0.01</td>
+<td>1.00</td>
+<td>0.01</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.82</td>
+<td>0.28</td>
+<td>0.08</td>
+<td>0.06</td>
+<td>1.00</td>
+<td>0.44</td>
+<td>0.94</td>
+<td>0.31</td>
+<td>1.00</td>
+<td>0.01</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>253-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.95</td>
+<td>0.92</td>
+<td>1.00</td>
+<td>0.37</td>
+<td>1.00</td>
+<td>0.96</td>
+<td>0.83</td>
+<td>0.49</td>
+<td>1.00</td>
+<td>0.84</td>
+<td>0.72</td>
+<td>0.70</td>
+<td>1.00</td>
+<td>0.74</td>
+<td>0.93</td>
+<td>0.84</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>1.00</td>
+<td>0.88</td>
+<td>0.88</td>
+<td>0.29</td>
+</tr>
+<tr>
+<td>253-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.60</td>
+<td>0.60</td>
+<td>0.94</td>
+<td>0.84</td>
+<td>0.90</td>
+<td>0.29</td>
+<td>0.99</td>
+<td>0.90</td>
+<td>0.84</td>
+<td>0.37</td>
+<td>0.98</td>
+<td>0.63</td>
+<td>0.72</td>
+<td>0.70</td>
+<td>0.95</td>
+<td>0.59</td>
+<td>0.71</td>
+<td>0.62</td>
+<td>1.00</td>
+<td>0.77</td>
+<td>1.00</td>
+<td>0.74</td>
+<td>0.87</td>
+<td>0.27</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>253-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.41</td>
+<td>0.41</td>
+<td>0.94</td>
+<td>0.75</td>
+<td>0.77</td>
+<td>0.25</td>
+<td>0.99</td>
+<td>0.86</td>
+<td>0.86</td>
+<td>0.26</td>
+<td>1.00</td>
+<td>0.46</td>
+<td>0.67</td>
+<td>0.66</td>
+<td>0.98</td>
+<td>0.46</td>
+<td>0.54</td>
+<td>0.45</td>
+<td>1.00</td>
+<td>0.66</td>
+<td>0.98</td>
+<td>0.63</td>
+<td>0.64</td>
+<td>0.19</td>
+</tr>
+<tr>
+<td>253-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.23</td>
+<td>0.23</td>
+<td>0.94</td>
+<td>0.64</td>
+<td>0.69</td>
+<td>0.11</td>
+<td>0.99</td>
+<td>0.78</td>
+<td>0.87</td>
+<td>0.13</td>
+<td>1.00</td>
+<td>0.25</td>
+<td>0.69</td>
+<td>0.68</td>
+<td>0.84</td>
+<td>0.33</td>
+<td>0.23</td>
+<td>0.20</td>
+<td>1.00</td>
+<td>0.55</td>
+<td>0.96</td>
+<td>0.48</td>
+<td>0.87</td>
+<td>0.13</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>254</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.01</td>
+<td>0.03</td>
+<td>1.00</td>
+<td>0.39</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.03</td>
+<td>0.04</td>
+<td>0.03</td>
+<td>1.00</td>
+<td>0.39</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>254-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.79</td>
+<td>1.00</td>
+<td>0.85</td>
+<td>1.00</td>
+<td>0.30</td>
+<td>1.00</td>
+<td>0.82</td>
+<td>0.60</td>
+<td>0.64</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>1.00</td>
+<td>0.64</td>
+<td>0.86</td>
+<td>0.76</td>
+<td>1.00</td>
+<td>0.85</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.86</td>
+<td>0.76</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>254-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.21</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.73</td>
+<td>0.90</td>
+<td>0.27</td>
+<td>1.00</td>
+<td>0.70</td>
+<td>0.54</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.58</td>
+<td>0.75</td>
+<td>0.55</td>
+<td>1.00</td>
+<td>0.73</td>
+<td>1.00</td>
+<td>0.61</td>
+<td>0.83</td>
+<td>0.61</td>
+</tr>
+<tr>
+<td>254-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.14</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>0.64</td>
+<td>0.75</td>
+<td>0.27</td>
+<td>1.00</td>
+<td>0.61</td>
+<td>0.68</td>
+<td>0.39</td>
+<td>1.00</td>
+<td>0.42</td>
+<td>0.93</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>0.45</td>
+<td>0.58</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>0.64</td>
+<td>1.00</td>
+<td>0.42</td>
+<td>0.58</td>
+<td>0.42</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>254-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.07</td>
+<td>0.21</td>
+<td>1.00</td>
+<td>0.48</td>
+<td>0.33</td>
+<td>0.06</td>
+<td>1.00</td>
+<td>0.42</td>
+<td>0.67</td>
+<td>0.18</td>
+<td>1.00</td>
+<td>0.21</td>
+<td>0.88</td>
+<td>0.21</td>
+<td>1.00</td>
+<td>0.24</td>
+<td>0.36</td>
+<td>0.24</td>
+<td>1.00</td>
+<td>0.48</td>
+<td>1.00</td>
+<td>0.21</td>
+<td>0.78</td>
+<td>0.21</td>
+</tr>
+<tr>
+<td>257</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.39</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.33</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.06</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.03</td>
+<td>0.08</td>
+<td>0.06</td>
+<td>1.00</td>
+<td>0.55</td>
+<td>0.83</td>
+<td>0.15</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>257-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.79</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>0.88</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.65</td>
+<td>0.73</td>
+<td>1.00</td>
+<td>0.97</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>1.00</td>
+<td>0.91</td>
+<td>0.83</td>
+<td>0.73</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>0.97</td>
+<td>0.85</td>
+<td>0.87</td>
+<td>0.82</td>
+</tr>
+<tr>
+<td>257-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.21</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.82</td>
+<td>0.94</td>
+<td>0.48</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.59</td>
+<td>0.48</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>1.00</td>
+<td>0.61</td>
+<td>0.96</td>
+<td>0.70</td>
+<td>0.62</td>
+<td>0.55</td>
+<td>1.00</td>
+<td>0.91</td>
+<td>1.00</td>
+<td>0.67</td>
+<td>0.85</td>
+<td>0.67</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>257-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.14</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>0.70</td>
+<td>0.86</td>
+<td>0.36</td>
+<td>1.00</td>
+<td>0.94</td>
+<td>0.63</td>
+<td>0.36</td>
+<td>0.89</td>
+<td>0.48</td>
+<td>0.93</td>
+<td>0.42</td>
+<td>0.95</td>
+<td>0.55</td>
+<td>0.58</td>
+<td>0.45</td>
+<td>1.00</td>
+<td>0.85</td>
+<td>0.83</td>
+<td>0.45</td>
+<td>0.62</td>
+<td>0.48</td>
+</tr>
+<tr>
+<td>257-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.07</td>
+<td>0.21</td>
+<td>1.00</td>
+<td>0.48</td>
+<td>0.86</td>
+<td>0.18</td>
+<td>1.00</td>
+<td>0.67</td>
+<td>0.56</td>
+<td>0.15</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.88</td>
+<td>0.21</td>
+<td>1.00</td>
+<td>0.24</td>
+<td>0.36</td>
+<td>0.27</td>
+<td>0.93</td>
+<td>0.82</td>
+<td>0.80</td>
+<td>0.24</td>
+<td>0.82</td>
+<td>0.27</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>258</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.04</td>
+<td>0.04</td>
+<td>0.98</td>
+<td>0.65</td>
+<td>1.00</td>
+<td>0.01</td>
+<td>0.97</td>
+<td>0.78</td>
+<td>1.00</td>
+<td>0.01</td>
+<td>1.00</td>
+<td>0.04</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.51</td>
+<td>0.19</td>
+<td>0.08</td>
+<td>0.06</td>
+<td>1.00</td>
+<td>0.49</td>
+<td>0.94</td>
+<td>0.31</td>
+<td>1.00</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>258-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.76</td>
+<td>0.80</td>
+<td>0.96</td>
+<td>0.94</td>
+<td>0.92</td>
+<td>0.38</td>
+<td>1.00</td>
+<td>0.95</td>
+<td>0.80</td>
+<td>0.48</td>
+<td>1.00</td>
+<td>0.86</td>
+<td>0.99</td>
+<td>0.78</td>
+<td>1.00</td>
+<td>0.85</td>
+<td>0.90</td>
+<td>0.81</td>
+<td>1.00</td>
+<td>0.89</td>
+<td>0.99</td>
+<td>0.89</td>
+<td>0.83</td>
+<td>0.27</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>258-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.58</td>
+<td>0.60</td>
+<td>0.95</td>
+<td>0.86</td>
+<td>0.92</td>
+<td>0.35</td>
+<td>0.99</td>
+<td>0.90</td>
+<td>0.83</td>
+<td>0.37</td>
+<td>0.98</td>
+<td>0.66</td>
+<td>1.00</td>
+<td>0.59</td>
+<td>0.94</td>
+<td>0.65</td>
+<td>0.71</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.81</td>
+<td>0.99</td>
+<td>0.76</td>
+<td>0.82</td>
+<td>0.25</td>
+</tr>
+<tr>
+<td>258-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.39</td>
+<td>0.41</td>
+<td>0.95</td>
+<td>0.78</td>
+<td>0.81</td>
+<td>0.27</td>
+<td>0.99</td>
+<td>0.86</td>
+<td>0.78</td>
+<td>0.23</td>
+<td>1.00</td>
+<td>0.48</td>
+<td>0.97</td>
+<td>0.40</td>
+<td>1.00</td>
+<td>0.55</td>
+<td>0.43</td>
+<td>0.38</td>
+<td>1.00</td>
+<td>0.70</td>
+<td>0.95</td>
+<td>0.62</td>
+<td>0.69</td>
+<td>0.19</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>258-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.24</td>
+<td>0.25</td>
+<td>0.96</td>
+<td>0.72</td>
+<td>0.78</td>
+<td>0.15</td>
+<td>1.00</td>
+<td>0.83</td>
+<td>0.80</td>
+<td>0.13</td>
+<td>0.96</td>
+<td>0.27</td>
+<td>0.95</td>
+<td>0.22</td>
+<td>0.86</td>
+<td>0.40</td>
+<td>0.25</td>
+<td>0.20</td>
+<td>1.00</td>
+<td>0.63</td>
+<td>0.94</td>
+<td>0.54</td>
+<td>0.79</td>
+<td>0.12</td>
+</tr>
+<tr>
+<td>259</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.02</td>
+<td>0.02</td>
+<td>0.92</td>
+<td>0.67</td>
+<td>1.00</td>
+<td>0.01</td>
+<td>0.96</td>
+<td>0.78</td>
+<td>1.00</td>
+<td>0.01</td>
+<td>1.00</td>
+<td>0.04</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.60</td>
+<td>0.19</td>
+<td>0.05</td>
+<td>0.04</td>
+<td>0.92</td>
+<td>0.49</td>
+<td>0.89</td>
+<td>0.35</td>
+<td>1.00</td>
+<td>0.01</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>259-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.91</td>
+<td>0.93</td>
+<td>0.90</td>
+<td>0.39</td>
+<td>0.98</td>
+<td>0.95</td>
+<td>0.83</td>
+<td>0.51</td>
+<td>0.98</td>
+<td>0.87</td>
+<td>0.55</td>
+<td>0.55</td>
+<td>1.00</td>
+<td>0.72</td>
+<td>0.89</td>
+<td>0.77</td>
+<td>0.99</td>
+<td>0.94</td>
+<td>0.97</td>
+<td>0.89</td>
+<td>0.85</td>
+<td>0.29</td>
+</tr>
+<tr>
+<td>259-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.91</td>
+<td>0.93</td>
+<td>0.91</td>
+<td>0.40</td>
+<td>0.98</td>
+<td>0.95</td>
+<td>0.83</td>
+<td>0.51</td>
+<td>0.98</td>
+<td>0.87</td>
+<td>0.52</td>
+<td>0.52</td>
+<td>0.97</td>
+<td>0.71</td>
+<td>0.89</td>
+<td>0.80</td>
+<td>0.99</td>
+<td>0.94</td>
+<td>0.97</td>
+<td>0.90</td>
+<td>0.85</td>
+<td>0.29</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>259-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.91</td>
+<td>0.93</td>
+<td>0.91</td>
+<td>0.40</td>
+<td>0.98</td>
+<td>0.95</td>
+<td>0.85</td>
+<td>0.52</td>
+<td>0.98</td>
+<td>0.87</td>
+<td>0.55</td>
+<td>0.55</td>
+<td>1.00</td>
+<td>0.70</td>
+<td>0.89</td>
+<td>0.79</td>
+<td>0.99</td>
+<td>0.94</td>
+<td>0.97</td>
+<td>0.89</td>
+<td>0.85</td>
+<td>0.29</td>
+</tr>
+<tr>
+<td>259-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.79</td>
+<td>0.91</td>
+<td>0.93</td>
+<td>0.90</td>
+<td>0.39</td>
+<td>0.98</td>
+<td>0.95</td>
+<td>0.81</td>
+<td>0.49</td>
+<td>0.98</td>
+<td>0.87</td>
+<td>0.53</td>
+<td>0.53</td>
+<td>0.97</td>
+<td>0.72</td>
+<td>0.87</td>
+<td>0.78</td>
+<td>0.99</td>
+<td>0.94</td>
+<td>0.96</td>
+<td>0.89</td>
+<td>0.85</td>
+<td>0.29</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>260</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.93</td>
+<td>0.45</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.92</td>
+<td>0.41</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.67</td>
+<td>0.07</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.14</td>
+<td>0.10</td>
+<td>0.94</td>
+<td>0.52</td>
+<td>0.33</td>
+<td>0.03</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>260-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.24</td>
+<td>0.79</td>
+<td>0.96</td>
+<td>0.90</td>
+<td>0.77</td>
+<td>0.34</td>
+<td>0.96</td>
+<td>0.93</td>
+<td>0.49</td>
+<td>0.59</td>
+<td>0.96</td>
+<td>0.86</td>
+<td>0.96</td>
+<td>0.79</td>
+<td>0.87</td>
+<td>0.69</td>
+<td>0.92</td>
+<td>0.83</td>
+<td>0.96</td>
+<td>0.90</td>
+<td>0.96</td>
+<td>0.83</td>
+<td>0.82</td>
+<td>0.79</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>260-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.19</td>
+<td>0.62</td>
+<td>0.96</td>
+<td>0.79</td>
+<td>0.89</td>
+<td>0.59</td>
+<td>0.96</td>
+<td>0.86</td>
+<td>0.62</td>
+<td>0.55</td>
+<td>0.95</td>
+<td>0.69</td>
+<td>1.00</td>
+<td>0.62</td>
+<td>0.94</td>
+<td>0.59</td>
+<td>0.74</td>
+<td>0.69</td>
+<td>0.96</td>
+<td>0.86</td>
+<td>0.90</td>
+<td>0.66</td>
+<td>0.79</td>
+<td>0.66</td>
+</tr>
+<tr>
+<td>260-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.12</td>
+<td>0.41</td>
+<td>0.95</td>
+<td>0.69</td>
+<td>0.77</td>
+<td>0.34</td>
+<td>0.96</td>
+<td>0.79</td>
+<td>0.44</td>
+<td>0.28</td>
+<td>0.87</td>
+<td>0.45</td>
+<td>0.92</td>
+<td>0.41</td>
+<td>0.80</td>
+<td>0.41</td>
+<td>0.50</td>
+<td>0.38</td>
+<td>0.96</td>
+<td>0.76</td>
+<td>0.81</td>
+<td>0.45</td>
+<td>0.62</td>
+<td>0.45</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>260-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.08</td>
+<td>0.28</td>
+<td>0.94</td>
+<td>0.55</td>
+<td>0.57</td>
+<td>0.14</td>
+<td>0.95</td>
+<td>0.62</td>
+<td>0.40</td>
+<td>0.14</td>
+<td>0.90</td>
+<td>0.31</td>
+<td>0.88</td>
+<td>0.24</td>
+<td>0.75</td>
+<td>0.21</td>
+<td>0.33</td>
+<td>0.28</td>
+<td>0.95</td>
+<td>0.69</td>
+<td>0.89</td>
+<td>0.28</td>
+<td>0.73</td>
+<td>0.28</td>
+</tr>
+<tr>
+<td>261</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.87</td>
+<td>0.39</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.88</td>
+<td>0.42</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.67</td>
+<td>0.06</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.50</td>
+<td>0.03</td>
+<td>0.04</td>
+<td>0.03</td>
+<td>0.78</td>
+<td>0.42</td>
+<td>0.22</td>
+<td>0.06</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>261-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.79</td>
+<td>0.91</td>
+<td>0.88</td>
+<td>0.85</td>
+<td>0.70</td>
+<td>0.88</td>
+<td>0.88</td>
+<td>0.50</td>
+<td>0.58</td>
+<td>0.91</td>
+<td>0.88</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.93</td>
+<td>0.76</td>
+<td>0.58</td>
+<td>0.58</td>
+<td>0.94</td>
+<td>0.91</td>
+<td>0.84</td>
+<td>0.79</td>
+<td>0.87</td>
+<td>0.82</td>
+</tr>
+<tr>
+<td>261-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.79</td>
+<td>0.91</td>
+<td>0.88</td>
+<td>0.85</td>
+<td>0.70</td>
+<td>0.88</td>
+<td>0.88</td>
+<td>0.61</td>
+<td>0.70</td>
+<td>0.91</td>
+<td>0.88</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.93</td>
+<td>0.82</td>
+<td>0.66</td>
+<td>0.64</td>
+<td>0.94</td>
+<td>0.91</td>
+<td>0.84</td>
+<td>0.79</td>
+<td>0.87</td>
+<td>0.82</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>261-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.79</td>
+<td>0.91</td>
+<td>0.88</td>
+<td>0.85</td>
+<td>0.70</td>
+<td>0.88</td>
+<td>0.88</td>
+<td>0.53</td>
+<td>0.61</td>
+<td>0.91</td>
+<td>0.88</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.93</td>
+<td>0.82</td>
+<td>0.56</td>
+<td>0.55</td>
+<td>0.94</td>
+<td>0.91</td>
+<td>0.84</td>
+<td>0.79</td>
+<td>0.87</td>
+<td>0.82</td>
+</tr>
+<tr>
+<td>261-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.79</td>
+<td>0.91</td>
+<td>0.88</td>
+<td>0.85</td>
+<td>0.70</td>
+<td>0.88</td>
+<td>0.88</td>
+<td>0.61</td>
+<td>0.70</td>
+<td>0.91</td>
+<td>0.88</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.93</td>
+<td>0.82</td>
+<td>0.59</td>
+<td>0.61</td>
+<td>0.94</td>
+<td>0.91</td>
+<td>0.84</td>
+<td>0.79</td>
+<td>0.87</td>
+<td>0.82</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>262</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.03</td>
+<td>0.09</td>
+<td>1.00</td>
+<td>0.39</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>1.00</td>
+<td>0.03</td>
+<td>0.05</td>
+<td>0.03</td>
+<td>1.00</td>
+<td>0.36</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>262-2</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.27</td>
+<td>0.79</td>
+<td>1.00</td>
+<td>0.85</td>
+<td>1.00</td>
+<td>0.30</td>
+<td>1.00</td>
+<td>0.82</td>
+<td>0.51</td>
+<td>0.55</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>1.00</td>
+<td>0.70</td>
+<td>0.86</td>
+<td>0.76</td>
+<td>1.00</td>
+<td>0.82</td>
+<td>1.00</td>
+<td>0.79</td>
+<td>0.86</td>
+<td>0.76</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>262-4</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.21</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.73</td>
+<td>0.90</td>
+<td>0.27</td>
+<td>1.00</td>
+<td>0.70</td>
+<td>0.54</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.55</td>
+<td>0.75</td>
+<td>0.55</td>
+<td>1.00</td>
+<td>0.70</td>
+<td>1.00</td>
+<td>0.61</td>
+<td>0.83</td>
+<td>0.61</td>
+</tr>
+<tr>
+<td>262-6</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.14</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>0.64</td>
+<td>0.73</td>
+<td>0.24</td>
+<td>1.00</td>
+<td>0.61</td>
+<td>0.63</td>
+<td>0.36</td>
+<td>1.00</td>
+<td>0.42</td>
+<td>0.93</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>0.45</td>
+<td>0.56</td>
+<td>0.42</td>
+<td>1.00</td>
+<td>0.61</td>
+<td>1.00</td>
+<td>0.42</td>
+<td>0.58</td>
+<td>0.42</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>262-8</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.07</td>
+<td>0.21</td>
+<td>1.00</td>
+<td>0.48</td>
+<td>0.33</td>
+<td>0.06</td>
+<td>1.00</td>
+<td>0.42</td>
+<td>0.78</td>
+<td>0.21</td>
+<td>1.00</td>
+<td>0.21</td>
+<td>0.88</td>
+<td>0.21</td>
+<td>1.00</td>
+<td>0.24</td>
+<td>0.48</td>
+<td>0.30</td>
+<td>1.00</td>
+<td>0.45</td>
+<td>1.00</td>
+<td>0.21</td>
+<td>0.78</td>
+<td>0.21</td>
+</tr>
+<tr>
+<td>265</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.02</td>
+<td>0.07</td>
+<td>0.93</td>
+<td>0.45</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.90</td>
+<td>0.31</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.67</td>
+<td>0.07</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.05</td>
+<td>0.03</td>
+<td>0.93</td>
+<td>0.48</td>
+<td>0.33</td>
+<td>0.03</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>266</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.87</td>
+<td>0.39</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.83</td>
+<td>0.30</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.67</td>
+<td>0.06</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.50</td>
+<td>0.03</td>
+<td>0.07</td>
+<td>0.06</td>
+<td>0.76</td>
+<td>0.39</td>
+<td>0.11</td>
+<td>0.03</td>
+<td>0.00</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>301</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.47</td>
+<td>0.78</td>
+<td>1.00</td>
+<td>0.42</td>
+<td>0.86</td>
+<td>0.64</td>
+<td>0.91</td>
+<td>0.81</td>
+<td>0.93</td>
+<td>0.24</td>
+<td>0.92</td>
+<td>0.58</td>
+<td>0.91</td>
+<td>0.68</td>
+<td>0.92</td>
+<td>0.58</td>
+<td>0.68</td>
+<td>0.61</td>
+<td>0.95</td>
+<td>0.59</td>
+<td>0.90</td>
+<td>0.78</td>
+<td>0.69</td>
+<td>0.31</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>302</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.32</td>
+<td>0.65</td>
+<td>1.00</td>
+<td>0.19</td>
+<td>0.73</td>
+<td>0.23</td>
+<td>0.86</td>
+<td>0.63</td>
+<td>1.00</td>
+<td>0.42</td>
+<td>0.93</td>
+<td>0.58</td>
+<td>0.90</td>
+<td>0.58</td>
+<td>0.81</td>
+<td>0.27</td>
+<td>0.50</td>
+<td>0.02</td>
+<td>1.00</td>
+<td>0.58</td>
+<td>0.86</td>
+<td>0.65</td>
+<td>0.76</td>
+<td>0.27</td>
+</tr>
+<tr>
+<td>303</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.83</td>
+<td>0.73</td>
+<td>0.69</td>
+<td>0.52</td>
+<td>0.78</td>
+<td>0.88</td>
+<td>0.92</td>
+<td>0.50</td>
+<td>0.85</td>
+<td>0.81</td>
+<td>0.77</td>
+<td>0.77</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.91</td>
+<td>0.81</td>
+<td>0.46</td>
+<td>0.54</td>
+<td>0.48</td>
+<td>0.29</td>
+</tr>
+<tr bgcolor="lightblue">
+<td>304</td>
+<td>1.00</td>
+<td>1.00</td>
+<td>0.74</td>
+<td>0.95</td>
+<td>0.86</td>
+<td>0.86</td>
+<td>0.91</td>
+<td>0.78</td>
+<td>0.94</td>
+<td>0.97</td>
+<td>0.94</td>
+<td>0.61</td>
+<td>0.95</td>
+<td>0.95</td>
+<td>0.96</td>
+<td>0.93</td>
+<td>0.91</td>
+<td>0.66</td>
+<td>0.76</td>
+<td>0.68</td>
+<td>0.92</td>
+<td>0.96</td>
+<td>0.91</td>
+<td>0.92</td>
+<td>0.90</td>
+<td>0.37</td>
+</tr>
+<tr bgcolor="yellow"><td>H-mean</td><td>1.00</td>
+<td>1.00</td>
+<td>0.45</td>
+<td>0.58</td>
+<td>0.95</td>
+<td>0.84</td>
+<td>0.94</td>
+<td>0.48</td>
+<td>0.98</td>
+<td>0.89</td>
+<td>0.84</td>
+<td>0.44</td>
+<td>0.98</td>
+<td>0.65</td>
+<td>0.82</td>
+<td>0.65</td>
+<td>0.96</td>
+<td>0.67</td>
+<td>0.68</td>
+<td>0.60</td>
+<td>0.99</td>
+<td>0.84</td>
+<td>0.97</td>
+<td>0.75</td>
+<td>0.86</td>
+<td>0.29</td>
+</tr>
+</tbody></table>
+<p><small>n/a: result alignment not provided or not readable<br />
+NaN: division per zero, likely due to empty alignment.</small></p>
+<p></p>
+
+<!--h2>References</h2>
+
+<p>[Ehrig&nbsp;2005] Marc Ehrig and J�r�me Euzenat. Relaxed precision and recall for ontology matching. In Ben Ashpole, J�r�me Euzenat, Marc Ehrig, and Heiner Stuckenschmidt, editors, Proc. K-Cap 2005 workshop on Integrating ontology, Banff (CA), pages 25-32, 2005.</p-->
+
+<div class="address">
+<div class="footer">
+http://oaei.ontologymatching.org/2010/results/benchmarks/index.html</div>
+8/3/2011
+</body>
+</html>

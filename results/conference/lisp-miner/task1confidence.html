@@ -1,0 +1,5624 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=Windows1250">
+		<!-- 4ftMiner.Task.HTML.Template, version of 2010-01-16 -->
+	
+		<title>Task1confidence - Task solution</title>
+		<link rel="stylesheet" type="text/css" href="design.css">
+	</head>
+	<body>
+		<h1>Solution of the data mining task 'Task1confidence'</h1>
+		<p>This documenten contains automatically generated description of a data mining task.</p>
+		<table id="metadata" summary="Task metadata">
+			<tr>
+				<th colspan="2">Task Metadata</th>
+			</tr>
+			<tr>
+				<td align="right">Task Name: </td>
+				<td><i>Task1confidence</i></td>
+			</tr>
+			<tr>
+				<td align="right">Group of Tasks: </td>
+				<td>Default group of tasks</td>
+			</tr>
+			<tr>
+				<td align="right">Data Matrix: </td>
+				<td>Oaei10all</td>
+			</tr>
+			<tr>
+				<td align="right">Number of found 4ft Association Rules: </td>
+				<td>29</td>
+			</tr>
+			<tr>
+				<td align="right">Number of verified patterns: </td>
+				<td>87</td>
+			</tr>
+			<tr>
+				<td align="right">Start of task: </td>
+				<td>24.11.2010 10:53:37</td>
+			</tr>
+			<tr>
+				<td align="right">Task duration: </td>
+				<td>0h 0m 3s</td>
+			</tr>
+			<tr>
+				<td align="right">Handling of missing values: </td>
+				<td>Delete</td>
+			</tr>
+			<tr>
+				<td align="right">Include antecedent extensions of all implications: </td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td align="right">Include succedent extension of 100% implications: </td>
+				<td>Delete</td>
+			</tr>
+			<tr>
+				<td align="right">Prime rule test for implications enabled: </td>
+				<td>No</td>
+			</tr>
+			<tr>
+				<td align="right">Prime rule test including minimal length check: </td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td align="right">Include both symetric hypotheses: </td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td align="right">Software system: </td>
+				<td>LISp-Miner</td>
+			</tr>
+			<tr>
+				<td align="right">Version: </td>
+				<td>14.07.01 of 18 Nov 2010</td>
+			</tr>
+			<tr>
+				<td align="right">Author: </td>
+				<td>PowerUser</td>
+			</tr>
+			<tr>
+				<td align="right">Notice: </td>
+				<td>-</td>
+			</tr>
+
+		</table>
+
+		<h2>Content</h2>
+
+		<ol type="I">
+			<li><a href="#section1">Analysed data description</a><ol>
+					<li><a href="#section1-measure">measure</a></li>
+					<li><a href="#section1-result">result</a></li>
+					<li><a href="#section1-system">system</a></li>
+				</ol>
+			</li>
+			<li><a href="#section3">Created attributes</a><ol>
+					<li><a href="#section3-Measure">Measure</a></li>
+					<li><a href="#section3-Result">Result</a></li>
+					<li><a href="#section3-System">System</a></li>
+				</ol>
+			</li>
+			<li><a href="#section4">Task Description</a><br></li>
+			<li><a href="#section5">Found 4ft Association Rules</a><ol>
+					<li><a href="#section5-rule1">Measure(&lt;0.0008865248;0.4)) ::: Result(-)</a></li>
+					<li><a href="#section5-rule2">Measure(&lt;0.0008865248;0.4)) ::: Result(&amp;)</a></li>
+					<li><a href="#section5-rule3">Measure(&lt;0.0008865248;0.4)) &amp; System(asmov) ::: Result(&amp;)</a></li>
+					<li><a href="#section5-rule4">Measure(&lt;0.0008865248;0.4)) &amp; System(sobom) ::: Result(-)</a></li>
+					<li><a href="#section5-rule5">Measure(&lt;0.0008865248;0.4)) &amp; System(sobom) ::: Result(&amp;)</a></li>
+					<li><a href="#section5-rule6">Measure(&lt;0.4;0.8)) ::: Result(-)</a></li>
+					<li><a href="#section5-rule7">Measure(&lt;0.4;0.8)) &amp; System(agrmaker) ::: Result(&amp;)</a></li>
+					<li><a href="#section5-rule8">Measure(&lt;0.4;0.8)) &amp; System(aroma) ::: Result(-)</a></li>
+					<li><a href="#section5-rule9">Measure(&lt;0.4;0.8)) &amp; System(asmov) ::: Result(+)</a></li>
+					<li><a href="#section5-rule10">Measure(&lt;0.4;0.8)) &amp; System(ef2match) ::: Result(&amp;)</a></li>
+					<li><a href="#section5-rule11">Measure(&lt;0.4;0.8)) &amp; System(falcon) ::: Result(&amp;)</a></li>
+					<li><a href="#section5-rule12">Measure(&lt;0.4;0.8)) &amp; System(sobom) ::: Result(+)</a></li>
+					<li><a href="#section5-rule13">Measure(&lt;0.8;1.0)) ::: Result(+)</a></li>
+					<li><a href="#section5-rule14">Measure(&lt;0.8;1.0)) &amp; System(ef2match) ::: Result(&amp;)</a></li>
+					<li><a href="#section5-rule15">Measure(&lt;0.8;1.0)) &amp; System(falcon) ::: Result(+)</a></li>
+					<li><a href="#section5-rule16">Measure(&lt;0.8;1.0)) &amp; System(germesmb) ::: Result(-)</a></li>
+					<li><a href="#section5-rule17">Measure(&lt;1.0;1.0&gt;) ::: Result(+)</a></li>
+					<li><a href="#section5-rule18">Measure(&lt;1.0;1.0&gt;) &amp; System(agrmaker) ::: Result(+)</a></li>
+					<li><a href="#section5-rule19">Measure(&lt;1.0;1.0&gt;) &amp; System(codi) ::: Result(+)</a></li>
+					<li><a href="#section5-rule20">Measure(&lt;1.0;1.0&gt;) &amp; System(ef2match) ::: Result(+)</a></li>
+					<li><a href="#section5-rule21">System(agrmaker) ::: Result(+)</a></li>
+					<li><a href="#section5-rule22">System(aroma) ::: Result(-)</a></li>
+					<li><a href="#section5-rule23">System(asmov) ::: Result(&amp;)</a></li>
+					<li><a href="#section5-rule24">System(codi) ::: Result(+)</a></li>
+					<li><a href="#section5-rule25">System(ef2match) ::: Result(+)</a></li>
+					<li><a href="#section5-rule26">System(falcon) ::: Result(+)</a></li>
+					<li><a href="#section5-rule27">System(germesmb) ::: Result(-)</a></li>
+					<li><a href="#section5-rule28">System(sobom) ::: Result(-)</a></li>
+					<li><a href="#section5-rule29">System(sobom) ::: Result(&amp;)</a></li>
+				</ol>
+			</li>
+
+<!-- Data Description -->
+
+		</ol><a id="section1"></a><h2>Analysed data description</h2>
+	        <p>Data matrix: Oaei10all<br>
+	        Number of records in data matrix: 16521</p>
+		<table class="itable" summary="Table: data description">
+			<caption valign="bottom">Table: data description</caption>
+			<tr>
+				<th colspan="5">Data matrix columns</th>
+			</tr>
+			<tr>
+				<th>Column name</th>
+				<th>Data type</th>
+				<th>Attribute type</th>
+				<th>Cardinality</th>
+			</tr>
+			<tr>
+				<a id="section1-measure">
+				<td>measure</td>
+				<td>Float</td>
+				<td>Ordinary DB field</td>
+				<td>Cardinal</td>
+			</tr>
+			<tr>
+				<a id="section1-result">
+				<td>result</td>
+				<td>String</td>
+				<td>Ordinary DB field</td>
+				<td>Nominal</td>
+			</tr>
+			<tr>
+				<a id="section1-system">
+				<td>system</td>
+				<td>String</td>
+				<td>Ordinary DB field</td>
+				<td>Nominal</td>
+			</tr>
+
+		</table>
+
+<!-- Attributes -->
+
+		</div><a id="section3"></a><h2>Created attributes</h2>
+		<p>There were created attributes based on data matrix columns. This attributes will be used in task description.</p>
+		<h3>Content (list of attributes)</h3>
+		<ol>
+			<li><a href="#section3-Measure">Measure</a></li>
+			<li><a href="#section3-Result">Result</a></li>
+			<li><a href="#section3-System">System</a></li>
+		</ol>
+		<p>Number of created attributes: <b>3</b></p>
+		<div class="idiv"><a id="section3-Measure"></a>
+			<table class="itable" summary="Table: attribute Measure">
+				<caption valign="bottom">Table: attribute Measure</caption>
+				<tr>
+					<td colspan="8">
+                        Attribute <b>Measure</b>
+                        based on column <b>measure</b></td>
+				</tr>
+				<tr>
+					<th>Category</th>
+					<th>Type</th>
+					<th>Bool</th>
+					<th>Values</th>
+					<th>+NULL?</th>
+					<th>Frequency</th>
+					<th>XCat?</th>
+					<th>Notice</th>
+				</tr>
+				<tr>
+					<td>&lt;0.0008865248;0.4)</td>
+					<td>Interval</td>
+					<td>-</td>
+					<td>
+							&lt;0.000887;0.4)
+					</td>
+					<td>No</td>
+					<td>4941</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>&lt;0.4;0.8)</td>
+					<td>Interval</td>
+					<td>-</td>
+					<td>
+							&lt;0.4;0.8)
+					</td>
+					<td>No</td>
+					<td>4457</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>&lt;0.8;1.0)</td>
+					<td>Interval</td>
+					<td>-</td>
+					<td>
+							&lt;0.8;1)
+					</td>
+					<td>No</td>
+					<td>3936</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>&lt;1.0;1.0&gt;</td>
+					<td>Interval</td>
+					<td>-</td>
+					<td>
+							&lt;1;1&gt;
+					</td>
+					<td>No</td>
+					<td>3186</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+			</table>
+		</div>
+		<div class="idiv"><a id="section3-Result"></a>
+			<table class="itable" summary="Table: attribute Result">
+				<caption valign="bottom">Table: attribute Result</caption>
+				<tr>
+					<td colspan="8">
+                        Attribute <b>Result</b>
+                        based on column <b>result</b></td>
+				</tr>
+				<tr>
+					<th>Category</th>
+					<th>Type</th>
+					<th>Bool</th>
+					<th>Values</th>
+					<th>+NULL?</th>
+					<th>Frequency</th>
+					<th>XCat?</th>
+					<th>Notice</th>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							-&nbsp;
+					</td>
+					<td>No</td>
+					<td>2151</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>!</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							!&nbsp;
+					</td>
+					<td>No</td>
+					<td>118</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>&amp;</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							&amp;&nbsp;
+					</td>
+					<td>No</td>
+					<td>10033</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>+</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							+&nbsp;
+					</td>
+					<td>No</td>
+					<td>4200</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>i</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							i&nbsp;
+					</td>
+					<td>No</td>
+					<td>19</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+			</table>
+		</div>
+		<div class="idiv"><a id="section3-System"></a>
+			<table class="itable" summary="Table: attribute System">
+				<caption valign="bottom">Table: attribute System</caption>
+				<tr>
+					<td colspan="8">
+                        Attribute <b>System</b>
+                        based on column <b>system</b></td>
+				</tr>
+				<tr>
+					<th>Category</th>
+					<th>Type</th>
+					<th>Bool</th>
+					<th>Values</th>
+					<th>+NULL?</th>
+					<th>Frequency</th>
+					<th>XCat?</th>
+					<th>Notice</th>
+				</tr>
+				<tr>
+					<td>agrmaker</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							agrmaker&nbsp;
+					</td>
+					<td>No</td>
+					<td>1893</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>aroma</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							aroma&nbsp;
+					</td>
+					<td>No</td>
+					<td>1892</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>asmov</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							asmov&nbsp;
+					</td>
+					<td>No</td>
+					<td>3152</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>codi</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							codi&nbsp;
+					</td>
+					<td>No</td>
+					<td>783</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>ef2match</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							ef2match&nbsp;
+					</td>
+					<td>No</td>
+					<td>1778</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>falcon</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							falcon&nbsp;
+					</td>
+					<td>No</td>
+					<td>1481</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>germesmb</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							germesmb&nbsp;
+					</td>
+					<td>No</td>
+					<td>1957</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>sobom</td>
+					<td>Enumeration</td>
+					<td>-</td>
+					<td>
+							sobom&nbsp;
+					</td>
+					<td>No</td>
+					<td>3280</td>
+					<td>No</td>
+					<td>-</td>
+				</tr>
+			</table>
+		</div>
+
+<!-- Task Description -->
+
+		</div><a id="section4"></a><h2>Task Description</h2>
+		<div class="idiv">
+			<p>Task Name: Task1confidence</p>
+			<table class="itable" summary="Table: used 4ft quantifiers">
+				<caption valign="bottom">Table: used 4ft quantifiers</caption>
+				<tr>
+					<th>Quantifier</th>
+					<th>Threshold</th>
+					<th>Significance level</th>
+				</tr>
+				<tr>
+					<td>BASE</td>
+					<td>0.010000</td>
+					<td>N/A</td>
+				</tr>
+				<tr>
+					<td>Above Average Dependence</td>
+					<td>0.100000</td>
+					<td>N/A</td>
+				</tr>
+			</table>
+		</div>
+
+
+	<!-- Antecedent Description -->
+
+		<div class="idiv">
+			<table class="itable" summary="Table: Antecedent -- partial cedents">
+				<caption valign="bottom">Table: Antecedent -- partial cedents</caption>
+				<tr>
+					<th colspan="4">Antecedent -- partial cedents</th>
+				</tr>
+				<tr>
+					<th>Partial cedent</th>
+					<th>Conj/Disj</th>
+					<th>MinLen</th>
+					<th>MaxLen</th>
+				</tr>
+				<tr>
+					<td>Antecedent</td>
+					<td>Conjunction</td>
+					<td>0</td>
+					<td>99</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="idiv">
+			<table class="itable" summary="Table: Antecedent -- Literals">
+				<caption valign="bottom">Table: Antecedent -- Literals</caption>
+				<tr>
+					<th colspan="9">Table: Antecedent -- Literals</th>
+				</tr>
+				<tr>
+					<th>Partial Cedent</th>
+					<th>Literal</th>
+					<th>Attribute</th>
+					<th>Column</th>
+					<th>Gace</th>
+					<th>Coefficient</th>
+					<th>EqClass</th>
+					<th>MinLen</th>
+					<th>MaxLen</th>
+				</tr>
+
+				<tr>
+					<td>Antecedent</td>
+					<td>Measure (subset), 1 - 1</td>
+					<td>Measure</td>
+					<td>measure</td>
+					<td>Basic</td>
+					<td>Subset</td>
+					<td>NULL</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>Antecedent</td>
+					<td>System (subset), 1 - 1</td>
+					<td>System</td>
+					<td>system</td>
+					<td>Basic</td>
+					<td>Subset</td>
+					<td>NULL</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+
+			</table>
+		</div>
+
+	<!-- Succedent Description -->
+
+		<div class="idiv">
+			<table class="itable" summary="Table: Succedent -- partial cedents">
+				<caption valign="bottom">Table: Succedent -- partial cedents</caption>
+				<tr>
+					<th colspan="4">Succedent -- partial cedents</th>
+				</tr>
+				<tr>
+					<th>Partial cedent</th>
+					<th>Conj/Disj</th>
+					<th>MinLen</th>
+					<th>MaxLen</th>
+				</tr>
+				<tr>
+					<td>Succedent</td>
+					<td>Conjunction</td>
+					<td>1</td>
+					<td>99</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="idiv">
+			<table class="itable" summary="Table: Succedent -- Literals">
+				<caption valign="bottom">Table: Succedent -- Literals</caption>
+				<tr>
+					<th colspan="9">Table: Succedent -- Literals</th>
+				</tr>
+				<tr>
+					<th>Partial Cedent</th>
+					<th>Literal</th>
+					<th>Attribute</th>
+					<th>Column</th>
+					<th>Gace</th>
+					<th>Coefficient</th>
+					<th>EqClass</th>
+					<th>MinLen</th>
+					<th>MaxLen</th>
+				</tr>
+
+				<tr>
+					<td>Succedent</td>
+					<td>Result (subset), 1 - 1</td>
+					<td>Result</td>
+					<td>result</td>
+					<td>Basic</td>
+					<td>Subset</td>
+					<td>NULL</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+
+			</table>
+		</div>
+
+	<!-- Condition Description -->
+
+		<div class="idiv">
+			<table class="itable" summary="Table: Condition -- partial cedents">
+				<caption valign="bottom">Table: Condition -- partial cedents</caption>
+				<tr>
+					<th colspan="4">Condition -- partial cedents</th>
+				</tr>
+				<tr>
+					<th>Partial cedent</th>
+					<th>Conj/Disj</th>
+					<th>MinLen</th>
+					<th>MaxLen</th>
+				</tr>
+				<tr>
+					<td>Condition</td>
+					<td>Conjunction</td>
+					<td>0</td>
+					<td>99</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="idiv">
+			<table class="itable" summary="Table: Condition -- Literals">
+				<caption valign="bottom">Table: Condition -- Literals</caption>
+				<tr>
+					<th colspan="9">Table: Condition -- Literals</th>
+				</tr>
+				<tr>
+					<th>Partial Cedent</th>
+					<th>Literal.Name</th>
+					<th>Attribute</th>
+					<th>Column</th>
+					<th>Gace</th>
+					<th>Coefficient</th>
+					<th>EqClass</th>
+					<th>MinLen</th>
+					<th>MaxLen</th>
+				</tr>
+
+
+			</table>
+		</div>
+
+<!-- Association rules -->
+
+		</div><a id="section5"></a><h2>Found 4ft Association Rules</h2>
+		<p>Found 4ft Association Rules concerns following data matrix columns: 
+			measure&nbsp;
+			result&nbsp;
+			system&nbsp;
+		</p>
+
+		<p>Number of found 4ft association rules: 29</p>
+
+		<h3>Content (list of rules)</h3>
+		<ol>
+			<li><a href="#section5-rule1">Measure(&lt;0.0008865248;0.4)) ::: Result(-)</a></li>
+			<li><a href="#section5-rule2">Measure(&lt;0.0008865248;0.4)) ::: Result(&amp;)</a></li>
+			<li><a href="#section5-rule3">Measure(&lt;0.0008865248;0.4)) &amp; System(asmov) ::: Result(&amp;)</a></li>
+			<li><a href="#section5-rule4">Measure(&lt;0.0008865248;0.4)) &amp; System(sobom) ::: Result(-)</a></li>
+			<li><a href="#section5-rule5">Measure(&lt;0.0008865248;0.4)) &amp; System(sobom) ::: Result(&amp;)</a></li>
+			<li><a href="#section5-rule6">Measure(&lt;0.4;0.8)) ::: Result(-)</a></li>
+			<li><a href="#section5-rule7">Measure(&lt;0.4;0.8)) &amp; System(agrmaker) ::: Result(&amp;)</a></li>
+			<li><a href="#section5-rule8">Measure(&lt;0.4;0.8)) &amp; System(aroma) ::: Result(-)</a></li>
+			<li><a href="#section5-rule9">Measure(&lt;0.4;0.8)) &amp; System(asmov) ::: Result(+)</a></li>
+			<li><a href="#section5-rule10">Measure(&lt;0.4;0.8)) &amp; System(ef2match) ::: Result(&amp;)</a></li>
+			<li><a href="#section5-rule11">Measure(&lt;0.4;0.8)) &amp; System(falcon) ::: Result(&amp;)</a></li>
+			<li><a href="#section5-rule12">Measure(&lt;0.4;0.8)) &amp; System(sobom) ::: Result(+)</a></li>
+			<li><a href="#section5-rule13">Measure(&lt;0.8;1.0)) ::: Result(+)</a></li>
+			<li><a href="#section5-rule14">Measure(&lt;0.8;1.0)) &amp; System(ef2match) ::: Result(&amp;)</a></li>
+			<li><a href="#section5-rule15">Measure(&lt;0.8;1.0)) &amp; System(falcon) ::: Result(+)</a></li>
+			<li><a href="#section5-rule16">Measure(&lt;0.8;1.0)) &amp; System(germesmb) ::: Result(-)</a></li>
+			<li><a href="#section5-rule17">Measure(&lt;1.0;1.0&gt;) ::: Result(+)</a></li>
+			<li><a href="#section5-rule18">Measure(&lt;1.0;1.0&gt;) &amp; System(agrmaker) ::: Result(+)</a></li>
+			<li><a href="#section5-rule19">Measure(&lt;1.0;1.0&gt;) &amp; System(codi) ::: Result(+)</a></li>
+			<li><a href="#section5-rule20">Measure(&lt;1.0;1.0&gt;) &amp; System(ef2match) ::: Result(+)</a></li>
+			<li><a href="#section5-rule21">System(agrmaker) ::: Result(+)</a></li>
+			<li><a href="#section5-rule22">System(aroma) ::: Result(-)</a></li>
+			<li><a href="#section5-rule23">System(asmov) ::: Result(&amp;)</a></li>
+			<li><a href="#section5-rule24">System(codi) ::: Result(+)</a></li>
+			<li><a href="#section5-rule25">System(ef2match) ::: Result(+)</a></li>
+			<li><a href="#section5-rule26">System(falcon) ::: Result(+)</a></li>
+			<li><a href="#section5-rule27">System(germesmb) ::: Result(-)</a></li>
+			<li><a href="#section5-rule28">System(sobom) ::: Result(-)</a></li>
+			<li><a href="#section5-rule29">System(sobom) ::: Result(&amp;)</a></li>
+		</ol>
+
+	<!-- Hypothesis -->
+
+
+		<a id="section5-rule1"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.0008865248;0.4)) ::: Result(-)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.0008865248;0.4))</b><br>
+		Succedent: <b>Result(-)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>781</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>4160</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>1370</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>10210</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>4941</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.158065169</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.1237521787</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.6652744991</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0472731675</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.3630869363</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.2140374974</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>48.3399277382</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.1582035201</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.1582035201</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0051900602</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">781</td>
+				<td style="background: rgb(255,219,219);">4160</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">1370</td>
+				<td style="background: rgb(255,215,215);">10210</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule2"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.0008865248;0.4)) ::: Result(&amp;)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.0008865248;0.4))</b><br>
+		Succedent: <b>Result(&amp;)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>3651</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>1290</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>6382</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>5198</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>4941</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.7389192471</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.3224410492</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.5356213304</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.2209914654</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.3638991329</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.2167532026</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>512.1458321686</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.7388225774</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.7388225774</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0062473907</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">3651</td>
+				<td style="background: rgb(255,219,219);">1290</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">6382</td>
+				<td style="background: rgb(255,215,215);">5198</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule3"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.0008865248;0.4)) &amp; System(asmov) ::: Result(&amp;)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.0008865248;0.4)) &amp; System(asmov)</b><br>
+		Succedent: <b>Result(&amp;)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>1932</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>745</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>8101</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>5743</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>2677</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.7217033993</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.179254036</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.4645602566</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.1169420737</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.192564537</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.1884044513</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>175.3579265496</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.7215378873</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.7215378873</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0086585512</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">1932</td>
+				<td style="background: rgb(255,219,219);">745</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">8101</td>
+				<td style="background: rgb(255,215,215);">5743</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule4"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.0008865248;0.4)) &amp; System(sobom) ::: Result(-)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.0008865248;0.4)) &amp; System(sobom)</b><br>
+		Succedent: <b>Result(-)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>402</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>1849</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>1749</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>12521</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>2251</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.1785872945</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.1005</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7822165728</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0243326675</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.1868898187</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.3716600154</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>53.884415505</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.1788726143</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.1788726143</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0080723548</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">402</td>
+				<td style="background: rgb(255,219,219);">1849</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">1749</td>
+				<td style="background: rgb(255,215,215);">12521</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule5"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.0008865248;0.4)) &amp; System(sobom) ::: Result(&amp;)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.0008865248;0.4)) &amp; System(sobom)</b><br>
+		Succedent: <b>Result(&amp;)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>1710</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>541</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>8323</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>5947</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>2251</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.7596623723</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.1617174201</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.4634707342</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.1035046305</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.1704375561</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.2509102016</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>253.7140177899</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.7594318686</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.7594318686</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0090029845</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">1710</td>
+				<td style="background: rgb(255,219,219);">541</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">8323</td>
+				<td style="background: rgb(255,215,215);">5947</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule6"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.4;0.8)) ::: Result(-)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.4;0.8))</b><br>
+		Succedent: <b>Result(-)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>654</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>3803</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>1497</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>10567</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>4457</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.1467354723</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.1098421229</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.6791961746</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0395859815</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.3040446304</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.1270184741</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0.0000796756</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>14.7402571862</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.1468939224</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.1468939224</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0053007339</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">654</td>
+				<td style="background: rgb(255,219,219);">3803</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">1497</td>
+				<td style="background: rgb(255,215,215);">10567</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule7"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.4;0.8)) &amp; System(agrmaker) ::: Result(&amp;)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.4;0.8)) &amp; System(agrmaker)</b><br>
+		Succedent: <b>Result(&amp;)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>624</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>221</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>9409</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>6267</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>845</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.7384615385</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0608543008</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.4171055021</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0377701108</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.0621947573</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.2159995093</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>64.2515021383</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.7378984652</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.7378984652</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0151020241</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">624</td>
+				<td style="background: rgb(255,219,219);">221</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">9409</td>
+				<td style="background: rgb(255,215,215);">6267</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule8"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.4;0.8)) &amp; System(aroma) ::: Result(-)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.4;0.8)) &amp; System(aroma)</b><br>
+		Succedent: <b>Result(-)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>222</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>1199</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>1929</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>13171</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>1421</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.1562280084</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0662686567</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.810665214</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0134374433</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.1032078103</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.199926977</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0.0016059241</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>9.3020764103</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.1567111736</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.1567111736</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0096334791</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">222</td>
+				<td style="background: rgb(255,219,219);">1199</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">1929</td>
+				<td style="background: rgb(255,215,215);">13171</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule9"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.4;0.8)) &amp; System(asmov) ::: Result(+)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.4;0.8)) &amp; System(asmov)</b><br>
+		Succedent: <b>Result(+)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>181</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>264</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>4019</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>12057</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>445</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.406741573</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.040546595</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7407541916</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0109557533</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.0430952381</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.5999470305</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>56.1109334581</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.4071588367</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.4071588367</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0232119754</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">181</td>
+				<td style="background: rgb(255,219,219);">264</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">4019</td>
+				<td style="background: rgb(255,215,215);">12057</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule10"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.4;0.8)) &amp; System(ef2match) ::: Result(&amp;)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.4;0.8)) &amp; System(ef2match)</b><br>
+		Succedent: <b>Result(&amp;)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>193</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>87</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>9840</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>6401</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>280</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.6892857143</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0190711462</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.3991283821</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0116821016</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.0192365195</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.1350233515</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>0.9999999998</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0.0024976018</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>8.0300700654</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.6879432624</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.6879432624</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0275422791</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">193</td>
+				<td style="background: rgb(255,219,219);">87</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">9840</td>
+				<td style="background: rgb(255,215,215);">6401</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule11"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.4;0.8)) &amp; System(falcon) ::: Result(&amp;)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.4;0.8)) &amp; System(falcon)</b><br>
+		Succedent: <b>Result(&amp;)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>228</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>81</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>9805</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>6407</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>309</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.7378640777</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0225430097</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.401610072</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0138006174</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.0227250075</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.2150156909</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>0.9999999998</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0.0000007732</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>22.5122288361</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.7363344051</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.7363344051</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0249451995</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">228</td>
+				<td style="background: rgb(255,219,219);">81</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">9805</td>
+				<td style="background: rgb(255,215,215);">6407</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule12"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.4;0.8)) &amp; System(sobom) ::: Result(+)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.4;0.8)) &amp; System(sobom)</b><br>
+		Succedent: <b>Result(+)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>398</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>630</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>3802</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>11691</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>1028</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.3871595331</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0824016563</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7317353671</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0240905514</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.0947619048</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.5229196776</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>102.1803126749</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.3873786408</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.3873786408</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0151717113</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">398</td>
+				<td style="background: rgb(255,219,219);">630</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">3802</td>
+				<td style="background: rgb(255,215,215);">11691</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule13"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.8;1.0)) ::: Result(+)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.8;1.0))</b><br>
+		Succedent: <b>Result(+)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>1120</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>2816</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>3080</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>9505</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>3936</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.2845528455</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.1596351197</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.6431208765</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0677925065</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.2666666667</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.1193089431</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0.0000003781</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>25.0719163913</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.2846622651</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.2846622651</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0071899774</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">1120</td>
+				<td style="background: rgb(255,219,219);">2816</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">3080</td>
+				<td style="background: rgb(255,215,215);">9505</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule14"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.8;1.0)) &amp; System(ef2match) ::: Result(&amp;)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.8;1.0)) &amp; System(ef2match)</b><br>
+		Succedent: <b>Result(&amp;)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>180</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>82</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>9853</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>6406</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>262</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.6870229008</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0177953534</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.3986441499</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0108952243</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.0179407954</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.1312972534</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>0.9999999998</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0.0042492389</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>7.0970039183</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.6856060606</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.6856060606</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.028520128</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">180</td>
+				<td style="background: rgb(255,219,219);">82</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">9853</td>
+				<td style="background: rgb(255,215,215);">6406</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule15"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.8;1.0)) &amp; System(falcon) ::: Result(+)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.8;1.0)) &amp; System(falcon)</b><br>
+		Succedent: <b>Result(+)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>450</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>709</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>3750</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>11612</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>1159</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.3882657463</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0916683642</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7301010835</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0272380607</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.1071428571</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.5272710465</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>118.1253714539</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.3884582257</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.3884582257</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0142982261</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">450</td>
+				<td style="background: rgb(255,219,219);">709</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">3750</td>
+				<td style="background: rgb(255,215,215);">11612</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule16"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;0.8;1.0)) &amp; System(germesmb) ::: Result(-)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;0.8;1.0)) &amp; System(germesmb)</b><br>
+		Succedent: <b>Result(-)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>286</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>1501</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>1865</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>12869</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>1787</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.1600447678</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.078313253</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7962593063</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0173113008</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.1329614133</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.2292420308</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0.0000618137</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>15.7620374385</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.1604248183</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.1604248183</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0086743923</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">286</td>
+				<td style="background: rgb(255,219,219);">1501</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">1865</td>
+				<td style="background: rgb(255,215,215);">12869</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule17"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;1.0;1.0&gt;) ::: Result(+)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;1.0;1.0&gt;)</b><br>
+		Succedent: <b>Result(+)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>1621</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>1565</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>2579</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>10756</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>3186</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.5087884495</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.2811795317</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7491677259</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0981175474</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.385952381</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>1.001355708</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>1349.1777518424</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.508782936</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.508782936</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0088526997</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">1621</td>
+				<td style="background: rgb(255,219,219);">1565</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">2579</td>
+				<td style="background: rgb(255,215,215);">10756</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule18"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;1.0;1.0&gt;) &amp; System(agrmaker) ::: Result(+)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;1.0;1.0&gt;) &amp; System(agrmaker)</b><br>
+		Succedent: <b>Result(+)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>398</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>406</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>3802</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>11915</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>804</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.4950248756</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0864090317</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7452938684</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0240905514</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.0947619048</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.9472157072</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>258.478153084</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.4950372208</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.4950372208</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0175999666</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">398</td>
+				<td style="background: rgb(255,219,219);">406</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">3802</td>
+				<td style="background: rgb(255,215,215);">11915</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule19"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;1.0;1.0&gt;) &amp; System(codi) ::: Result(+)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;1.0;1.0&gt;) &amp; System(codi)</b><br>
+		Succedent: <b>Result(+)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>399</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>384</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>3801</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>11937</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>783</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.5095785441</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0870418848</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.746686036</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0241510804</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.095</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>1.0044636015</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>282.6964097866</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.5095541401</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.5095541401</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0178311532</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">399</td>
+				<td style="background: rgb(255,219,219);">384</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">3801</td>
+				<td style="background: rgb(255,215,215);">11937</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule20"></a><h3>Rule</h3>
+		<p><b>Measure(&lt;1.0;1.0&gt;) &amp; System(ef2match) ::: Result(+)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>Measure(&lt;1.0;1.0&gt;) &amp; System(ef2match)</b><br>
+		Succedent: <b>Result(+)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>483</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>753</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>3717</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>11568</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>1236</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.390776699</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0975166566</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7294352642</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0292355184</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.115</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.5371480583</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>131.3955665931</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.3909531502</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.3909531502</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0138628351</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">483</td>
+				<td style="background: rgb(255,219,219);">753</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">3717</td>
+				<td style="background: rgb(255,215,215);">11568</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule21"></a><h3>Rule</h3>
+		<p><b>System(agrmaker) ::: Result(+)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>System(agrmaker)</b><br>
+		Succedent: <b>Result(+)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>541</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>1352</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>3659</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>10969</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>1893</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.2857897517</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0974423631</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.6966890624</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0327462018</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.1288095238</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.1241744019</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0.0004993087</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>11.2374941908</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.2860158311</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.2860158311</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0103781552</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">541</td>
+				<td style="background: rgb(255,219,219);">1352</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">3659</td>
+				<td style="background: rgb(255,215,215);">10969</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule22"></a><h3>Rule</h3>
+		<p><b>System(aroma) ::: Result(-)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>System(aroma)</b><br>
+		Succedent: <b>Result(-)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>292</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>1600</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>1859</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>12770</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>1892</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.1543340381</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0778459078</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7906301071</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0176744749</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.1357508136</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.1853801221</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0.0006474088</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>10.9913944438</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.1546990496</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.1546990496</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0083070131</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">292</td>
+				<td style="background: rgb(255,219,219);">1600</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">1859</td>
+				<td style="background: rgb(255,215,215);">12770</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule23"></a><h3>Rule</h3>
+		<p><b>System(asmov) ::: Result(&amp;)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>System(asmov)</b><br>
+		Succedent: <b>Result(&amp;)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>2149</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>1003</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>7884</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>5485</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>3152</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.6817893401</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.1947263501</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.4620785667</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.1300768719</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.2141931626</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.122679327</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>90.6538718132</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.6816740647</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.6816740647</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0082932492</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">2149</td>
+				<td style="background: rgb(255,219,219);">1003</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">7884</td>
+				<td style="background: rgb(255,215,215);">5485</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule24"></a><h3>Rule</h3>
+		<p><b>System(codi) ::: Result(+)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>System(codi)</b><br>
+		Succedent: <b>Result(+)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>399</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>384</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>3801</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>11937</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>783</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.5095785441</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0870418848</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.746686036</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0241510804</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.095</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>1.0044636015</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>282.6964097866</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.5095541401</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.5095541401</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0178311532</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">399</td>
+				<td style="background: rgb(255,219,219);">384</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">3801</td>
+				<td style="background: rgb(255,215,215);">11937</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule25"></a><h3>Rule</h3>
+		<p><b>System(ef2match) ::: Result(+)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>System(ef2match)</b><br>
+		Succedent: <b>Result(+)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>526</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>1252</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>3674</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>11069</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>1778</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.2958380202</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0964783566</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7018340294</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0318382664</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.1252380952</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.1636999839</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0.0000145893</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>18.2004794522</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.2960674157</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.2960674157</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0108175492</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">526</td>
+				<td style="background: rgb(255,219,219);">1252</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">3674</td>
+				<td style="background: rgb(255,215,215);">11069</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule26"></a><h3>Rule</h3>
+		<p><b>System(falcon) ::: Result(+)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>System(falcon)</b><br>
+		Succedent: <b>Result(+)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>491</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>990</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>3709</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>11331</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>1481</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.3315327481</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.0946050096</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7155741178</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0297197506</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.1169047619</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.3041077457</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>51.2863568826</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.3317599461</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.3317599461</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0122225346</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">491</td>
+				<td style="background: rgb(255,219,219);">990</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">3709</td>
+				<td style="background: rgb(255,215,215);">11331</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule27"></a><h3>Rule</h3>
+		<p><b>System(germesmb) ::: Result(-)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>System(germesmb)</b><br>
+		Succedent: <b>Result(-)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>334</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>1623</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>1817</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>12747</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>1957</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.1706693919</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.088500265</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7917801586</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0202166939</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.1552766155</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.3108456643</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0.0000000252</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>32.1084807817</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.1710056151</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.1710056151</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0085045814</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">334</td>
+				<td style="background: rgb(255,219,219);">1623</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">1817</td>
+				<td style="background: rgb(255,215,215);">12747</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule28"></a><h3>Rule</h3>
+		<p><b>System(sobom) ::: Result(-)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>System(sobom)</b><br>
+		Succedent: <b>Result(-)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>502</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>2778</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>1649</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>11592</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>3280</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.1530487805</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.1018462163</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.7320380122</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.0303855699</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.2333798233</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.1755085553</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0.0000109172</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>18.8699006778</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.1532602072</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.1532602072</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0062871562</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">502</td>
+				<td style="background: rgb(255,219,219);">2778</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">1649</td>
+				<td style="background: rgb(255,215,215);">11592</td>
+			</tr>
+		</table>
+
+
+
+		<a id="section5-rule29"></a><h3>Rule</h3>
+		<p><b>System(sobom) ::: Result(&amp;)</b></p>
+		<p>
+
+		<p>
+		Antecedent: <b>System(sobom)</b><br>
+		Succedent: <b>Result(&amp;)</b><br>
+		</p>
+
+	<!-- Quantifier Values -->
+	
+		<table class="itable" summary="Quantifier Values">
+			<tr>
+				<th colspan="3">Quantifier Values</th>
+			</tr>
+			<tr>
+				<th>Quantifier</th>
+				<th>Value</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>a</td>
+				<td>2229</td>
+				<td>a-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td>1051</td>
+				<td>b-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td>7804</td>
+				<td>c-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td>5437</td>
+				<td>d-frequency from the contingency table</td>
+			</tr>
+			<tr>
+				<td>r</td>
+				<td>3280</td>
+				<td>r-frequency (a+b) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>n</td>
+				<td>16521</td>
+				<td>n-frequency (a+b+c+d) from the contingency table</td>
+			</tr>
+			<tr>
+				<td>Conf</td>
+				<td>0.6795731707</td>
+				<td>Confidence (validity): a/(a+b)</td>
+			</tr>
+			<tr>
+				<td>DConf</td>
+				<td>0.2011006857</td>
+				<td>D-Confidence: a/(a+b+c)</td>
+			</tr>
+			<tr>
+				<td>EConf</td>
+				<td>0.4640154954</td>
+				<td>E-Confidence: (a+d)/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Supp</td>
+				<td>0.1349191938</td>
+				<td>Support: a/(a+b+c+d)</td>
+			</tr>
+			<tr>
+				<td>Cmplt</td>
+				<td>0.2221668494</td>
+				<td>Completeness: a/(a+c)</td>
+			</tr>
+			<tr>
+				<td>AvgDf</td>
+				<td>0.1190300362</td>
+				<td>Average difference: a(a+b+c+d)/((a+b)(a+c))- 1</td>
+			</tr>
+			<tr>
+				<td>LBound</td>
+				<td>1</td>
+				<td>Lower bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>UBound</td>
+				<td>0</td>
+				<td>Upper bound implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>ELBound</td>
+				<td>0.9999999999</td>
+				<td>Lower bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>EUBound</td>
+				<td>0</td>
+				<td>Upper bound equivalence (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DLBound</td>
+				<td>1</td>
+				<td>Lower bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>DUBound</td>
+				<td>0</td>
+				<td>Upper bound double implication (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>Fisher</td>
+				<td>0</td>
+				<td>Fisher test</td>
+			</tr>
+			<tr>
+				<td>Chi-Sq</td>
+				<td>89.6649048764</td>
+				<td>Chi-square test</td>
+			</tr>
+			<tr>
+				<td>bMean</td>
+				<td>0.6794637416</td>
+				<td>Bayesian Mean</td>
+			</tr>
+			<tr>
+				<td>bVAR</td>
+				<td>0.6794637416</td>
+				<td>Bayesian Variance</td>
+			</tr>
+			<tr>
+				<td>bStDev</td>
+				<td>0.0081449099</td>
+				<td>Bayesian std. deviation</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=90%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.9)</td>
+			</tr>
+			<tr>
+				<td>P(&gt;=95%)</td>
+				<td>0</td>
+				<td>Bayesian Beta PDF integral (p=0.95)</td>
+			</tr>
+		</table>
+
+	<!-- 4ft Contingency Table -->
+
+		<h5>4ft Contingency Table</h5>
+		<table class="itable" summary="4ft Contingency Table">
+			<tr>
+				<td />
+				<td>Succedent</td>
+				<td>¬Succedent</td>
+			</tr>
+			<tr>
+				<td>Antecedent</td>
+				<td style="background: rgb(255,106,106);">2229</td>
+				<td style="background: rgb(255,219,219);">1051</td>
+			</tr>
+			<tr>
+				<td>¬Antecedent</td>
+				<td style="background: rgb(255,223,223);">7804</td>
+				<td style="background: rgb(255,215,215);">5437</td>
+			</tr>
+		</table>
+
+
+
+	</body>
+</html>

@@ -1,0 +1,87 @@
+<html><head><title>Ontology Alignment Evaluation Initiative::Conference track|evaluation modalities</title>
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../style.css"></head><body>
+
+<div class="header">
+<a style="color: grey; line-height: 5mm;" href="http://oaei.ontologymatching.org/2010/">Ontology
+  Alignment Evaluation Initiative - OAEI-2010
+  Campaign</a><a href="http://oaei.ontologymatching.org/"><img src="../../oaeismall.jpg" alt="OAEI" style="border-style: none; float: right; margin-left: 5pt;"></a>
+  <a href="http://www.seals-project.eu/">
+  <img style="float:right; margin-left: 5pt; border-style:none;" src="../../seals-logo.jpg"/></a>
+</div>
+
+<h1>Evaluation related to Conference track</h1>
+
+<p>This year we plan to evaluate results of participants with following evaluation methods:</p>
+<ul>
+<li><a href="#reference">(1) Evaluation based on reference alignments</a>;
+<li><a href="#manual">(2) Evaluation based on manual labelling</a>;
+<li><a href="#dmm">(3) Evaluation based on Data Mining method</a>;
+<li><a href="#reasoning">(4) Evaluation based on Logical Reasoning</a>.
+<!-- <li><a href="#consensus">(5) Evaluation based on consensus of experts</a> -->
+</ul>
+
+<h3><a name="reference">(1) Evaluation based on reference alignments</a></h3>
+<p>Subset of all alignments will be evaluated against <a href="data/reference-alignment.zip">reference alignment</a>. Therefore, we will provide participants with traditional evaluation measures such as <i>precision</i> and <i>recall</i>. 
+</p>
+<p>This evaluation will be ready at the time of Ontology Matching workshop 2010.</p>
+
+<h3><a name="manual">(2) Evaluation based on manual labelling</a></h3>
+<p>
+The number of all distinct correspondences is always quite high number, therefore we will take advantage of sampling. This year we will just take the most probable correct correspondences as a population for each matcher. It means we will evaluate 150 correspondences per matcher randomly chosen from all correspondences with confidence value 1.0. This approach is inspired by [4].
+</p>
+
+<p>Evaluation will be ready at the time of Ontology Matching workshop 2010.</p>
+
+<h3><a name="dmm">(3) Evaluation based on Data Mining method</a></h3>
+<p>Data Mining technique enables us to discover non-trivial findings about systems of participants. These findings will be answers to so-called <i>analytic questions</i>, such as:</p>
+<ul>
+<li>Which systems give higher/lower validity than others to the mappings that are deemed 'in/correct'?
+<li>Which systems produce certain mapping patterns/correspondence patterns more often than others?
+<li>Which systems are more successful on certain types of ontologies?
+</ul>
+<p>We will try to answer abovementioned and similar analytic question. Those analytic questions will also be dealing with so-called mapping patterns [2] and newly also with correspondence patterns [1].</p>
+<p>For the purpose of this kind of evaluation, we will use the <i>LISp-Miner</i> tool. Particularly, we will use the <i>4ft-Miner procedure</i> that mines <i>association rules</i>. This kind of evaluation was first tried two years ago [2]. We furthermore extended this approach and applied on data from years 2006, 2007 and 2008 [5]. 
+<p>Evaluation will be ready during November, 2010.</p>
+
+<h3><a name="reasoning">(4) Evaluation based on Logical Reasoning</a></h3>
+<p>This method will be done by Christian Meilicke and Heiner Stuckenschmidt from 
+Computer Science Institure at University Mannheim, Germany. This year, it will be done automatically within SEALS platform. In this kind of evaluation, ontologies will be merged on the base of correspondences submitted by participants. Subsequently, the incoherence of the mappings will be measured based on the incoherence of the merged ontology. This method is related to [3].</p>
+<hr>
+<h3><a name="consensus">Evaluation based on consensus of experts</a> (Consensus Building Workshop)</h3>
+<p>Finally, we can organize short session (during the day of workshops when OM workshop will not be held) when interesting (unclear, weird, surprising etc.) correspondences from participants results or from reference alignment will be discussed. This event would last one or two hours and would take place only if there would be some <i>interesting correspondences</i> for discussion and <i>interest</i> of people to participate.   
+
+<!--
+<h2>Acknowledgements</h2>
+
+<p>We deeply acknowledge the effort of contributors to the evaluation:
+</p>
+-->
+<h2>Contacts</h2>
+<p>Contact addresses are Ondřej Šváb-Zamazal (ondrej.zamazal at vse dot cz) and Vojtěch Svátek (svatek at vse dot cz).</p>
+<h2>References</h2>
+<p>
+<!--[1] Šváb O., Svátek V. Combining Ontology Mapping Methods Using Bayesian Networks. OM-2006 at ISWC-2006. -->
+</p>
+<p>
+[1] Scharffe F., Euzenat J., Ding Y., Fensel,D. Correspondence patterns for ontology mediation. OM-2007 at ISWC-2007.</p>
+<p>
+[2] Šváb O., Svátek V., Stuckenschmidt H.: A Study in Empirical and Casuistic Analysis of Ontology Mapping Results. ESWC-2007.
+<a href="http://nb.vse.cz/%7Esvatek/abstr.htm#eswc07" target="_blank">Abstract</a>
+<a href="http://nb.vse.cz/%7Esvatek/eswc07su.pdf" target="_blank">Draft paper</a> (final version available via <a href="http://www.springerlink.com/content/l3327x8n451g12r0/?p=1b0e634a25944c04836ca09588855c3d&pi=24">SpringerLink</a>)
+</p>
+<p>
+[3] Meilicke C., Stuckenschmidt H. Incoherence as a basis for measuring the quality of ontology mappings. OM-2008 at ISWC 2008.
+</p>
+<p>
+[4] van Hage W.R., Isaac A., Aleksovski Z. Sample evaluation of ontology matching systems. EON-2007, Busan, Korea, 2007.
+</p>
+<p>
+[5] Šváb-Zamazal O., Svátek V. Empirical Knowledge Discovery over Ontology Matching Results. IRMLeS 2009 at ESWC-2009.
+</p>
+<div class="address">
+<div class="footer">http://oaei.ontologymatching.org/2010/conference/eval1.html</div>
+<!--$Id$-->
+</div>
+</body></html>

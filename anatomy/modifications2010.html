@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>Ontology Alignment Evaluation Initiative::Anatomy</title>
+<link rel="stylesheet" type="text/css" href="http://oaei.ontologymatching.org/2010/style.css" />
+</head>
+<body>
+
+
+<h1>Datatset Anatomy 2010</h1>
+
+<h2>Download</h2>
+
+<ul>
+	<li><b><a href="data/mouse_anatomy_2010.owl">mouse_anatomy_2010.owl</a></b>, relevant for #1,#2,#3,#4</li>
+	<li><b><a href="data/nci_anatomy_2010.owl">nci_anatomy_2010.owl</a></b>,relevant for #1,#2,#3,#4</li>
+	<li><b><a href="data/partial_reference_2010.rdf">partial_reference_2010.rdf</a></b>, relevant for #4</li>
+</ul>
+
+
+<p><img src="hot.gif"  width="100" height="70" align="left" vspace="5" hspace="5"> After discussing pros and cons of publishing the full reference alignment, we finally decided that it is time to do this step. We would like to gratefully thank Martin Ringwald and Terry Hayamizu (Mouse Genome Informatics - <a href="http://www.informatics.jax.org/">http://www.informatics.jax.org/</a>), who provided us not only with an intial reference mapping for the matching task of this track, but also allowed us to publish the material now. Please ensure that you cite their work on the issue whenever you use the dataset in one of your publications: <i>Oliver Bodenreider, Terry F. Hayamizu, Martin Ringwald, Sherri De Coronado, and Songmao Zhang. Of mice and men: Aligning mouse and human anatomies. In Proceedings of the American Medical Informatics Association (AIMA) Annual Symposium, pages 61–65, 2005.</i>
+<ul>
+	<li><b><a href="data/mouse_anatomy_reference_2010.rdf">mouse_anatomy_reference_2010.rdf</a></b></li>
+</ul>
+
+<h2>Motivation</h2>
+
+<p>We started our modifications by adding very carfully some disjointness axioms to the upper level concepts of the human ontology. Although, none of these disjointness statements can be doubted, we the 2008 reference alignment has become incoherent, i.e. many concepts in the merged ontology have become unsatisfiable. When we looked at the reason for this, we discovered different types of problem. Some based on errors in the reference alignment, where an equivalence has been specified where a subsumption would have been more correct. Others based on some errors in the ontologies, where some subsumption axioms had to be removed or replaced by part-of relations.</p>
+
+<p>After fixing these problems we finally aggreed on a coherent reference alignment. We expect that the matching results of many systems will be improved, due to a more correct representation of the domain and an improved reference alignment.</p>
+
+<h2>Modifications of 2010 Dataset</h2>
+
+
+
+<h3>Mouse ontology</h3>
+
+<p>The following modifications have been applied:</p>
+
+<pre>
+New subclass-of axioms (12):
+SubClassOf(&lt;http://mouse.owl#MA_0000323&gt; ObjectSomeValuesFrom(&lt;http://mouse.owl#UNDEFINED_part_of&gt; &lt;http://mouse.owl#MA_0002431&gt;))
+SubClassOf(&lt;http://mouse.owl#MA_0001286&gt; ObjectSomeValuesFrom(&lt;http://mouse.owl#UNDEFINED_part_of&gt; &lt;http://mouse.owl#MA_0001911&gt;))
+SubClassOf(&lt;http://mouse.owl#MA_0002434&gt; ObjectSomeValuesFrom(&lt;http://mouse.owl#UNDEFINED_part_of&gt; &lt;http://mouse.owl#MA_0000013&gt;))
+SubClassOf(&lt;http://mouse.owl#MA_0000323&gt; &lt;http://mouse.owl#MA_0000019&gt;)
+SubClassOf(&lt;http://mouse.owl#MA_0000324&gt; &lt;http://mouse.owl#MA_0000019&gt;)
+SubClassOf(&lt;http://mouse.owl#MA_0001236&gt; ObjectSomeValuesFrom(&lt;http://mouse.owl#UNDEFINED_part_of&gt; &lt;http://mouse.owl#MA_0001911&gt;))
+SubClassOf(&lt;http://mouse.owl#MA_0002434&gt; &lt;http://mouse.owl#MA_0000003&gt;)
+SubClassOf(&lt;http://mouse.owl#MA_0001236&gt; &lt;http://mouse.owl#MA_0002450&gt;)
+SubClassOf(&lt;http://mouse.owl#MA_0002435&gt; &lt;http://mouse.owl#MA_0000003&gt;)
+SubClassOf(&lt;http://mouse.owl#MA_0002435&gt; ObjectSomeValuesFrom(&lt;http://mouse.owl#UNDEFINED_part_of&gt; &lt;http://mouse.owl#MA_0000013&gt;))
+SubClassOf(&lt;http://mouse.owl#MA_0001286&gt; &lt;http://mouse.owl#MA_0002450&gt;)
+SubClassOf(&lt;http://mouse.owl#MA_0000324&gt; ObjectSomeValuesFrom(&lt;http://mouse.owl#UNDEFINED_part_of&gt; &lt;http://mouse.owl#MA_0002431&gt;))
+
+Deleted subclass-of axioms (6):
+SubClassOf(&lt;http://mouse.owl#MA_0002435&gt; &lt;http://mouse.owl#MA_0000013&gt;)
+SubClassOf(&lt;http://mouse.owl#MA_0000324&gt; &lt;http://mouse.owl#MA_0002431&gt;)
+SubClassOf(&lt;http://mouse.owl#MA_0002434&gt; &lt;http://mouse.owl#MA_0000013&gt;)
+SubClassOf(&lt;http://mouse.owl#MA_0001286&gt; &lt;http://mouse.owl#MA_0001911&gt;)
+SubClassOf(&lt;http://mouse.owl#MA_0001236&gt; &lt;http://mouse.owl#MA_0001911&gt;)
+SubClassOf(&lt;http://mouse.owl#MA_0000323&gt; &lt;http://mouse.owl#MA_0002431&gt;)
+
+New disjointness axioms (0):
+---
+
+Deleted disjointness axioms (0):
+---
+</pre>
+
+<h3>Human ontology</h3>
+
+<p>The following modifications have been applied:</p>
+
+<pre>
+New subclass-of axioms (3):
+SubClassOf(&lt;http://human.owl#NCI_C13046&gt; &lt;http://human.owl#NCI_C12374&gt;)
+SubClassOf(&lt;http://human.owl#NCI_C33794&gt; &lt;http://human.owl#NCI_C13236&gt;)
+SubClassOf(&lt;http://human.owl#NCI_C33304&gt; &lt;http://human.owl#NCI_C13046&gt;)
+
+Deleted subclass-of axioms (3):
+SubClassOf(&lt;http://human.owl#NCI_C33794&gt; &lt;http://human.owl#NCI_C12801&gt;)
+SubClassOf(&lt;http://human.owl#NCI_C33794&gt; &lt;http://human.owl#NCI_C33177&gt;)
+SubClassOf(&lt;http://human.owl#NCI_C33304&gt; &lt;http://human.owl#NCI_C33794&gt;)
+
+New disjointness axioms (17):
+DisjointClasses(&lt;http://human.owl#NCI_C12508&gt; &lt;http://human.owl#NCI_C12801&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C12919&gt; &lt;http://human.owl#NCI_C13018&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C12680&gt; &lt;http://human.owl#NCI_C21599&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C13236&gt; &lt;http://human.owl#NCI_C32221&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C13236&gt; &lt;http://human.owl#NCI_C21599&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C12919&gt; &lt;http://human.owl#NCI_C21599&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C12919&gt; &lt;http://human.owl#NCI_C13236&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C21599&gt; &lt;http://human.owl#NCI_C25444&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C13018&gt; &lt;http://human.owl#NCI_C25444&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C12508&gt; &lt;http://human.owl#NCI_C13018&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C12680&gt; &lt;http://human.owl#NCI_C25444&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C13018&gt; &lt;http://human.owl#NCI_C13236&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C13236&gt; &lt;http://human.owl#NCI_C25444&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C12680&gt; &lt;http://human.owl#NCI_C13018&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C12680&gt; &lt;http://human.owl#NCI_C12919&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C12919&gt; &lt;http://human.owl#NCI_C25444&gt;)
+DisjointClasses(&lt;http://human.owl#NCI_C12680&gt; &lt;http://human.owl#NCI_C13236&gt;)
+
+Deleted disjointness axioms (0):
+---
+</pre>
+
+
+<h3>Reference alignment</h3>
+
+<p>The following modifications have been applied:</p>
+
+<pre>
+In reference alignment of 2009 and not (as equivalence) in 2010:
+http://mouse.owl#MA_0002433 = http://human.owl#NCI_C12680 | 1.0 (weakened)
+http://mouse.owl#MA_0000005 = http://human.owl#NCI_C25444 | 1.0 (removed)
+http://mouse.owl#MA_0000003 = http://human.owl#NCI_C12919 | 1.0 (weakened)
+
+New in reference alignment of 2010:
+http://mouse.owl#MA_0002433 &gt; http://human.owl#NCI_C12680 | 1.0
+http://mouse.owl#MA_0000003 &gt; http://human.owl#NCI_C12919 | 1.0
+</pre>
+
+<p>Notice that subsumption correspondences will probably not be evaluated in 2010 campaign (there are only two of them available in the reference alignment, which is probably not complete w.r.t. subsumption).</p>
+
+
+
+
+<h2>Acknowledgements</h2>
+
+<p>We would like Elena Beisswanger for her work on improving this dataset. Thanks a lot!</p>
+
+<p><a href="index.html">Back to Anatomy 2010 main page</a><p>
+<p>&nbsp;</p>
+
+</body>
+</html>
+
+
+
