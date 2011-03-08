@@ -1,0 +1,189 @@
+<html>
+<head>
+<title>Ontology Alignment Evaluation Initiative::Conference track|evaluation</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="../../style.css" />
+</head>
+<body>
+<div class="header">
+<a style="color: grey; line-height: 5mm;" href="http://oaei.ontologymatching.org/2010/">Ontology
+  Alignment Evaluation Initiative - OAEI-2010
+  Campaign</a><a href="http://oaei.ontologymatching.org/"><img src="../../../oaeismall.jpg" alt="OAEI"
+		   style="float:right; margin-left: 5pt; border-style:none;"/></a>
+</div>
+
+<h1>Evaluation of the Conference track</h1>
+
+<!-- <p>This year we consider to evaluate results of participants with following evaluation methods:</p> -->
+<ul>
+<li><a href="#general">Global characteristics of results delivered by participants</a>;
+</li><li><a href="#reference">(1) Evaluation based on reference alignments</a>;
+<ul>
+<li><a href="#ref-comparison">Comparison with previous year</a>
+</li><li><a href="#ref-semantic">Restricted semantic precision and recall</a>
+</li></ul>
+</li><li><a href="#manual">(2)Evaluation based on manual labelling with sampling</a>;
+</li><li><a href="#dmm">(3)Evaluation based on Data Mining method</a>;
+</li><li><a href="#reasoning">(4)Evaluation based on Logical Reasoning</a>;
+<!-- <li><a href="#consensus">(5) Evaluation based on consensus of experts</a> -->
+</li></ul>
+
+<h2><a name="general">Global characteristics of results delivered by participants</a></h2>
+<p>We have seen eight participants:</p>
+<ul>
+</li><li><i>AgreementMaker (AgrMaker)</i>
+</li><li><i>AROMA</i>
+</li><li><i>ASMOV</i>
+</li><li><i>CODI</i>
+<li><i>Ef2Match</i>
+</li><li><i>Falcon</i>
+</li><li><i>GeRMeSMB</i>
+</li><li><i>SOBOM</i>
+</li></ul>
+<ul>
+<li>All participants delivered via SEALS platform all 120 alignments.
+</li>
+</li><li>CODI matcher delivered 'certain' correspondences,
+other matchers delivered correspondences with graded confidence values 
+between 0 and 1
+<!-- <li> All participants delivered class-to-class correspondences and property-to-property correspondences. -->
+</li></ul>
+<p>You can <a href="conference_submissions.zip"> download</a>
+all alignments delivered by participants. They are in one directory
+conference10 named as it follows: matcher-ontology1-ontology2.rdf.</p>
+<p>Please let us know what kind of an experiment you do with those data and the reference alignment (ondrej.zamazal at vse dot cz).</p>
+<h2>Results and explanation of particular evaluation methods</h2>
+<!--
+TODO:
+<p>Evaluation methods are strongly intertwined. Mutual interdependencies are schematically depicted in Figure 1.</p> All but one methods are a posteriori evalution methods. 
+<img src="methods09.png" alt="Figure 1" vspace="5" width="20%" align="left" border="1" height="30%" hspace="15"> -->
+
+<p>This year we considered results of participants with the following evaluation methods:</p>
+
+<h3><a name="reference">(1) Evaluation based on reference alignment </a></h3>
+<p>We have 21 reference alignments, which corresponds to the complete
+alignment space between 7 ontologies from the data set. You can <a href="reference-alignment.zip">download</a> this reference-alignment. Please let us know how you use this reference-alignment and data set (ondrej.zamazal at vse dot cz). 
+
+</p><p>In the table below, there are results of all eight participants
+with regard to the reference alignment. There are traditional precision
+(P), recall (R), and F-measure (F-meas) computed for three different
+thresholds (0.2, 0.5, and 0.7). We use F-measure, which is the harmonic
+mean of precision and recall.
+<br>
+<center><img src="resultsEval1.png" /></center>
+<br>For better comparison we found an optimal threshold in terms of
+highest average F-measure, see Table below. A dependency of F-measure
+on a threshold can be seen from the Figure below In the table there
+are precision, recall, and F-measure for an optimal threshold. There is
+ one 'asterisk' in the column of threshold for matchers which did
+not provide graded confidence values. 
+The matcher with the highest average F-measure (62%) is the CODI which did not provide graded confidence values. Other matchers are very close to this score (ASMOV 60%, Ef2Match 60%, Falcon 59%). However we should take into account that this evaluation has been made over small part of all alignments (one fifth).
+<br>
+<center>
+<img src="resultsEval2.png" />
+<br>
+<img src="plot1.png" />
+</center>
+<br>
+</p>
+<h4><a name="ref-comparison">Comparison with previous years</a></h4>
+<p>
+We can also compare performance of participants wrt. last two years (2008, 2009). There are three matchers which also participated in last two years. ASMOV participated in all three consecutive years with increasing highest average F-measure: from 43% in 2008 and 47% in 2009 to 60% in 2010. AgreementMaker participated with 57% in 2009 and 58% in 2010 regarding highest average F-measure. Finally, AROMA participated with the same highest average F-measure in both years, 2009 and 2010.
+</p>
+<h4><a name="ref-semantic">Restricted semantic precision and recall</a></h4>
+<p>
+This year we have not received any alignments with subsumption relations, therefore we did not compute `restricted semantic precision and recall'.
+</p>
+
+<h3><a name="manual">(2) Evaluation based on manual labelling</a></h3>
+<p>
+This year we take the most secure, i.e., with highest confidence, correct correspondences as a population for each matcher. Particularly,  we evaluate 100 correspondences per matcher randomly chosen from all correspondences of all 120 alignments with confidence 1.0 (sampling). Because AROMA, ASMOV, Falcon, GeRMeSMB and SOBOM do not have enough correspondences with 1.0 confidence we take 100 correspondences with highest confidence. For all of these matchers (except ASMOV where we found exactly 100 correspondences with highest confidence values) we sampled over their population.
+
+In table below you can see approximated precisions for each matcher over its population of best correspondences. N is a population of all the best correspondences for one matcher. n is a number of randomly chosen correspondences so it is 100 best correspondences for each matcher.
+TP is a number of correct correspondences from the sample, and P* is an approximation of precision for the correspondences in each population; additionally there is a margin of error computed as: sqrt((N/n)-1)/sqrt(N) based on [4].
+</p>
+
+<center><img src="resultsEval3.png" /></center>
+<br>
+From the table above we can conclude that CODI, Falcon and AgreementMaker have  the best precision (higher than 90%) over their 100 more confident correspondences. 
+
+<br>
+<br>
+<br>
+<!-- Soon we will provide further evaluation methods and details. -->
+<!-- TODO: 11-10-10 see evalAll.html to continue-->
+
+<h3><a name="dmm">(3) Evaluation based on Data Mining method</a></h3>
+<p>Data Mining technique enables us to discover non-trivial findings about systems of participants. These findings can answer <i>analytic questions</i>, such as:</p>
+<ul>
+<li>Which systems give higher/lower validity than others to the mappings that are deemed 'in/correct'?
+<li>Which systems produce certain mapping patterns/correspondence patterns more often than others?
+<li>Which systems are more successful on certain types of ontologies?
+</ul>
+<p>We formulated abovementioned and similar analytic questions as tasks for mining association rules using the <i>LISp-Miner</i> tool and its <i>4ft-Miner procedure</i>. In those tasks we also employed matching patterns [2] and correspondence patterns [1].</p> This kind of evaluation was first tried two years ago [2]. We furthermore extended this approach and applied on data from years 2006, 2007 and 2008 [5]. 
+<p>Here are the full descriptions and results of four tasks output by LISp-Miner tool:
+<ul>
+<li>Task 1 - <a href="lisp-miner/task1confidence.html">confidence</a>
+<li>Task 2 - <a href="lisp-miner/task2resources.html">origin of resources</a>
+<li>Task 3 - <a href="lisp-miner/task3NMP.html">"neutral" matching patterns</a>
+<li>Task 4 - <a href="lisp-miner/task4CMP.html">correspondence (matching) patterns</a>
+</ul>
+</p>
+<p>Results are briefly described in [6].</p>
+
+<h3><a name="reasoning">(4) Evaluation based on Logical Reasoning</a></h3>
+<p>This method has been done by Christian Meilicke and Heiner Stuckenschmidt from Computer Science Institure at University Mannheim, Germany.</p>
+<p>Results are available in [6].</p>
+
+<!--
+<h2>Acknowledgements</h2>
+
+<p>We deeply acknowledge the effort of contributors to the evaluation:
+</p>
+-->
+<h2>Contacts</h2>
+<p>Contact addresses are Ondřej Šváb-Zamazal (ondrej.zamazal at vse dot cz) and Vojtěch Svátek (svatek at vse dot cz).</p>
+<h2>References</h2>
+<p>
+<!--[1] Šváb O., Svátek V. Combining Ontology Mapping Methods Using Bayesian Networks. OM-2006 at ISWC-2006. -->
+</p>
+<p>
+[1] Scharffe F., Euzenat J., Ding Y., Fensel,D. Correspondence patterns for ontology mediation. OM-2007 at ISWC-2007.</p>
+<p>
+[2] Šváb O., Svátek V., Stuckenschmidt H.: A Study in Empirical and 'Casuistic' Analysis of Ontology Mapping Results. ESWC-2007.
+<a href="http://nb.vse.cz/%7Esvatek/abstr.htm#eswc07" target="_blank">Abstract</a>
+<a href="http://nb.vse.cz/%7Esvatek/eswc07su.pdf" target="_blank">Draft paper</a> (final version available via <a href="http://www.springerlink.com/content/l3327x8n451g12r0/?p=1b0e634a25944c04836ca09588855c3d&amp;pi=24">SpringerLink</a>)
+</p>
+<p>
+[3] Meilicke C., Stuckenschmidt H. Incoherence as a basis for measuring the quality of ontology mappings. OM-2008 at ISWC 2008.
+</p>
+<p>
+[4] van Hage W.R., Isaac A., Aleksovski Z. Sample evaluation of ontology matching systems. EON-2007, Busan, Korea, 2007.
+</p>
+<p>
+[5] Šváb-Zamazal O., Svátek V. Empirical Knowledge Discovery over Ontology Matching Results. IRMLeS 2009 at ESWC-2009.
+</p>
+<p>
+[6] Euzenat J. et al.: <a href="../oaei2010.pdf">Results of the Ontology Alignment Evaluation Initiative 2010</a>. 
+</p>
+<!--
+<p>
+[5] Fleischhacker D., Stuckenschmidt H.: Implementing semantic
+precision and recall. accepted for poster session at OM-2009 at ISWC
+2009.
+</p>
+
+<p>
+[6] Meilicke C., Stuckenschmidt H.. An Efficient Method for Computing a Local Optimal Alignment Diagnosis. Technical Report, University Mannheim, 2009.
+</p> -->
+<!--
+<p>
+[7] Euzenat J. et al.: <a http://www.dit.unitn.it/~p2p/OM-2010/oaei10_paper0.pdf">Results of the Ontology Alignment Evaluation Initiative 2010</a>. 
+</p>
+-->
+<div class="address">
+Original page: <a href="http://nb.vse.cz/~svabo/oaei2010/eval.html">http://nb.vse.cz/~svabo/oaei2010/eval.html</a> [cached: 08/03/2011]
+<div class="footer">http://oaei.ontologymatching.org/2010/results/conference/</div>
+<!--$Id$-->
+</div>
+</body></html>

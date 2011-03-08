@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>Ontology Alignment Evaluation Initiative::Anatomy</title>
+<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+
+<div class="header">
+<a style="color: grey; line-height: 5mm;" href="http://oaei.ontologymatching.org/2009/">Ontology
+  Alignment Evaluation Initiative - OAEI-2010 Campaign</a>
+  <a href="http://oaei.ontologymatching.org/">
+  <img src="../../oaeismall.jpg" alt="OAEI" style="float:right; margin-left: 5pt; border-style:none;"/></a>
+  <a href="http://www.seals-project.eu/"><img style="float:right; margin-left: 5pt; border-style:none;" src="../../seals-logo.jpg"/></a>
+</div>
+
+<h1>Anatomy</h1>
+
+
+<h2>General description</h2>
+
+<p>The Anatomy track of the 2010 campaign consists of finding alignments between the Adult Mouse Anatomy and a part of the NCI Thesaurus (describing the human anatomy). The task is placed in a domain where we find large, carefully designed ontologies that are described in technical terms. Besides their large size and a conceptualization that is only to a limited degree based on the use of natural language, they also differ from other ontologies with respect to the use of specific annotations and roles, e.g. the extensive use of the partOf relation. The manual harmonization of the ontologies leads to a situation, where we have a high number of rather trivial mappings that can be found by simple string comparison techniques. At the same time, we have a good share of non-trivial mappings that require a careful analysis and sometimes also medical background knowledge.</p>
+
+
+<h2>Results for 2010</h2>
+
+<p>Results are already available for 2010 evaluation: <a href="../results/anatomy/index.html">Link to the results page</a></p>
+
+<h2>Differences compared to 2009</h2>
+
+<h3>Support by SEALS</h3>
+
+<p>
+Most of the evaluations (subtask #1 to #3) will be run with support of SEALS. This will not only allow an automized evaluation approach, but also the chance for each participant to easily test your system. We clarify this point below.
+</p>
+
+<h3>Fixing flaws in onologies and reference alignment</h3>
+<p>
+Again we fixed several flaws in the reference alignment and in the ontologies to be matched. Further we carefully added some disjointness axioms into the ontologies. These changes have partially been announced for 2009, however, we had no time to validate our changes. Therefore, the 2009 evaluation was only based a restricted set of changes. In 2010 we will now use this improved dataset
+<p>
+
+<h2>Data sets</h2>
+
+<p>Use the following ontologies as input for your matching system. You can already test with this data and report probems (see email address below). </br><b>Caution!</b> The formal representation of some OBO specific properties has been changed. You should test whether your system is still capable of reading the relevant information.</p>
+
+<p><b><a href="modifications2010.html">&gt; &gt; &gt; Download dataset here!</a></b></p>
+
+<h3>... a note on the availability of the reference alignment</h3>
+
+Again the complete reference alignment is still not directly available! Nevertheless, you can use the SEALS evaluation services to measure precision and recall of your system with respect to the anatomy test dataset, as soon as these services are available. More information on how to use this service <a href="../seals-eval.html">are available here.</a>
+
+<h2>Modalities</h2>
+
+
+<h3>Subtasks</h3>
+
+<p>The anatomy track consists of four subtasks. Subtask #1 is obligatory for all participants of the anatomy track, while subtasks #2, #3, and #4 are optional.</p>
+
+<p>Subtask #1, #2, and #3 are standard matching tasks with respect to the input (two ontologies to be matched). For all of these subtasks your matching system should generate an alignment between the mouse-anatomy and the human-anatomy that differs with respect to recall and precision.
+
+<ul>
+	<li>For subtask #1 the generated alignment should be an optimal solution to the matching problem with respect to both recall and precision as far as possible (= precision and recall are evenly weighted). In the evaluation we will focus on the f-value.</li>
+	<li> For subtask #2 your matching system should generate a result that is optimized for precisison. Think of a scenario where the result of your system is directly used without verification of a domain expert.</li>
+	<li>For subtask #3 your matching system should generate a result that is optimized for recall. Think of a scenario where the result of your system is used afterwards as a comprehensive candidate mapping, that will be revised by a domain expert afterwards, by removing the incorrect correspondences manually.</li>
+</ul>
+ Comparing the results of subtask #1, #2, and #3 will show in how far you system can be adjusted / parameterised for certain requirements.</p>
+
+<ul>
+	<li>Subtask #4 has been added to the anatomy track now for the third time. For this subtask a part of the reference mapping is available as additional input (see above). Suppose that this part of the reference mapping has been generated by e.g. a group of domain experts. You job is to use the information encoded in the mapping to imrprove the matching process.</li>
+</ul>
+
+<p>In the evaluation we compare the results of subtask #1 with the results of #4 to see whether or not the additional information had positive effects.<p>
+
+<h3>Participation Conditions</h3>
+
+<p>Due to our 2007 and 2008 experiences we know that certain correspondences in the partial reference mapping are hard to detect by a matching system. If some of these correspondences are part of the submissions for #1, #2 or #3, we will ask the authors of the matching system to explain how these correspondences could be detected by the implemented algorithms. If it cannot be shown or at least be suggested how these correspondences have been generated automatically, we will exclude the system from taking part in the anatomy track!</p>
+
+
+<h3>Format of submission</h3>
+
+<p>ATTTENTION: Changes have been announced by accident only few days prior to submission deadline. Now also #2 and #3 have to be submitted manually.</p>
+
+
+<p><b>[#1]</b> In case you participate only in subtask #1, you do not have to sent any submissions (opposed to the last years!), but have to implement a simple interface. Please follow the instructions given <a href="../seals-eval.html">here</a>.</P>
+
+<p><b>[#2-#4]</b> In case you participate in subtask #2 and #3 and/or #4, you have to submit a zip file that contains the result (we plan to automize evaluations related to this task also on the long term). Your submission should contain the following folders and files.</p>
+
+<pre>
++- anatomy
+|  +- 4
+|  |  +- participant.rdf
+</pre>
+
+
+<p>The files <i>participant.rdf</i> (replace 'partcipant' by the name of your system) contain the mapping generated by your system for subtask #4. These files have to follow the format described <a href="../align.html">here</a> (standard format for submissions to the OAEI).</p>
+
+<p>
+The reference mapping contains only equivalence correspondences between concepts of the ontologies (more precisely: only the equivalence correspondences of the reference alignment are used for evaluation purpose). Furthermore, no correspondences between properties (roles) are specified in the reference alignment.
+</p>
+
+<p>Please submit the files (preliminary and final results) for subtask #4 directly to the email address specified under 'Contact' (below). Send the results zipped in a file <i>participant.zip</i> or <i>participant.rar</i> and let the name of your matching systems occur somewhere in the subject heading of the mail.</p>
+
+<h2>Schedule</h2>
+
+<p>The schedules given at <a href="../index.html#schedule">http://oaei.ontologymatching.org/2010/index.html#schedule</a> is also binding for the anatomy track</p>
+
+
+<h2>Acknowledgements</h2>
+
+<p>We would like to gratefully thank Martin Ringwald and Terry Hayamizu (Mouse Genome Informatics - http://www.informatics.jax.org/), who provided us with an intial reference mapping for the matching task of this track.</p>
+
+<p>We would like Elena Beisswanger for improving the datasets with respect to several problems (see description available <a href="modifications2010.html">here</a>). Thanks a lot!</p>
+
+<p>In addition, we would like to thank all of the participants of the OAEI-07 and OAEI-08 and OAEI-09 anatomy track for hints and discussions with respect to the realization and evaluation of the last year.</p>
+
+
+<h2>Related Links</h2>
+
+<ul>
+	<li>Webpage of the <a href="../../2009/anatomy/index.html">Anatomy Track 2009</a></li>
+	<li>Webpage of the <a href="http://www.seals-project.eu/">SEALS Project</a> with <a href="http://www.seals-project.eu/seals-evaluation-campaigns/ontology-matching">Campaign Announcement</a></li>
+	<li><a href="../seals-eval.html">SEALS platform evaluation modalities</a> for OAEI</li>
+	<li>Documentation of <a href="modifications2010.html">2010 Modifications</a></li>
+</ul>
+
+
+<h2>Contact</h2>
+
+<p>This track is organized by <a href="http://ki.informatik.uni-mannheim.de/people/christian_meilicke.html">Christian Meilicke</a> and <a href="http://ki.informatik.uni-mannheim.de/people/heiner_stuckenschmidt.html">Heiner Stuckenschmidt</a> and supported by the SEALS project. If you have any problems working with the ontologies, any questions related to SEALS, or any suggestions related to the anatomy track, feel free to write an email to christian [at] informatik [.] uni-mannheim [.] de.</p>
+
+<div class="address">
+Original page: <a href="http://webrum.uni-mannheim.de/math/lski/anatomy10/">http://webrum.uni-mannheim.de/math/lski/anatomy10/</a> [cached: 08/03/2011]
+<div class="footer">http://oaei.ontologymatching.org/2010/anatomy/</div>
+<!--$Id$-->
+</div>
+</body>
+</html>
