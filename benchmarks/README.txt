@@ -3,7 +3,7 @@ To generate a new version:
 - run make.sh
 - if new location, change manually 3xx
   [well this has to be changed in make.sh and will be automatic]
-- update logs.html and index.html
+- update tests/index.html and index.html
 - apply manual part of make.sh
 
 To put back in tests:
